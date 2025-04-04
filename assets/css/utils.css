@@ -1,0 +1,140 @@
+.desktop_scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.desktop_scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.desktop_scroll::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+
+/*  */
+
+.mobile_menu_title {
+    font-weight: 700;
+    color: var(--gray-700);
+    margin-bottom: .6rem;
+    font-size: .85rem;
+    text-transform: uppercase;
+}
+
+
+.param_label_container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+
+.param_title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+.param_icon_card {
+    padding: 4px;
+    background-color: var(--primary-color);
+    display: flex;
+    border-radius: 4px;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    box-shadow: 0px 4px 6px rgba(168, 18, 18, 0.026);
+}
+
+.param_icon_card i {
+    font-size: 1.2rem;
+}
+
+.param_description {
+    font-size: .84rem;
+    /* background-color: rebeccapurple; */
+    /* margin-left: 2.4rem; */
+}
+
+.label_description {
+    font-size: .8rem;
+}
+
+.label_description {
+    font-size: .81.7rem;
+    width: 85%;
+    font-weight: 500;
+}
+
+
+/*  */
+.param_list_container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.param_drop_menu {
+    border: 0.01rem solid rgba(128, 128, 128, 0.622) !important;
+    border-radius: 4px !important;
+    height: 2.65rem !important;
+    padding: 0 .5rem;
+    font-size: .85rem !important;
+}
+
+.param_drop_list {
+    top: 3rem !important;
+    border: 0.01rem solid rgba(128, 128, 128, 0.622) !important;
+}
+
+.param_drop_list ul li {
+    font-size: .85rem !important;
+    font-weight: 600;
+    display: flex;
+}
+
+.param_drop_list ul li i {
+    font-size: 1rem;
+    margin-right: 4px;
+}
+
+.config_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .3rem;
+
+    margin-bottom: .7rem;
+}
+
+.config_title {
+    display: flex;
+    align-items: center;
+    font-size: .85rem;
+    gap: 4px;
+    font-weight: 700;
+}
+
+.config_title i {
+    font-size: 1.2rem;
+}
+
+
+/*  */
+
+.container_scrollable {
+    overflow-y: auto;
+    /* padding: 1rem; */
+}
+
+
+@media (max-width: 768px) {
+    .param_description {
+        width: 85%;
+    }
+}

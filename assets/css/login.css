@@ -1,0 +1,209 @@
+@import url('/assets/css/main.css');
+
+
+/*  */
+body {
+    background-color: #EDF1F3;
+}
+
+.text-muted {
+    width: 70%;
+    font-size: .84rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color-200);
+}
+
+.login__content {
+    background-color: var(--background);
+    height: 100%;
+}
+
+.image__content {
+    width: 120px;
+}
+
+.input__card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+
+.input__card label {
+    font-size: clamp(.9rem, 2.8vw, 1.2rem);
+    font-weight: 600;
+}
+
+.input__card input {
+    font-size: clamp(.9rem, 2.7vw, 1.2rem);
+    padding: 2.3vw 10px;
+}
+
+button {
+    border: 1.2px solid;
+    border-radius: 3px;
+    background-color: var(--primary-color-500);
+    color: #ffffff;
+    text-transform: capitalize;
+    opacity: .9;
+    padding: 2.7vw 0;
+    font-size: clamp(1rem, 1.05rem, 1.2rem);
+}
+
+button:hover {
+    opacity: 1;
+}
+
+
+.extra__label {
+    color: var(--primary-color-600);
+    font-size: .7rem;
+}
+
+/*  */
+
+
+
+
+
+.form-control {
+    padding: 8px 7px;
+    border: 1.1px solid rgba(128, 128, 128, 0.502);
+    border-radius: 4px;
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+
+
+
+.form-check {
+    font-size: .8rem;
+}
+
+.color__text {
+    color: #6a9135;
+}
+
+/*  */
+
+.card__right {
+    background-image: url('/assets/images/back-login.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%
+}
+
+
+/* ------------------------------- Responsive ------------------------------- */
+
+/* ✅ sm - 576px & more */
+@media (min-width: 576px) {}
+
+/* ✅ md - 768px & more */
+@media (min-width: 768px) {
+
+    .login__content {
+        width: 560px;
+        height: 700px;
+        padding: min(2rem, 8%);
+        border-radius: 5px;
+    }
+
+    .image__content {
+        width: 140px;
+    }
+
+    .content__title {
+        width: 80%;
+    }
+
+    h5 {
+        font-size: 1.4rem;
+    }
+
+    .input__card label {
+        font-size: clamp(.8rem, 2.7vw, 1.15rem);
+        font-weight: 600;
+    }
+
+    .input__card input {
+        font-size: clamp(.9rem, 2.7vw, 1.2rem);
+        padding: 1.5vw 10px;
+        font-size: 1.1rem;
+    }
+
+    button {
+        opacity: .9;
+        padding: 1.5vw 0;
+        font-size: clamp(1rem, 1.05rem, 1.2rem);
+    }
+}
+
+/* ✅ lg - 992px & more */
+@media (min-width: 992px) {
+
+    .login__content {
+        width: 50rem;
+        height: 600px;
+        padding-bottom: 2rem;
+    }
+
+    .card__left {
+        width: 40rem;
+    }
+
+    .content__title {
+        width: inherit;
+    }
+
+    .content__title span {
+        font-size: .78rem;
+        letter-spacing: -0.5px;
+        line-height: 1.2;
+        margin-bottom: 0.2rem;
+    }
+
+    .image__content {
+        width: 90px;
+    }
+
+    h5 {
+        font-size: inherit;
+    }
+
+
+    /*  */
+    .input__card label {
+        font-size: .8rem;
+        font-weight: 600;
+    }
+
+    .input__card input {
+        font-size: .8rem;
+        padding: .5vw 10px;
+    }
+
+    button {
+        opacity: .9;
+        padding: .5vw 0;
+        font-size: .9rem;
+    }
+
+
+    .extra__content {
+        width: 50%;
+        font-size: .7rem;
+    }
+
+}
+
+/* ✅ xl - 1200px and more */
+@media (min-width: 1200px) {}
+
+/* ✅ xxl - 1400px and more */
+@media (min-width: 1400px) {}
