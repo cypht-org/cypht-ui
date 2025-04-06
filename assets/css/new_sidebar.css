@@ -37,7 +37,6 @@
     bottom: 3.5rem;
     background-color: rgba(202, 202, 202, 0.311);
     backdrop-filter: blur(1px);
-    /* z-index: 9999; */
 }
 
 .accounts_container {
@@ -84,7 +83,6 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    /* background-color: rgba(128, 128, 128, 0.069); */
     background-color: transparent;
 }
 
@@ -125,182 +123,11 @@
 
 
 
-/* ✅ xl - 1200px et plus */
 @media (min-width: 992px) {
-
     #acounts {
         align-items: end !important;
         justify-content: start !important;
         padding-bottom: 0.5rem !important;
         padding-left: 4.4rem !important;
     }
-
-    /* .content__parent {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 4.65rem;
-        height: 100dvh;
-        padding: 10px 0rem;
-        margin-right: 2px;
-        background-color: #FDFDFD;
-    }
-
-    .card__menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-    } */
-
-    /* ---------------------------------- Logo ---------------------------------- */
-    /* 
-    .logo__content {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .logo__content .__logo {
-        width: 36px;
-        height: 36px;
-    } */
-
-    /* ---------------------------------- Menu ---------------------------------- */
-
-    /* .side__left__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    } */
-
-    /* -------------------------------- Top Menu -------------------------------- */
-
-    /* .side__left__content .top__menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 8px;
-        padding-top: 2rem;
-    } */
-
-    /* .top__menu a {
-        font-size: 1.4rem;
-        cursor: pointer;
-        color: var(--icon-color);
-        height: 40px;
-        width: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100%;
-        text-decoration: none;
-
-    } */
-
-
-
-    /* ------------------------------- Button menu ------------------------------ */
-    /* .button__card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        row-gap: 1.5rem;
-    }
-
-    .button__card .button_card__menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: .4rem;
-    }
-
-    .button_card__menu a {
-        font-size: 23px;
-        cursor: pointer;
-        color: var(--icon-color);
-        height: 40px;
-        width: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100%;
-        text-decoration: none;
-    }
-
-    .button_card__menu a :hover {
-        color: var(--primary-color);
-        opacity: 1;
-        background-color: var(--body-background);
-        height: 38px;
-        width: 38px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 100%;
-    } */
-
-
-    /* --------------------------------- profile -------------------------------- */
-
-    /* .profile__button {
-        position: relative;
-        width: 40px;
-        height: 40px;
-        color: #4b5563;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0.25rem;
-        padding-left: 10px;
-        padding-right: 10px;
-        border: .1px solid var(--border);
-        border-radius: 100%;
-        overflow: hidden;
-        background-color: var(--background);
-
-    } */
-
-    /* Ligne bleue */
-    /* .profile__button .line {
-        color: #374151;
-        height: 0.25rem;
-        width: 100%;
-        background-color: #60a5fa;
-    } */
-
-    /* Conteneur centré */
-    /* .profile__button .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    } */
-
-    /* Conteneur des éléments centraux */
-    /* .profile__button .center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
-
-    /* Petit bloc bleu */
-    /* .profile__button .box {
-        color: #374151;
-        height: 0.625rem;
-        width: 0.275rem;
-        background-color: #60a5fa;
-    } */
-
-    /* .profile__card .__singe {
-        position: absolute;
-        height: 8px;
-        width: 8px;
-        border-radius: 100%;
-        right: 2px;
-        top: 1px;
-        background-color: #FFBB00;
-    } */
 }
