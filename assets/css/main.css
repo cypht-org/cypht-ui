@@ -1162,6 +1162,33 @@ body {
     display: flex !important;
 }
 
+/*--------------- Filters & Block list page----------------------*/
+.option-card {
+    display: inline-flex;
+    gap: 2px;
+    padding: 8px 10px;
+    border: .5px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: .8rem;
+    font-weight: 400;
+    max-width: 250px;
+}
+
+
+.option-card:hover {
+    background: rgba(0, 0, 0, 0.015);
+    border-color: #80b4417b;
+}
+
+.option-card.active {
+    border-color: #000;
+    background: rgba(160, 160, 160, 0.05);
+    border-color: #80b4417b;
+}
+
+
 
 @media (min-width: 768px) {
     .popup__card {

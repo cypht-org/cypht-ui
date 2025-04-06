@@ -1,0 +1,188 @@
+@import url('/assets/css/main.css');
+@import url('/assets/css/server.css');
+
+.label__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.label__card .title {
+    font-weight: 600;
+    font-size: .83rem;
+}
+
+.label__card .description {
+    font-size: .78rem;
+    font-weight: 400;
+    color: gray;
+}
+
+.server__card .server__item {
+    width: 300px;
+    display: inline-flex;
+    border: .4px solid rgba(128, 128, 128, 0.483);
+    border-radius: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.server__item:hover {
+    border-color: var(--primary-color);
+}
+
+/*  */
+
+
+.simple_btn {
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.radio-circle.active {
+    /* background-color: #000; */
+    background-color: var(--primary-color) !important;
+}
+
+
+/* -------------------------------- Drop Menu ------------------------------- */
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    /* padding: 10px 20px; */
+
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    border-radius: 4px;
+    width: 350px;
+    min-height: 2.3rem;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+/* .dropdown-btn:hover {
+    background-color: #045A8D;
+} */
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    border-radius: 4px;
+    width: 100%;
+    height: 2.3rem;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.dropdown-btn button i {
+
+    transition: transform 0.4s ease;
+}
+
+.dropdown-menu-custom,
+.table-dropdown-menu-custom {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    border-radius: 4px;
+    width: 100%;
+    top: 45px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu-custom a,
+.table-dropdown-menu-custom a {
+    color: #333;
+    padding: 10px 10px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: .82rem;
+    font-weight: 500;
+}
+
+.dropdown-menu-custom a:hover {
+    background-color: #f1f1f1;
+
+}
+
+
+.show {
+    display: block !important;
+}
+
+/*  */
+.table-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.table-dropdown-btn {
+    width: 100%;
+    height: 2.3rem;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.table-dropdown-btn button i {
+    transition: transform 0.4s ease;
+}
+
+.parent-div {
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.no-focus:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: inherit !important;
+
+}
+
+/* --------------------------------- Select --------------------------------- */
+
+
+select {
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    font-size: .85rem !important;
+    font-weight: 500 !important;
+    border-radius: 4px !important;
+}
+
+
+
+.dynamic__div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+}
