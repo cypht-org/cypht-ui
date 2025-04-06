@@ -1,0 +1,72 @@
+@import url('/assets/css/main.css');
+@import url('/assets/css/server.css');
+
+.label__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.label__card .title {
+    font-weight: 600;
+    font-size: .83rem;
+}
+
+.label__card .description {
+    font-size: .78rem;
+    font-weight: 400;
+    color: gray;
+}
+
+/* Server List */
+.server__card .server__item {
+    width: 300px;
+    display: inline-flex;
+    border: .4px solid rgba(128, 128, 128, 0.483);
+    border-radius: 3px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+
+.server__item:hover {
+    border-color: var(--primary-color);
+}
+
+.radio-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.radio-circle.active {
+    background-color: var(--primary-color) !important;
+}
+
+
+/*  */
+.table-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.table-dropdown-btn {
+    width: 100%;
+    height: 2.3rem;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.table-dropdown-btn button i {
+    transition: transform 0.4s ease;
+}
+
+
+#block-list-modal {
+    padding: 0 1rem;
+}
