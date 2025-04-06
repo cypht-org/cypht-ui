@@ -1,0 +1,69 @@
+@import url("/assets/css/server.css");
+
+thead tr {
+      font-size: .8rem;
+      font-weight: 300 !important;
+}
+
+thead tr th,
+tbody tr td {
+      min-width: 14rem;
+      max-width: 16rem;
+
+}
+
+thead tr th {
+      font-size: .8rem;
+      font-weight: 600 !important;
+}
+
+tbody tr td {
+      font-size: .8rem;
+      font-weight: 400 !important;
+}
+
+td button {
+
+      border-radius: 8px;
+}
+
+td button i {
+      font-size: 1rem;
+}
+
+.custom-thead {
+      background-color: #3498db !important;
+      color: white !important;
+}
+
+.table-dark {
+      --bs-table-bg: #F8F9FB;
+      --bs-table-color: var(--foreground);
+      border: 1px solid rgba(128, 128, 128, 0.228);
+}
+
+
+textarea {
+      border: 0.01rem solid rgba(128, 128, 128, 0.622);
+      border-radius: 4px;
+      width: 350px;
+      min-height: 2.3rem;
+      field-sizing: content;
+      max-height: 120px !important;
+      padding: 7px !important;
+}
+
+.small_td_th {
+      min-width: 5rem !important;
+}
+
+
+
+@media (min-width: 992px) {
+
+
+      .compose_container {
+            bottom: 3rem;
+      }
+
+}
