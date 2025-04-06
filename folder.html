@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Icon 1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coswise/hicon-css@latest/web-fonts/hicon.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/new_sidebar.css">
+    <link rel="stylesheet" href="/assets/css/folder.css">
+</head>
+
+<body class="position-relative">
+    <div class="base__container d-flex flex-column-reverse flex-lg-row bg-danger">
+
+        <div class="menu__container magic-t-line">
+
+            <!-- Mobile -->
+            <ul class="p-0 m-0 d-flex align-items-center justify-content-around d-lg-none" id="sidebar-menu">
+                <li> <a href="/home.html" class="menu-link">
+                        <i class="bi bi-grid"></i>
+                    </a></li>
+                <li> <a href="/folder.html" class="menu-link sidebar_active">
+                        <i class="bi bi-folder-fill"></i>
+                    </a></li>
+                <li> <a href="/contacts.html" class="menu-link">
+                        <i class="bi bi-people"></i>
+                    </a></li>
+                <li> <a href="/info.html" class="menu-link">
+                        <i class="bi bi-exclamation-diamond"></i>
+                    </a></li>
+                <li id="setting-btn" class="d-md-none"> <a class="menu-link" href="#">
+                        <i class="bi bi-gear"></i>
+                    </a></li>
+
+
+                <li class="d-none d-md-flex"> <a class="menu-link" href="/site.html">
+                        <i class="bi bi-diagram-2"></i>
+                    </a></li>
+
+                <li class="d-none d-md-flex" style="padding-top: 5px;"> <a href="/server.html" class="">
+                        <i class='bx bx-card'></i>
+                    </a></li>
+            </ul>
+
+            <div id="setting-menu"
+                class="position-absolute setting__container  align-items-end justify-content-end  me-3 d-lg-none">
+                <ul class="d-flex align-items-center justify-content-start column-gap-3 mb-2  py-0 px-3">
+                    <li class=""> <a href="/site.html" class="menu-link">
+                            <i class="bi bi-diagram-2-fill" style="font-size: 1.2rem;"></i>
+                            </i>Site
+                        </a></li>
+                    <li class=""> <a href="/server.html" class="menu-link">
+                            <i class='bx bxs-card'></i>Server
+                        </a></li>
+                </ul>
+            </div>
+            <!-- </nav> -->
+
+            <nav class="d-none d-lg-flex flex-column justify-content-between  magic-r-line py-2">
+                <div class="d-flex flex-column align-items-center  gap-4  justify-content-center">
+                    <div class="d-flexalign-items-center logo_content">
+                        <img class="object-fit-cover" src="/assets/images/svg/logo.svg" />
+                    </div>
+
+                    <div class="menu_group">
+                        <ul class="">
+                            <li><a href="/home.html">
+                                    <i class="bi bi-grid-fill"></i>
+                                </a></li>
+                            <li><a href="/folder.html" class="sidebar_active">
+                                    <i class="bi bi-folder-fill"></i>
+                                </a></li>
+                            <li><a href="/contacts.html">
+                                    <i class="bi bi-people"></i>
+                                </a></li>
+                            <li><a href="/info.html">
+                                    <i class='bi bi-exclamation-diamond'></i>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="button_group align-items-center gap-3 d-flex flex-column justify-content-end ">
+                    <a href="/site.html"><i class="bi bi-diagram-2-fill"></i></a>
+                    <a href="/server.html"><i class="bi bi-hdd-network"></i></a>
+                    <div>
+                        <div class="rounded_circle">
+                            <img src="/assets/images/avatar.jpg" alt="" class="rounded-circle avatar">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="flex-1 position-relative d-flex flex-column" style="background-color: var(--background-2);">
+            <!-- Mobile -->
+            <div class=" d-flex flex-column  d-lg-none">
+                <div class="d-flex align-items-center justify-content-between column-gap-2 top__menu px-3 px-md-4 ">
+                    <div class="pt-2 mobile_menu_title ">
+                        <div class="param_icon_card d-inline-flex">
+                            <i class="bi bi-sliders2-vertical"></i>
+                        </div><span class="ms-2">Folder</span>
+                    </div>
+                    <div>
+                        <div class="rounded_circle">
+                            <img src="/assets/images/avatar.jpg" alt="" class="rounded-circle avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="d-flex d-lg-flex flex-1 magic-t-line">
+
+                <div class="d-none d-lg-flex flex-column shortcuts_menu justify-content-start ps-4"
+                    style="height: 100dvh !important;">
+                    <div class="fw-semibold">
+                        <span class="short_title_label">On this page</span>
+                    </div>
+                    <nav id="gen-params" class="navbar mt-2">
+
+                        <ul class="nav nav-pills" style="border-right: 1px solid rgba(128, 128, 128, 0.196);">
+                            <li class=""><a href="#folders" class="">New Folder</a></li>
+                            <li class=""><a href="#trash" class="">Trash Folder</a></li>
+                            <li class=""><a href="#sent" class="">Sent Folder</a></li>
+                            <li class=""><a href="#archive" class="">Archive Folder</a></li>
+                            <li class=""><a href="#draft" class="">Draft Folder</a></li>
+                            <li class=""><a href="#junk" class="">Junk Folder</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="flex-1 position-relative bg-dan">
+                    <div data-bs-spy="scroll" data-bs-target="#gen-params" data-bs-offset="0" tabindex="0"
+                        class="h-100 d-flex flex-column px-3 px-md-5 ps-lg-0 overflow-y-auto desktop_scroll top-0 button-0"
+                        style=" background-color: var(--background)">
+                        <div class="py-4 param_label_container">
+                            <div class="param_title fw-bold d-flex align-items-center">
+
+                                <div class="param_icon_card d-inline-flex d-none d-lg-block">
+                                    <i class="bi bi-sliders2-vertical"></i>
+                                </div>
+
+                                <span>Folder settings</span>
+                            </div>
+                            <small class="param_description">Lorem ipsum
+                                dolor sit
+                                amet
+                                consectetur
+                                adipisicing elit.
+                                Dolorum officiis doloribus
+                                iste?</small>
+
+                            <div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+                        <div class="flex-1 position-relative">
+                            <div class="position-absolute mb-4 param_list_container p-1">
+                                <div id="folder_server">
+                                    <div class="config_container">
+                                        <span class="config_title"><i class='bx bx-card'></i>IMAP Server list</span>
+                                        <small class="fw-normal">Select a imap server for more management
+                                            folders</span></small>
+                                    </div>
+
+                                    <div class="drop_down_content param_drop_menu position-relative">
+                                        <div id="drop-down-btn"
+                                            class="d-flex align-items-center justify-content-between column-gap-1 me-2">
+                                            <span class=" fw-semibold"><span id="menu_selected">Select
+                                                    server</span></span>
+                                            <button><i class='bx bx-chevron-down'></i></button>
+                                        </div>
+                                        <div class="drop_down_list param_drop_list">
+                                            <ul class="flex-1">
+                                                <li><i class='bx bx-card'></i>Server 1</li>
+                                                <li><i class='bx bx-card'></i>Server 2</i></li>
+                                                <li><i class='bx bx-card'></i>Server 3</i></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 1 -->
+                                <div id="folders" class="d-flex flex-column mb-3" style="min-height: 10dvh;">
+
+                                    <div class="config_container">
+                                        <span class="config_title"><i class='bx bx-checkbox-minus'></i>Server
+                                            Folders</span>
+                                        <small class="fw-normal">Folder lorem ipsum dolor sit amet consectetur
+                                            adipisicing
+                                            elit.</span></small>
+                                    </div>
+
+                                    <div class="gap-1 pt-2 folder_container">
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card" aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card" aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card" aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card" aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card" aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card" aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card " aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card" aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card" aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                        <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                            aria-controls="offcanvasRight" class="folder_card" aria-label="Dossier">
+                                            <div class="folder__icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                                    <g fill="none" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="1.5">
+                                                        <path
+                                                            d="M11.57 21h-1.063c-4.01 0-6.015 0-7.261-1.546S2 15.42 2 10.444V7.22c0-1.917 0-2.876.324-3.595a2.94 2.94 0 0 1 .984-1.223C3.888 2 4.661 2 6.206 2c.99 0 1.485 0 1.918.202c.99.46 1.398 1.575 1.844 2.683l.539 1.337m-3.503 0h8.545c1.792 0 2.688 0 3.332.534c.278.23.518.528.704.874c.29.538.384 1.219.415 2.287" />
+                                                        <path
+                                                            d="M4.596 12.576c.43-1.15.647-1.724 1.067-2.085c.68-.582 1.657-.485 2.494-.485h9.095c2.477 0 3.716 0 4.334.797c1.06 1.368-.191 3.587-.695 4.93c-.904 2.408-1.356 3.612-2.256 4.346c-1.371 1.119-3.366.904-5.021.904H9.937c-3.543 0-5.314 0-6.236-1.096c-1.7-2.025.13-5.274.895-7.312" />
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <span class="folder_title">Nom du dossier</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2 -->
+                                <div id="trash" class="d-flex flex-column  mb-5" style="min-height: 10dvh;">
+                                    <div class="config_container">
+                                        <span class="config_title"><i class='bx bx-checkbox-minus'></i>Trash
+                                            Folder</span>
+
+                                        <div class=" d-flex flex-column">
+                                            <small class="fw-normal">This folder is designated for storing emails that
+                                                have
+                                                been deleted by
+                                                the user.</span></small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pt-3">
+                                        <div class="task px-2 folder_config_container">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="task-title completed"><i
+                                                        class='bx bx-folder-open'></i>Current
+                                                    Folder</span>
+
+                                                <div class="d-flex align-items-center gap-2 task_action">
+                                                    <button class="update__btn modal__btn" data-bs-toggle="offcanvas"
+                                                        data-bs-target="#current_folder"
+                                                        aria-controls="offcanvasRight"><i
+                                                            class='bx bx-pen'></i></button>
+                                                    <button class="modal__btn delete_btn"><i
+                                                            class='bx bx-trash'></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="blocker">
+                                                <small>Folder Name</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 3 -->
+                                <div id="sent" class="d-flex flex-column  mb-5" style="min-height: 10dvh;">
+                                    <div class="config_container">
+                                        <span class="config_title"><i class='bx bx-checkbox-minus'></i>Sent
+                                            Folder</span>
+
+                                        <div class=" d-flex flex-column">
+                                            <small class="fw-normal">This folder is designated for storing emails that
+                                                have
+                                                been deleted by
+                                                the user.</span></small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pt-3">
+                                        <div class="task px-2 folder_config_container">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="task-title completed"><i
+                                                        class='bx bx-folder-open'></i>Current
+                                                    Folder</span>
+
+                                                <div class="d-flex align-items-center gap-2 task_action">
+                                                    <button class="update__btn modal__btn" data-bs-toggle="offcanvas"
+                                                        data-bs-target="#current_folder"
+                                                        aria-controls="offcanvasRight"><i
+                                                            class='bx bx-pen'></i></button>
+                                                    <button class="modal__btn delete_btn"><i
+                                                            class='bx bx-trash'></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="blocker">
+                                                <small>Folder Name</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 4 -->
+                                <div id="archive" class="d-flex flex-column  mb-5" style="min-height: 10dvh;">
+                                    <div class="config_container">
+                                        <span class="config_title"><i class='bx bx-checkbox-minus'></i>Archive
+                                            Folder</span>
+
+                                        <div class=" d-flex flex-column">
+                                            <small class="fw-normal">This folder is designated for storing emails that
+                                                have
+                                                been deleted by
+                                                the user.</span></small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pt-3">
+                                        <div class="task px-2 folder_config_container">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="task-title completed"><i
+                                                        class='bx bx-folder-open'></i>Current
+                                                    Folder</span>
+
+                                                <div class="d-flex align-items-center gap-2 task_action">
+                                                    <button class="update__btn modal__btn" data-bs-toggle="offcanvas"
+                                                        data-bs-target="#current_folder"
+                                                        aria-controls="offcanvasRight"><i
+                                                            class='bx bx-pen'></i></button>
+                                                    <button class="modal__btn delete_btn"><i
+                                                            class='bx bx-trash'></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="blocker">
+                                                <small>Folder Name</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 5 -->
+                                <div id="draft" class="d-flex flex-column  mb-5" style="min-height: 10dvh;">
+                                    <div class="config_container">
+                                        <span class="config_title"><i class='bx bx-checkbox-minus'></i>Draft
+                                            Folder</span>
+
+                                        <div class=" d-flex flex-column">
+                                            <small class="fw-normal">This folder is designated for storing emails that
+                                                have
+                                                been deleted by
+                                                the user.</span></small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pt-3">
+                                        <div class="task px-2 folder_config_container">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="task-title completed"><i
+                                                        class='bx bx-folder-open'></i>Current
+                                                    Folder</span>
+
+                                                <div class="d-flex align-items-center gap-2 task_action">
+                                                    <button class="update__btn modal__btn" data-bs-toggle="offcanvas"
+                                                        data-bs-target="#current_folder"
+                                                        aria-controls="offcanvasRight"><i
+                                                            class='bx bx-pen'></i></button>
+                                                    <button class="modal__btn delete_btn"><i
+                                                            class='bx bx-trash'></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="blocker">
+                                                <small>Folder Name</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 6 -->
+                                <div id="junk" class="d-flex flex-column  mb-5" style="min-height: 10dvh;">
+                                    <div class="config_container">
+                                        <span class="config_title"><i class='bx bx-checkbox-minus'></i>Junk
+                                            Folder</span>
+
+                                        <div class=" d-flex flex-column">
+                                            <small class="fw-normal">This folder is designated for storing emails that
+                                                have
+                                                been deleted by
+                                                the user.</span></small>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex pt-3">
+                                        <div class="task px-2 folder_config_container">
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="task-title completed"><i
+                                                        class='bx bx-folder-open'></i>Current
+                                                    Folder</span>
+
+                                                <div class="d-flex align-items-center gap-2 task_action">
+                                                    <button class="update__btn modal__btn" data-bs-toggle="offcanvas"
+                                                        data-bs-target="#current_folder"
+                                                        aria-controls="offcanvasRight"><i
+                                                            class='bx bx-pen'></i></button>
+                                                    <button class="modal__btn delete_btn"><i
+                                                            class='bx bx-trash'></i></button>
+                                                </div>
+                                            </div>
+                                            <div class="blocker">
+                                                <small>Folder Name</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="offcanvas offcanvas-end   rounded my-md-2 me-2" tabindex="-1" id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel" style=" background-color: var(--background);">
+
+        <!-- div 1 -->
+        <div>
+            <div class="offcanvas-header">
+                <div class="w-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6 id="offcanvasRightLabel" class="fw-semibold">Folder Detail</h6>
+                        <div>
+                            <div class="d-flex align-items-center column-gap-2 d-lg-none">
+                                <button type="button" class=" update__btn text-reset modal__btn clear__btn"
+                                    style="font-size: 1.1rem;"><i class='bx bx-pen'></i></button>
+                                <button type="button" class="delete__btn text-reset modal__btn clear__btn"
+                                    style="font-size: 1.1rem;"><i class='bx bx-trash'></i></button>
+                                <button type="button" class="text-reset clear__btn modal__btn"
+                                    style="font-size: 1.1rem;" data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <i class='bx bx-x'></i>
+                                </button>
+                            </div>
+
+                            <div class="d-none d-lg-flex align-items-center column-gap-2">
+                                <button type="button" class="update__btn text-reset modal__btn clear__btn"
+                                    style="font-size: 1.1rem;"><i class='bx bx-pen'></i></button>
+                                <button type="button" class="delete__btn text-reset modal__btn clear__btn"
+                                    style="font-size: 1.1rem;"><i class='bx bx-trash'></i></button>
+                                <button type="button" class="text-reset clear__btn modal__btn"
+                                    style="font-size: 1.1rem;" data-bs-dismiss="offcanvas" aria-label="Close">
+                                    <i class='bx bx-x'></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="my-2">
+                        <div class="clear_space d-flex flex-column config__description p-0 m-0"
+                            style="font-size: .9rem;">
+                            <small>Designation</small>
+                        </div>
+                        <span class="config__title" style="font-size: .78rem;">Folder
+                            name</span>
+                    </div>
+                    <div>
+                        <div class="clear_space d-flex flex-column config__description p-0 m-0"
+                            style="font-size: .9rem;">
+                            <small>IMAP Server</small>
+                        </div>
+                        <span class="config__title" style="font-size: .78rem;">Imap Server
+                            designation</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- div 2 (caché par défaut) -->
+            <div class="offcanvas-body m-0 p-0">
+                <div class="container mt-0 scrollable" id="folder-list" style="font-size: .72rem;">
+                </div>
+            </div>
+
+            <!-- update -->
+            <div id="update-container" class="px-3 py-4  modal__float__card d-none"
+                style="background-color: var(--background); width: 350px; left: -370px;">
+
+
+                <div class="">
+                    <div class="d-flex flex-column mb-3">
+                        <small class="fw-semibold d-flex align-items-center gap-1"
+                            style="color: var(--menu-primary); font-size: .8rem;">
+                            <i class='bx bx-folder' style="font-size: 1rem;"></i>Update Folder
+                        </small>
+                        <small class="description__text fw-normal"
+                            style="font-size: .78rem; opacity: .7; font-size: .76rem; padding-left: 2px;">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </small>
+                    </div>
+
+                    <div class="">
+                        <div class="filed__card">
+                            <small class="field__label">New Designation</small>
+                            <input id="new-folder-name" type="text" class="input__modal" style="font-size: .8rem;"
+                                placeholder="Enter name">
+                        </div>
+
+                    </div>
+
+                    <div class="filed__card">
+                        <div class="w-100 d-flex column-gap-2 " style="margin-top: 1.15rem;">
+                            <button id="btn-cancel-update" class="btn-reset px-4">Cancel<i class='bx bx-x'></i></button>
+                            <button id="btn-update-folder" class="btn-connect">Update<i
+                                    class='bx bx-transfer-alt'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- delete -->
+            <div id="delete-container" class="px-3 py-4  modal__float__card d-none"
+                style="background-color: var(--background); width: 350px; left: -370px;">
+                <div class="">
+                    <div class="d-flex flex-column mb-3">
+                        <small class="fw-semibold d-flex align-items-center gap-1"
+                            style="color: var(--menu-primary); font-size: .8rem;">
+                            <i class='bx bx-folder' style="font-size: 1rem;"></i>Delete Folder
+                        </small>
+                        <small class="description__text fw-normal"
+                            style="font-size: .78rem; opacity: .7; font-size: .76rem; padding-left: 2px;">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        </small>
+                    </div>
+
+                    <div class="">
+                        <div class="filed__card">
+                            <small class="fw-medium" style="color: var(--second-danger-color) !important;">Write
+                                the
+                                folder name before
+                                delete.</small>
+                            <input id="folder-name" type="text" class="input__modal" style="font-size: .8rem;"
+                                placeholder="Enter name of folder">
+                        </div>
+
+                    </div>
+
+                    <div class="filed__card">
+                        <div class="w-100 d-flex column-gap-2 " style="margin-top: 1.15rem;">
+                            <button id="btn-cancel-delete" class="btn-reset px-4">Cancel<i class='bx bx-x'></i></button>
+                            <button id="btn-update-folder" class="btn-delete">Delete Folder<i
+                                    class='bx bx-trash'></i></button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+    integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/folder.js"></script>
+</body>
+
+</html>
