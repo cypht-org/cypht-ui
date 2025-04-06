@@ -1,0 +1,33 @@
+@import url('/assets/css/main.css');
+@import url('/assets/css/server.css');
+
+.table-dark {
+    --bs-table-bg: #F8F9FB;
+    --bs-table-color: var(--foreground);
+    border: 1px solid rgba(128, 128, 128, 0.228);
+}
+
+thead tr {
+      background-color: red !important;
+      font-size: .8rem;
+      font-weight: 300 !important;
+}
+
+thead tr th {
+      font-size: .8rem;
+      font-weight: 600 !important;
+}
+
+tbody tr td {
+      font-size: .8rem;
+      font-weight: 400 !important;
+}
+
+td button {
+
+      border-radius: .3rem !important;
+}
+
+td button i {
+      font-size: 1rem;
+}
