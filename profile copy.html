@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Page</title>
+    <title>Profile Page</title>
     <!-- Bootstrap CSS -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
@@ -25,7 +25,7 @@
 </head>
 
 <body class="position-relative">
-    <div class="base__container d-flex flex-column-reverse flex-lg-row">
+    <div class="base__container d-flex flex-column-reverse flex-lg-row position-relative">
 
         <div class="menu__container magic-t-line">
 
@@ -52,7 +52,8 @@
                         <i class="bi bi-diagram-2"></i>
                     </a></li>
 
-                <li class="d-none d-md-flex" style="padding-top: 5px;"> <a href="/server.html" class="sidebar_active">
+                <li class="d-none d-md-flex" style="padding-top: 5px;"> <a href="/server.html"
+                        class="sidebar_active">
                         <i class='bx bxs-card'></i>
                     </a></li>
             </ul>
@@ -108,8 +109,7 @@
             </nav>
         </div>
 
-        <div class="flex-1 position-relative d-flex flex-column px-lg-4 px-xxl-5"
-            style="background-color: var(--background-3);">
+        <div class="flex-1 position-relative d-flex flex-column" style="background-color: var(--background-2);">
             <!-- Mobile -->
             <div class="d-flex flex-column  d-lg-none">
                 <div class="d-flex align-items-center justify-content-between column-gap-2 top__menu px-3 px-md-4 ">
@@ -132,51 +132,61 @@
             </div>
 
             <!-- Desktop -->
-            <div class="flex-1 d-flex flex-column">
-
-                <div class="d-none d-lg-flex align-items-center server_title_card mt-4">
-                    <h4 class="fw-semibold">Settings</h4>
-                </div>
+            <div class="d-flex d-lg-flex flex-1 magic-t-line">
 
 
-                <div class="flex-1 d-flex d-lg-flex flex-1 magic-t-line column-gap-4 mb-2">
-                    <div class="d-none d-lg-block parameter_menu_card">
-                        <ul>
-                            <li><a href="/server.html"><i class="bi bi-app-indicator"></i>General</a></li>
-                            <li><a href="/filters.html"><i class='bx bx-collection'></i>Filters</a></li>
-                            <li><a href="/block_list.html"><i class="bi bi-view-list"></i>Block List</a></li>
-                            <li><a href="/feed.html"><i class='bx bx-candles'></i>Feeds</a></li>
-                            <li><a href="/dev.html"><i class="bi bi-cpu-fill"></i>Dev</a>
-                            </li>
-                            <li><a href="/shortcuts.html"><i class="bi bi-command"></i>Shortcuts</a></li>
-                            <li><a href="/profile.html" class="parameter_active_menu">
-                                    <i class='bx bx-user'></i>
-                                    Profile</a></li>
-                        </ul>
-
+                <div class="d-none d-lg-block parameter__menu__card">
+                    <div class="title__card mb-2">
+                        <h3 class="fw-semibold">Settings</h3>
                     </div>
 
-                    <div class="flex-1 d-flex flex-column position-relative parameter_view_card">
+                    <div class="item__card d-flex flex-column">
+                        <span class="item__card__label">Menu</span>
+                        <ul class="">
+                            <li><a href="/server.html">Servers Settings</a></li>
+                            <li><a href="/filters.html">Filters</a></li>
+                            <li><a href="/block_list.html">Block List</a></li>
+                            <li><a href="/feed.html">Feeds</a></li>
+                            <li><a href="/dev.html">Dev</a></li>
+                            <li><a href="/shortcuts.html">Shortcuts</a></li>
+                            <li><a href="/profile.html" class="parameter__active__menu">Profile</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-                        <div class="d-flex column-gap-3  py-4  parameter_title_card ps-4">
+                <div class="flex-1 position-relative bg-dan">
+                    <div data-bs-spy="scroll" data-bs-target="#gen-params" data-bs-offset="0" tabindex="0"
+                        class="h-100 d-flex flex-column  px-md-5  pt-lg-3 ps-lg-3  overflow-y-auto desktop_scroll top-0 button-0"
+                        style=" background-color: var(--background)">
+
+                        <div class="py-4 param_label_container px-3">
+                            <div class="param_title fw-bold d-flex align-items-center">
+
+                                <div class="param_icon_card d-inline-flex d-none d-lg-block">
+                                    <i class="bi bi-sliders2-vertical"></i>
+                                </div>
+
+                                <span>Profile</span>
+                            </div>
+                            <small class="param_description">Profile lorem ipsum
+                                dolor sit
+                                amet
+                                consectetur
+                                adipisicing elit.
+                                Dolorum officiis doloribus
+                            </small>
 
                             <div>
-                                <div class="param_icon_card d-flex">
-                                    <i class="bx bx-user"></i>
-                                </div>
-                            </div>
-
-                            <div class="d-flex flex-column">
-                                <span class="parameter_title">Profile</span>
-                                <small class="param_description">Profile lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Dolorum officiis doloribus</small>
                             </div>
                         </div>
 
-                        <div class="parameter_content flex-1 d-flex flex-column mx-3 mx-lg-0 pt-lg-3 position-relative">
-                            <div class="position-absolute  dev_param_list fw-medium d-flex flex-column row-gap-4 px-2  pt-4 px-lg-4 desktop_scroll  end-0 start-0  overflow-y-auto"
-                                style="bottom: 15px; top: 15px;">
+                        <!--  -->
+                        <div class="flex-1 position-relative mt-3">
+                            <div
+                                class="position-absolute mb-4 dev_param_list p-1 fw-medium d-flex flex-column row-gap-4 pb-5 profile_list  end-0 start-0 px-3">
 
+                                <!-- Profile table -->
                                 <div class="table-responsive">
                                     <table class="table table-bordered table-hover text-center align-middle">
                                         <thead class="table-dark">
@@ -261,7 +271,6 @@
                                         </tbody>
                                     </table>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -269,43 +278,166 @@
             </div>
         </div>
 
-        <!-- Modal -->
-        <!-- 1. Menu -->
-        <div class="offcanvas offcanvas-start my-1 ms-1 rounded d-flex flex-column d-lg-none" tabindex="-1"
-            id="off-home-menu" aria-labelledby="offcanvasExampleLabel" style="width: 330px; ">
+        <div class="position-absolute float_btn_container  d-flex align-items-center justify-content-center rounded-2"
+            style="right: .9rem;  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.346);">
+            <button type="button" data-bs-toggle="offcanvas" data-bs-target="#new-server" aria-controls="offcanvasRight"
+                class="compose-btn btn d-flex align-items-center justify-content-center shadow rounded-2 p-md-3 rounded-md-3">
+                <i class="bi bi-plugin"></i>
+            </button>
+        </div>
+    </div>
 
-            <div class="offcanvas-body">
-                <div class="mt-2" style="width: 90px;">
-                    <img src="/assets/images/svg/logo_dark.svg" class="" alt="Logo">
-                </div>
-                <div class="d-flex flex-column menu_modal mb-2 mt-5 scrollable "
-                    style="max-height: calc(97dvh - 120px); overflow-y: auto;">
+    <!-- Modal -->
+    <!-- 1. Menu -->
+    <div class="offcanvas offcanvas-start my-1 ms-1 rounded d-flex flex-column d-lg-none" tabindex="-1"
+        id="off-home-menu" aria-labelledby="offcanvasExampleLabel" style="width: 330px; ">
 
-                    <div class="group_menu">
+        <div class="offcanvas-body">
+            <div class="mt-2" style="width: 90px;">
+                <img src="/assets/images/svg/logo_dark.svg" class="" alt="Logo">
+            </div>
+            <div class="d-flex flex-column menu_modal mb-2 mt-5 scrollable "
+                style="max-height: calc(97dvh - 120px); overflow-y: auto;">
 
-                        <ul class="p-0">
-                            <li><a href="/server.html"><i class="bi bi-app-indicator"></i>General</a></li>
-                            <li><a href="/filters.html"><i class='bx bx-collection'></i>Filters</a></li>
-                            <li><a href="/block_list.html"><i class="bi bi-view-list"></i>Block List</a></li>
-                            <li><a href="/feed.html"><i class='bx bx-candles'></i>Feeds</a></li>
-                            <li><a href="/dev.html"><i class="bi bi-cpu-fill"></i>Dev</a></li>
-                            <li><a href="/shortcuts.html"><i class="bi bi-command"></i>Shortcuts</a></li>
-                            <li><a href="/profile.html" class="parameter_active_menu"><i
-                                        class='bx bx-user'></i>Profile</a></li>
-                        </ul>
-                    </div>
+                <div class="group_menu">
+
+                    <ul class="p-0">
+                        <li><a href="/server.html">Servers Settings</a></li>
+                        <li><a href="/filters.html">Filters</a></li>
+                        <li><a href="/block_list.html">Block List</a></li>
+                        <li><a href="/feed.html">Feeds</a></li>
+                        <li><a href="/dev.html">Dev</a></li>
+                        <li><a href="/shortcuts.html">Shortcuts</a></li>
+                        <li><a href="/profile.html" class="active__menu">Profile</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <!-- Js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
-            integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </div>
 
-        <script src="/assets/js/utils.js"></script>
+    <!-- Local Contact -->
+    <div class="offcanvas offcanvas-end my-2 mx-2 rounded" tabindex="-1" id="new-server"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <div class="w-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 id="offcanvasRightLabel" class="fw-semibold">Add Server</h6>
+                    <div class="d-flex align-items-center">
+                        <button type="button" class=" text-reset clear__btn type__two__btn" style="font-size: 1.4rem;"
+                            data-bs-dismiss="offcanvas" aria-label="Close"><i class='bx bx-x'></i></button>
+                    </div>
+                </div>
+
+                <small class="fw-normal d-flex" style="width: 80%;">
+                    Add a new contact by entering essential details more.
+
+                </small>
+            </div>
+        </div>
+
+        <div class="offcanvas-body scrollable mt-2 mb-4" style="max-height: 80vh; padding-left: .6rem;">
+            <div class="" style="height: 70vh;">
+                <div class="d-flex flex-column row-gap-0">
+
+                    <!-- Person -->
+                    <small class="fw-semibold d-flex align-items-center gap-2 mb-2 ms-2"
+                        style="color: var(--menu-primary); font-size: .88rem;">
+                        <i class='bi bi-plugin' style="font-size: 1.1rem;"></i>Contact Info
+                    </small>
+                    <div class="mx-2 mt-2  d-flex flex-column" style="width: 93%">
+                        <div class="filed__card mb-3">
+                            <small class="field__label">Display Name</small>
+                            <input id="display_name" type="text" class="base__field" style="font-size: .8rem;"
+                                placeholder="Enter display name">
+                        </div>
+                        <div class="filed__card mb-3">
+                            <small class="field__label">Email Address</small>
+                            <input id="email" type="email" class="base__field" style="font-size: .8rem;"
+                                placeholder="Enter email address">
+                        </div>
+                        <div class="filed__card mb-3">
+                            <small class="field__label">IMAP Server</small>
+                            <div class="dropdown-container w-100">
+                                <div id="imap-server-list"
+                                    class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                    <span style="font-size: .8rem;">Select IMAP Server</span>
+                                    <button class="clear__btn border-0 bg-transparent" style="font-size: 1.1rem;">
+                                        <i class='bx bx-chevron-down icon'></i>
+                                    </button>
+                                </div>
+
+                                <div class="dropdown-menu-custom">
+                                    <a href="#">Option 1</a>
+                                    <a href="#">Option 2</a>
+                                    <a href="#">Option 3</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-inline-flex flex-column mb-3 row-gap-1 w-100">
+                            <small class="field__label">SMTP Server</small>
+                            <div class="dropdown-container">
+                                <div
+                                    class="dropdown-origin dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                    <span style="font-size: .8rem;">Select SMTP Server</span>
+                                    <button class="clear__btn border-0 bg-transparent" style="font-size: 1.1rem;">
+                                        <i class='bx bx-chevron-down icon'></i>
+                                    </button>
+                                </div>
+
+                                <div class="dropdown-menu-custom">
+                                    <a href="#">Option 1</a>
+                                    <a href="#">Option 2</a>
+                                    <a href="#">Option 3</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filed__card mb-3">
+                            <small class="field__label">Signature</small>
+                            <textarea name="" id="" type="text" class=" scrollable w-100"
+                                style="font-size: .8rem;"></textarea>
+                        </div>
+                        <div class="filed__card mb-3">
+                            <small class="field__label">Remark</small>
+                            <textarea name="" id="" type="text" class=" scrollable w-100"
+                                style="font-size: .8rem;"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check d-flex">
+                                <input class="form-check-input cursor-pointer" type="checkbox" value=""
+                                    id="ex-profile-check">
+                                <label
+                                    class="form-check-label fw-normal d-flex align-items-center cursor-pointer px-1 fw-medium"
+                                    style="font-size: .8rem;" for="ex-profile-check">
+                                    Set as default
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <!-- <button>Cancel</button> -->
+                            <button class="btn w-100 mt-1 py-2 text-white  btn-connect" style="font-size: .88rem;">Add
+                                Contact</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/assets/js/utils.js"></script>
 </body>
 
 </html>

@@ -265,6 +265,7 @@
     /* ------------------------------- Background ------------------------------- */
 
     --background-2: #F5F6FA;
+    --background-3: #F8F8F8;
 
 
     /* container scroll */
@@ -887,7 +888,7 @@ body {
     flex-direction: column;
     gap: 6px;
     margin-bottom: .7rem;
-    
+
 }
 
 .field__label {

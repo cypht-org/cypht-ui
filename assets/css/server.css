@@ -27,9 +27,151 @@
     width: 94% !important;
 }
 
+
+
+
+
+/* ---------------------------- Refactor Site ui ---------------------------- */
+
+.server_title_card {
+    min-height: 3rem;
+}
+
+.parameter_menu_card {
+    width: 15rem;
+    /* background-color: var(--red-300); */
+}
+
+.parameter_menu_card ul {
+    background-color: var(--background);
+    /* background-color: #EDEDED; */
+    list-style: none;
+    padding: 0;
+    color: var(--menu-secondary);
+    font-size: .85rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    border: .5px solid var(--gray-200);
+    border-radius: .5rem;
+    padding: .8rem .7rem;
+
+}
+
+.parameter_menu_card ul li {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.parameter_menu_card ul li a:hover {
+    color: var(--primary-color) !important;
+    background-color: var(--primary-color-50);
+    border-radius: 5px;
+    border: .8px solid var(--primary-color-200) !important;
+}
+
+.parameter_menu_card ul li a,
+.group_menu ul li a {
+    text-decoration: none;
+    color: var(--menu-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: .25rem 0;
+    padding-left: 8px;
+}
+
+.parameter_menu_card ul li a i {
+    font-size: 1.02rem;
+}
+
+
+.parameter_active_menu {
+    font-weight: 700;
+    color: var(--primary-color) !important;
+    background-color: var(--primary-color-50);
+    border-radius: 5px;
+    border: .8px solid var(--primary-color-200) !important;
+}
+
+/* View */
+
+.parameter_view_card {
+    background-color: #ededed77;
+    border-radius: .9rem .9rem .5rem .5rem;
+    border: .5px solid var(--gray-200);
+}
+
+.parameter_title_card {
+    min-height: 4.4rem;
+    border-radius: .9rem .9rem 0 0;
+
+}
+
+.parameter_content {
+    border-radius: .9rem .9rem .5rem .5rem;
+    background-color: var(--background)
+}
+
+/* ----------------------------------- III ---------------------------------- */
+
+
+.param_icon_card {
+    padding: 4px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+    box-shadow: 0px 4px 6px rgba(168, 18, 18, 0.026);
+}
+
+.param_icon_card i {
+    font-size: 1.2rem;
+}
+
+.parameter_title {
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.param_description {
+    font-size: .8rem;
+    color: var(--gray-400);
+    font-weight: 500;
+    /* width: 99%; */
+    /* background-color: red; */
+}
+
+
+
 @media (min-width: 768px) {
     .offcanvas {
         width: 55% !important;
+    }
+}
+
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+
+@media (min-width: 768px) {
+    .offcanvas {
+        width: 55% !important;
+    }
+
+    .param_icon_card {
+
+        width: 2rem;
+        height: 2rem;
+
     }
 }
 

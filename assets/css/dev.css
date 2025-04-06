@@ -1,26 +1,47 @@
 @import url('/assets/css/server.css');
 
 
-.dev_param_list p {
-      font-size: .88rem;
-      color: var(--gray-700);
+.dev_param_list {
+      bottom: 15px;
+      top: 15px;
+}
+
+.dev_param_list span {
+      font-size: .86rem;
+      color: var(--gray-500);
       margin: 0;
       padding: 0;
 }
 
 
-.dev_param_list p a {
+.dev_param_list a {
+      margin-left: 2px;
       text-decoration: none;
-      display: flex;
-      gap: .4rem;
-      align-items: center;
-      font-weight: 600;
+      font-weight: 500;
+      font-size: .8rem;
+      color: var(--primary-color) !important;
+      transition: color 0.3s ease-in-out;
+}
+
+.dev_param_list a:hover {
+      text-decoration: underline;
+}
+
+.dev_param_list a i {
+      margin-left: 4px;
+}
+
+.dev_param_list .txt_strong {
+      font-weight: 700;
       font-size: .82rem;
+      color: var(--foreground);
 }
 
 
 @media (min-width: 992px) {
       .dev_param_list {
-            padding-right: 14rem !important;
+            width: 88%;
       }
+
+
 }
