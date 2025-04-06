@@ -1,0 +1,91 @@
+@import url('/assets/css/main.css');
+@import url('/assets/css/utils.css');
+@import url('/assets/css/index.css');
+@import url('/assets/css/new_sidebar.css');
+
+
+
+/* -------------------------------- SHORTCUTS ------------------------------- */
+
+.shortcuts_param_list h5 {
+    font-size: .95rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    display: flex;
+    gap: .4rem;
+}
+
+.shortcuts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: .85rem;
+    font-weight: normal;
+}
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    font-size: .78rem;
+    gap: 1.15rem;
+}
+
+.shortcut-item .key {
+
+    flex-grow: 1;
+    font-weight: 600;
+
+}
+
+.shortcut-item .action {
+    width: 60%;
+    /* background-color: red; */
+}
+
+.shortcut-item i {
+    font-size: 1rem;
+}
+
+
+
+.float_btn_container {
+    right: 2.5rem !important;
+    bottom: 3rem !important;
+}
+
+.float_btn_container button {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: ease 0.2s;
+}
+
+.float_btn_container button:focus {
+    background-color: var(--primary-color-400);
+    color: #fff;
+}
+
+
+.offcanvas {
+    width: 94% !important;
+}
+
+@media (min-width: 768px) {
+    .offcanvas {
+        width: 55% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .offcanvas {
+        width: 35% !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .offcanvas {
+        width: 30% !important;
+    }
+}

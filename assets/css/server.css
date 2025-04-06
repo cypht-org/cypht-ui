@@ -3,51 +3,6 @@
 @import url('/assets/css/index.css');
 @import url('/assets/css/new_sidebar.css');
 
-
-
-/* -------------------------------- SHORTCUTS ------------------------------- */
-
-.shortcuts_param_list h5 {
-    font-size: .95rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    display: flex;
-    gap: .4rem;
-}
-
-.shortcuts-grid {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    font-size: .85rem;
-    font-weight: normal;
-}
-
-.shortcut-item {
-    display: flex;
-    align-items: center;
-    font-size: .78rem;
-    gap: 1.15rem;
-}
-
-.shortcut-item .key {
-
-    flex-grow: 1;
-    font-weight: 600;
-
-}
-
-.shortcut-item .action {
-    width: 60%;
-    /* background-color: red; */
-}
-
-.shortcut-item i {
-    font-size: 1rem;
-}
-
-
-
 .float_btn_container {
     right: 2.5rem !important;
     bottom: 3rem !important;
