@@ -1,0 +1,175 @@
+.nav-pills .nav-link.active {
+    background-color: #057ABB !important;
+    color: white !important;
+}
+
+
+/* ------------------------------ Genral Config ----------------------------- */
+
+.config__card {
+    padding-top: 1.5rem;
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+}
+
+
+.config__label {
+    width: 50%;
+    padding-right: 10px;
+}
+
+.config__label span {
+    font-size: .8rem;
+    font-weight: 500;
+}
+
+.resize__check__box {
+    height: 19px;
+}
+
+/* Config Element */
+
+.config__element {
+    min-width: 15%;
+}
+
+
+/*  */
+
+.config__actions {
+    width: 20%;
+}
+
+.restart__btn {
+    background-color: var(--primary-color);
+    border: .5px solid rgba(128, 128, 128, 0.2);
+    padding: 3px 8px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    gap: 2px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.restart__btn i {
+    font-size: 1.1rem;
+}
+
+/* select form */
+.select__content {
+    display: block;
+    padding: 5px 8px;
+    height: 35px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+
+/* Input */
+.input__content {
+    display: block;
+    padding: 5px 8px;
+    font-size: .8rem;
+    cursor: pointer;
+}
+
+.textarea__content {
+    padding: 5px 8px;
+    font-size: .8rem;
+    border: .5px solid var(--gray-200) !important;
+    height: 60px;
+}
+
+/* Otp */
+
+.otp__input {
+    width: 40px;
+    height: 42px;
+    text-align: center;
+}
+
+
+
+
+/* --------------------------------- NEW CSS -------------------------------- */
+
+.params_primary_container {
+    display: flex;
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+.param_menu_container {
+    display: none;
+    width: 15rem;
+    height: 100%;
+}
+
+.param_config_container {
+    flex-grow: 1;
+}
+
+
+.param_config_container .param_title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+
+
+/* style card one */
+
+.config_element_t1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .6rem;
+    justify-items: end;
+}
+
+.config_element_t1 .config_element_title {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.config_element_t1 .config_element_body {
+    display: flex;
+    justify-content: end;
+}
+
+
+@media (min-width: 768px) {
+
+    .param_menu_container {
+        display: flex;
+
+    }
+
+}
+
+@media (min-width: 920px) {
+
+    .restart__btn {
+        background-color: var(--primary-color);
+        border: .5px solid rgba(128, 128, 128, 0.2);
+        padding: 3px 8px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        gap: 2px;
+        font-weight: 600;
+        font-size: .78rem;
+    }
+
+}

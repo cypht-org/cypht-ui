@@ -368,7 +368,6 @@ function displayTags() {
     $("#new-tag-modal").modal('hide');
   }
 
-  // Action sur le bouton Save
   $("#tag-save-btn").click(function () {
     let designation = $("#tag_designation").val().trim();
     let parentId = selectedTag ? selectedTag.id : null;
@@ -383,13 +382,12 @@ function displayTags() {
       tags.push(newTag);
       populateTagsDropdown();
       displayTags();
-      initTagForm(); // Réinitialiser le formulaire après l'ajout
+      initTagForm();
     } else {
       alert("Veuillez entrer une désignation !");
     }
   });
 
-  // Charger les tags au démarrage
   populateTagsDropdown();
   displayTags();
 });
@@ -399,8 +397,8 @@ $(document).on("click", ".tag-node", function () {
   let $parentLi = $(this).parent();
 
   if ($subList.length) {
-    $subList.toggle(); // Affiche ou masque les enfants
-    $parentLi.toggleClass("expanded"); // Change l'icône de la flèche
+    $subList.toggle();
+    $parentLi.toggleClass("expanded");
   }
 });
 
