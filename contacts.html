@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- Bootstrap CSS -->
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Icon 1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coswise/hicon-css@latest/web-fonts/hicon.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/new_sidebar.css">
+    <link rel="stylesheet" href="/assets/css/contact.css">
+</head>
+
+<body class="position-relative">
+    <div class="base__container d-flex flex-column-reverse flex-lg-row bg-danger" style="height: 100dvh;">
+
+        <div class="menu__container magic-t-line">
+
+            <!-- Mobile -->
+            <ul class="p-0 m-0 d-flex align-items-center justify-content-around d-lg-none" id="sidebar-menu">
+                <li> <a href="/home.html" class="menu-link">
+                        <i class="bi bi-grid"></i>
+                    </a></li>
+                <li> <a href="/folder.html" class="menu-link">
+                        <i class="bi bi-folder"></i>
+                    </a></li>
+                <li> <a href="/contacts.html" class="menu-link sidebar_active">
+                        <i class="bi bi-people-fill"></i>
+                    </a></li>
+                <li> <a href="/info.html" class="menu-link">
+                        <i class="bi bi-exclamation-diamond"></i>
+                    </a></li>
+                <li id="setting-btn" class="d-md-none"> <a class="menu-link" href="#">
+                        <i class="bi bi-gear"></i>
+                    </a></li>
+
+
+                <li class="d-none d-md-flex"> <a class="menu-link" href="/site.html">
+                        <i class="bi bi-diagram-2"></i>
+                    </a></li>
+
+                <li class="d-none d-md-flex" style="padding-top: 5px;"> <a href="/server.html" class="">
+                        <i class='bx bx-card'></i>
+                    </a></li>
+            </ul>
+
+            <div id="setting-menu"
+                class="position-absolute setting__container  align-items-end justify-content-end  me-3 d-lg-none">
+                <ul class="d-flex align-items-center justify-content-start column-gap-3 mb-2  py-0 px-3">
+                    <li class=""> <a href="/info.html" class="menu-link">
+                            <i class="bi bi-diagram-2-fill" style="font-size: 1.2rem;"></i>
+                            </i>Site
+                        </a></li>
+                    <li class=""> <a href="/server.html" class="menu-link">
+                            <i class='bx bxs-card'></i>Server
+                        </a></li>
+                </ul>
+            </div>
+            <!-- </nav> -->
+
+            <nav class="d-none d-lg-flex flex-column justify-content-between  magic-r-line py-2">
+                <div class="d-flex flex-column align-items-center  gap-4  justify-content-center">
+                    <div class="d-flexalign-items-center logo_content">
+                        <img class="object-fit-cover" src="/assets/images/svg/logo.svg" />
+                    </div>
+
+                    <div class="menu_group">
+                        <ul class="">
+                            <li><a href="/home.html">
+                                    <i class="bi bi-grid-fill"></i>
+                                </a></li>
+                            <li><a href="/folder.html">
+                                    <i class="bi bi-folder"></i>
+                                </a></li>
+                            <li><a href="/contacts.html" class="sidebar_active">
+                                    <i class="bi bi-people-fill"></i>
+                                </a></li>
+                            <li><a href="/info.html">
+                                    <i class='bi bi-exclamation-diamond'></i>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="button_group align-items-center gap-3 d-flex flex-column justify-content-end ">
+                    <a href="/site.html"><i class="bi bi-diagram-2"></i></a>
+                    <a href="/server.html"><i class="bi bi-hdd-network"></i></a>
+                    <div>
+                        <div class="rounded_circle">
+                            <img src="/assets/images/avatar.jpg" alt="" class="rounded-circle avatar">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="flex-1 position-relative d-flex flex-column" style="background-color: var(--background-2);">
+            <!-- Mobile -->
+            <div
+                class="d-flex align-items-center justify-content-between column-gap-2 top__menu px-3 px-md-4 d-lg-none">
+
+                <div class="search_content">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class='bx bx-search'></i>
+                    </div>
+                    <input type="text" class="" placeholder="search message">
+                </div>
+                <!-- <div> -->
+                <!-- popup -->
+
+                <div class="position-relative">
+                    <!-- vue -->
+                    <div id="btn_popup" class=" d-flex gap-1 fw-medium cursor-pointer">
+                        <span id="filter_value" class="" style="font-size: .8rem;">Filter by</span>
+                        <div>
+                            <i class="popup__icon icon bx bx-chevron-down" style="font-size: 1.1rem;"></i>
+                        </div>
+                    </div>
+                    <div class="popup__card p-2">
+                        <div class="popup__body filter__body">
+                            <div class="popup__title">
+                                <span class="d-flex align-items-center column-gap-2"><i class='bx bxs-filter-alt'
+                                        style="font-size: 1.05rem;"></i>Filter
+                                    By</span>
+
+                            </div>
+                            <ul>
+
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input cursor-pointer" type="checkbox" id="filter_1"
+                                            value="Filter by name">
+                                        <label class="fw-medium cursor-pointer" for="filter_1"
+                                            style="margin-left: 4px;">Name</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input cursor-pointer" type="checkbox" id="filter_2">
+                                        <label class="fw-medium cursor-pointer" for="filter_2"
+                                            style="margin-left: 4px;">Last Name</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input cursor-pointer" type="checkbox" id="filter_3">
+                                        <label class="fw-medium cursor-pointer" for="filter_3"
+                                            style="margin-left: 4px;">Filter 3</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input cursor-pointer" type="checkbox" id="filter_4">
+                                        <label class="fw-medium cursor-pointer" for="filter_4"
+                                            style="margin-left: 4px;">Filter 4</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile -->
+            <div class="d-flex d-lg-flex flex-1 magic-t-line flex-1  position-relative"
+                style="background-color: var(--background);">
+                <div class="position-absolute top-0 button-0 start-0 end-0 h-100 d-flex">
+                    <div class="d-none d-lg-flex">
+                        <div id="menu__container" class="">
+                            <div class="ib__menu w-100 h-100 pt-5 d-flex flex-column row-gap-4 ps-3"
+                                style="background-color: var(--background);">
+
+                                <small>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing.
+                                </small>
+
+                                <ul class="contact__menu d-flex flex-column row-gap-3">
+                                    <li><a href="" class="contact__menu__active"><i class='bx bxs-contact'></i>All
+                                            contacts</a></li>
+                                    <li> <a href=""><i class='bx bx-user-pin'></i>Personal address</a></li>
+                                    <li><a href=""> <i class='bx bxs-user-rectangle'></i>Trusted senders</a></li>
+                                    <li><a href=""><i class='bx bxs-user-detail'></i>Collected recipients</a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column left__card position-relative magic-l-line contact_container"
+                        style="width: 22rem; ">
+
+                        <div class="d-none  d-lg-flex align-items-center justify-content-between px-2 magic-b-line"
+                            style="height: 4.3rem; background: var(--background);">
+                            <div class="search__content">
+                                <i class='bx bx-search' style="font-size: 1.2rem;"></i>
+                                <input type="text" placeholder="search message">
+                            </div>
+
+                            <div class="position-relative">
+
+                                <!-- vue -->
+                                <div id="btn_popup" class=" d-flex gap-1 fw-medium cursor-pointer">
+                                    <span id="filter_value" class="" style="font-size: .8rem;">Filter by</span>
+                                    <div>
+                                        <i class="popup__icon icon bx bx-chevron-down" style="font-size: 1.1rem;"></i>
+                                    </div>
+                                </div>
+
+
+                                <!-- popup -->
+                                <div class="popup__card p-2">
+                                    <div class="popup__body filter__body">
+                                        <div class="popup__title">
+                                            <span class="d-flex align-items-center column-gap-2"><i
+                                                    class='bx bxs-filter-alt' style="font-size: 1.05rem;"></i>Filter
+                                                By</span>
+
+                                        </div>
+                                        <ul>
+
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input cursor-pointer" type="checkbox"
+                                                        id="filter_1" value="Filter by name">
+                                                    <label class="fw-medium cursor-pointer" for="filter_1"
+                                                        style="margin-left: 4px;">Name</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input cursor-pointer" type="checkbox"
+                                                        id="filter_2">
+                                                    <label class="fw-medium cursor-pointer" for="filter_2"
+                                                        style="margin-left: 4px;">Last Name</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input cursor-pointer" type="checkbox"
+                                                        id="filter_3">
+                                                    <label class="fw-medium cursor-pointer" for="filter_3"
+                                                        style="margin-left: 4px;">Filter 3</label>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="form-check">
+                                                    <input class="form-check-input cursor-pointer" type="checkbox"
+                                                        id="filter_4">
+                                                    <label class="fw-medium cursor-pointer" for="filter_4"
+                                                        style="margin-left: 4px;">Filter 4</label>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="items__list  overflow-y-auto scrollable"
+                            style="padding: 0; padding-bottom: .95rem;">
+                            <!--  -->
+                            <div class="d-flex align-items-center column-gap-1 px-2 py-3 mb-2 position-sticky top-0"
+                                style="background-color: var(--background); z-index: 20;">
+                                <div class="form-check">
+                                    <input class="form-check-input cursor-pointer" type="checkbox"
+                                        id="flexSwitchCheckChecked">
+                                    <label class="fw-semibold cursor-pointer" for="flexSwitchCheckChecked"
+                                        style="font-size: .8rem; margin-left: 4px;">All Contacts</label>
+                                </div>
+
+                                <span style="font-size: .78rem; margin-bottom: 3.5px;">(
+                                    <span id="contact-total" class="fw-semibold">00</span> )
+                                </span>
+                            </div>
+
+                            <div id="contact-list" class="row-gap-2 d-flex flex-column mt-0 px-2"></div>
+                        </div>
+
+                        <div class="position-absolute new__contact__btn d-flex align-items-center justify-content-center"
+                            style="right: .8rem; bottom: 1.6rem;">
+
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#type-add-contact"
+                                class="compose-btn btn d-flex align-items-center justify-content-center shadow rounded-2 p-md-3 rounded-md-3"
+                                style="color: #fff; background-color: var(--primary-color); padding: 11px;">
+                                <i class="bx bx-user-plus" style="font-size: 1.4rem;"></i>
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Right -->
+                    <div class="es1__overview__card flex-1 d-none d-md-flex magic-l-line">
+                        <div class="flex-1 p-4 d-flex flex-column row-gap-4"
+                            style="padding: 0; background-color: var(--background);">
+                            <!--  -->
+                            <div class="d-flex column-gap-3 align-items-center">
+
+                                <div class="d-flex">
+                                    <div class=" d-flex align-items-center justify-content-center rounded-circle fw-semibold"
+                                        style="height: 55px; width: 55px; background-color: #33FF57; color:#000" ;">
+                                        <i class='bx bx-user' style="font-size: 1.2rem"></i>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4>Bin Maurice</h4>
+                                    <div class="d-flex align-items-center column-gap-2">
+
+                                        <!-- <div> -->
+                                        <button
+                                            class="type__label fw-semibold d-flex align-items-center column-gap-2 btn-connect">
+                                            <i class='bx bx-envelope fs-6'></i>
+                                            Write
+                                            Message</button>
+                                        <!-- </div> -->
+                                        <button class="overview__bt__action px-2 py-1">
+                                            <i class='bx bx-pen'></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+
+                                <div class="pt-4 menu__card">
+                                    <ul class="nav nav-pills mb-3 column-gap-4" id="pills-tab" role="tablist">
+                                        <li class="" role="presentation">
+                                            <button class="clear__btn active" id="pills-overview-tab"
+                                                data-bs-toggle="pill" data-bs-target="#pills-overview" type="button"
+                                                role="tab" aria-controls="pills-overview"
+                                                aria-selected="true">Overview</button>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                                <div class="tab-content py-3 ps-3" id="pills-tabContent">
+
+                                    <div class="tab-pane fade active show pt-3" id="pills-overview" role="tabpanel"
+                                        aria-labelledby="pills-overview-tab">
+
+                                        <div class="d-flex flex-column mb-3">
+                                            <small class="fw-semibold d-flex align-items-center gap-1"
+                                                style="color: var(--menu-primary); font-size: .9rem;">
+                                                <i class='bx bx-user' style="font-size: 1rem;"></i>Information
+                                            </small>
+                                            <small class="description__text fw-normal"
+                                                style="font-size: .78rem; opacity: .7; font-size: .76rem; padding-left: 2px;">
+                                                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                            </small>
+                                        </div>
+
+
+
+                                        <!-- <div> -->
+                                        <div class=" mt-2  d-flex flex-column" style="width: 90%">
+                                            <div class="filed__card mb-3">
+                                                <small
+                                                    class="field__label d-flex align-items-center column-gap-2 fw-semibold">
+                                                    <i class='bx bx-envelope' style="font-size: 1rem;"></i>Email</small>
+                                                <span class="overview__label__value">bin243@gmail.com</span>
+                                            </div>
+                                            <div class="filed__card mb-3">
+                                                <small
+                                                    class="field__label d-flex align-items-center column-gap-2 fw-semibold"><i
+                                                        class='bx bx-phone' style="font-size: 1rem;"></i>Phone
+                                                    Number</small>
+                                                <span class="overview__label__value">+234 999 786 354</span>
+                                            </div>
+
+
+                                            <div class="filed__card mb-3">
+                                                <small
+                                                    class="field__label d-flex align-items-center column-gap-2 fw-semibold"><i
+                                                        class='bx bx-plug' style="font-size: 1rem;"></i>Personal
+                                                    Addresses</small>
+                                                <span class="overview__label__value">Collected sender</span>
+                                            </div>
+
+                                        </div>
+                                        <!-- </div> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <!-- Type Add Model -->
+    <div class="modal fade" id="type-add-contact" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content p-1">
+
+                <div class="modal-header border-0">
+                    <div class="d-flex flex-column justify-content-between  w-100">
+                        <div class="d-flex justify-content-between">
+                            <h6 id="offcanvasRightLabel" class="fw-semibold">Add to block-list</h6>
+                            <div class="d-inline-flex">
+                                <button type="button" class=" text-reset clear__btn type__two__btn"
+                                    data-bs-dismiss="modal" style="font-size: 1.2rem; margin-top: -6px;"
+                                    aria-label="Close"><i class='bx bx-x'></i></button>
+                            </div>
+                        </div>
+
+                        <small class="fw-normal me-3" style="font-size: .75rem;">Step
+                            of
+                            Lorem,
+                            ipsum
+                            dolor sit amet
+                            consectetur adipisicing elit. </small>
+                    </div>
+                </div>
+
+
+                <div class="modal-body">
+
+                    <!-- Ldap -->
+                    <div class="add-option d-flex align-items-start  rounded form-check">
+                        <div class="p-3">
+                            <input type="radio" id="ldap" name="type_contact" value="ldap"
+                                class=" mt-1 form-check-input _radio">
+                            <label for="ldap" class="ms-1">
+                                <strong>LDAP Contact</strong><br>
+                                <small class="text-muted" style="font-size: .75rem;">A contact stored in an LDAP system,
+                                    used for centralized directory management
+                                    tools.</small>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Local -->
+                    <div class="add-option d-flex align-items-start  rounded form-check my-4">
+                        <div class="p-3">
+                            <input type="radio" id="local" name="type_contact" value="local"
+                                class=" mt-1 form-check-input _radio">
+                            <label for="local" class="ms-1">
+                                <strong>Local Contact</strong><br>
+                                <small class="text-muted" style="font-size: .75rem;">A contact stored locally within a
+                                    specific system or application.
+                                    tools.</small>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="" style="font-size: .75rem;">
+
+                        <label for="agree" class="form-check-label text-muted">
+                            Or <a href="#" class="text-decoration-none ">Import contact file</a>. Find
+                            out
+                            more about how we use and protect your data in our <a href="#"
+                                class="text-decoration-none">CSV file</a>.
+                        </label>
+                    </div>
+
+
+                    <button class="btn w-100 mt-4 py-2 text-white fw-medium btn-connect" data-bs-dismiss="modal"
+                        aria-label="Close" onclick="open_offcanvas()">Next</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Ldap Contact  ldap-contact-->
+    <div class="offcanvas offcanvas-end  mx-2 my-2 border-0" tabindex="-1" id="ldap-contact"
+        aria-labelledby="offcanvasRightLabel" style="width: 500px; background-color: transparent;">
+
+
+        <div class=" d-flex flex-column rounded" style="background-color: var(--background);">
+            <div class="offcanvas-header">
+                <div class="w-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6 id="offcanvasRightLabel" class="fw-semibold">Add LDAP contact</h6>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class=" text-reset clear__btn type__two__btn"
+                                style="font-size: 1.4rem;" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                                    class='bx bx-x'></i></button>
+                        </div>
+                    </div>
+
+                    <small class="fw-normal d-flex" style="width: 80%;">
+                        Add a new contact by entering essential details more to keep
+                        your contacts organized.
+
+                    </small>
+                </div>
+            </div>
+            <div class="offcanvas-body ">
+                <div class="scrolbale" style=" margin-left: .6rem; max-height: 80dvh; width: 90%">
+                    <div class="d-flex flex-column row-gap-0">
+
+
+                        <!-- Person -->
+                        <div class="mb-4">
+                            <small class="fw-semibold d-flex align-items-center gap-2"
+                                style="color: var(--menu-primary); font-size: .8rem;">
+                                <i class='bx bx-user' style="font-size: 1rem;"></i>Contact Info
+                            </small>
+                            <div class="contact__type">
+                                <div class="filed__card">
+                                    <small class="field__label">First Name</small>
+                                    <input id="first_name" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter first name">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Last Name</small>
+                                    <input id="last_name" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter last name">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Email</small>
+                                    <input id="email" type="email" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter email address">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Display Name</small>
+                                    <input id="display_name" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter display name">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="mb-4">
+                            <small class="fw-semibold d-flex align-items-center gap-2"
+                                style="color: var(--menu-primary); font-size: .8rem;">
+                                <i class='bx bx-envelope' style="font-size: 1rem;"></i>Location
+                            </small>
+                            <div class="contact__type">
+
+                                <div class="filed__card">
+                                    <small class="field__label">Locality</small>
+                                    <input id="locality" type="email" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter locality">
+                                </div>
+
+                                <div class="filed__card">
+                                    <small class="field__label">State</small>
+                                    <input id="state" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter state">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Street</small>
+                                    <input id="street" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter street">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Postal Code</small>
+                                    <input id="street" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter postal code">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Title</small>
+                                    <input id="tilte" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter title">
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Phones -->
+                        <div class="mb-4">
+                            <small class="fw-semibold d-flex align-items-center gap-2"
+                                style="color: var(--menu-primary); font-size: .8rem;">
+                                <i class='bx bx-phone' style="font-size: 1rem;"></i>Phone Numbers
+                            </small>
+                            <div class="contact__type">
+                                <div class="filed__card">
+                                    <small class="field__label">Fax Number</small>
+                                    <input id="fax_number" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter fax number">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Mobile Number</small>
+                                    <input id="mobile_number" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter mobile number">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Room Number</small>
+                                    <input id="room_number" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter room number">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">License Plate Number</small>
+                                    <input id="license_number" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter license plate number">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Enterprise -->
+                        <div class="mb-4">
+                            <small class="fw-semibold d-flex align-items-center gap-2"
+                                style="color: var(--menu-primary); font-size: .8rem;">
+                                <i class='bx bx-buildings' style="font-size: 1rem;"></i>Enterprise
+                            </small>
+                            <div class="contact__type">
+                                <div class="filed__card">
+                                    <small class="field__label">Organization Name</small>
+                                    <input id="organization_name" type="text" class="base__field"
+                                        style="font-size: .8rem;" placeholder="Enter organization name">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Organization Unit</small>
+                                    <input id="organization_unit" type="text" class="base__field"
+                                        style="font-size: .8rem;" placeholder="Enter organization unit">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Department Number</small>
+                                    <input id="department_number" type="text" class="base__field"
+                                        style="font-size: .8rem;" placeholder="Enter department number">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Employee Number</small>
+                                    <input id="employee_number" type="text" class="base__field"
+                                        style="font-size: .8rem;" placeholder="Enter employee number">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Employee Type</small>
+                                    <input id="employee_type" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter employee type">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Others -->
+                        <div class="mb-4">
+                            <small class="fw-semibold d-flex align-items-center gap-2"
+                                style="color: var(--menu-primary); font-size: .8rem;">
+                                <i class='bx bx-file' style="font-size: 1rem;"></i>Others
+                            </small>
+                            <div class="contact__type">
+                                <div class="filed__card">
+                                    <small class="field__label">Language</small>
+                                    <input id="language" type="text" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter language">
+                                </div>
+                                <div class="filed__card">
+                                    <small class="field__label">Website</small>
+                                    <input id="website" type="url" class="base__field" style="font-size: .8rem;"
+                                        placeholder="Enter website">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" d-flex mb-3 pb-4" style="width: 100% ; padding-left: .3rem;">
+                            <div class="filed__card ps-4 w-100">
+                                <button class="btn w-100 mt-1 py-2 text-white  btn-connect"
+                                    style="font-size: .88rem; ">Add
+                                    Contact</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Local Contact -->
+    <div class="offcanvas offcanvas-end my-2 mx-2 rounded" tabindex="-1" id="local-contact"
+        aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <div class="w-100">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 id="offcanvasRightLabel" class="fw-semibold">Add new local contact</h6>
+                    <div class="d-flex align-items-center">
+                        <button type="button" class=" text-reset clear__btn type__two__btn" style="font-size: 1.4rem;"
+                            data-bs-dismiss="offcanvas" aria-label="Close"><i class='bx bx-x'></i></button>
+                    </div>
+                </div>
+
+                <small class="fw-normal d-flex" style="width: 80%;">
+                    Add a new contact by entering essential details more to keep
+                    your contacts organized.
+
+                </small>
+            </div>
+        </div>
+
+        <div class="offcanvas-body scrollable" style="max-height: 80vh; padding-left: .6rem;">
+            <div class="" style="height: 70vh;">
+                <div class="d-flex flex-column row-gap-0">
+
+
+                    <!-- Person -->
+                    <!-- <div class="mb-4"> -->
+                    <small class="fw-semibold d-flex align-items-center gap-1 mb-2"
+                        style="color: var(--menu-primary); font-size: .8rem;">
+                        <i class='bx bx-user' style="font-size: 1rem;"></i>Contact Info
+                    </small>
+                    <div class="mx-2 mt-2  d-flex flex-column" style="width: 90%">
+                        <div class="filed__card mb-3">
+                            <small class="field__label">Full Name</small>
+                            <input id="full_name" type="text" class="base__field" style="font-size: .8rem;"
+                                placeholder="Enter contact name">
+                        </div>
+                        <div class="filed__card mb-3">
+                            <small class="field__label">Email</small>
+                            <input id="email" type="email" class="base__field" style="font-size: .8rem;"
+                                placeholder="Enter email">
+                        </div>
+                        <div class="filed__card mb-3">
+                            <small class="field__label">Phone Number</small>
+                            <input id="phone_number" type="email" class="base__field" style="font-size: .8rem;"
+                                placeholder="Enter phone number">
+                        </div>
+
+                        <div class="filed__card mb-3">
+                            <small class="field__label" style="font-size: .8rem;">Personal Addresses</small>
+                            <div class="dropdown-container w-100">
+                                <div id="address-list"
+                                    class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                    <span style="font-size: .8rem;">Select Options</span>
+                                    <button class="clear__btn border-0 bg-transparent" style="font-size: 1.1rem;">
+                                        <i class='bx bx-chevron-down icon'></i>
+                                    </button>
+                                </div>
+
+                                <div class="dropdown-menu-custom">
+                                    <a href="#">Option 1</a>
+                                    <a href="#">Option 2</a>
+                                    <a href="#">Option 3</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="">
+                            <!-- <button>Cancel</button> -->
+                            <button class="btn w-100 mt-4 py-2 text-white  btn-connect" style="font-size: .88rem;">Add
+                                Contact</button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/contact.js"></script>
+</body>
+
+</html>
