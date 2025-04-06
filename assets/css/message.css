@@ -1,0 +1,246 @@
+@import url('./home.css');
+@import url('./new_sidebar.css');
+/* @import url('./'); */
+
+.top_card {
+    height: 3.7rem;
+    display: flex;
+    background-color: var(--background);
+}
+
+.top_card i {
+    font-size: 1.2rem;
+}
+
+
+.top_card button {
+    border: none;
+    background-color: transparent;
+}
+
+
+/* -------------------------------- Mail List ------------------------------- */
+
+
+.mail__content .mails__list {
+    background-color: var(--background);
+    height: 100%;
+}
+
+
+.mail_content {
+    /* margin-top: 3.7rem; */
+}
+
+.email-item:hover {
+    background: #f1f5f9;
+}
+
+.email-avatar {
+    width: 40px;
+    height: 40px;
+    background: #d9d9d9;
+}
+
+.email-content {
+    flex-grow: 1;
+}
+
+.email-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.email-header h5 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.email-initial {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+
+.email-time {
+    font-size: 10px;
+    color: gray;
+}
+
+
+.email-message {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+
+#email-sender-mail {
+    /* font-size: 1px; */
+    font-weight: 400;
+    color: gray;
+}
+
+#email-subject {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#email-sender {
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+
+.attachment-section img {
+    width: 38px;
+    margin-bottom: .3rem;
+}
+
+.attachment-section {
+    font-size: .8rem;
+}
+
+.attachment_card {
+    /* border-top: 0.5px solid var(--gray-300); */
+    /* padding-top: 1rem; */
+}
+
+
+/* --------------------------------- header --------------------------------- */
+
+.header_detail {
+    position: absolute;
+    top: 2rem;
+    left: -50%;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.052);
+    border-radius: 4px;
+    min-width: 350px;
+    max-width: 500px;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    display: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 10;
+}
+
+/* Affichage du menu */
+.show_header_detail {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Style des éléments de la liste */
+
+.header_detail li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 0;
+}
+
+.header_detail li span:first-child {
+    white-space: nowrap;
+    /* Empêche le label de passer à la ligne */
+    font-weight: bold;
+    flex-shrink: 0;
+    font-size: .82rem;
+    width: 15%;
+    text-align: end;
+    /* Empêche le label de rétrécir */
+}
+
+.header_detail li span:last-child {
+    flex-grow: 1;
+    /* Permet au contenu de s'étendre */
+    text-align: right;
+    /* Aligner les valeurs à droite */
+    overflow-wrap: break-word;
+    text-align: start;
+    font-size: .82rem;
+    /* Permet aux longues valeurs de se couper si besoin */
+}
+
+/* Style du bouton dropdown */
+#btn_dropdown {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    font-size: .9rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Petit triangle indicateur */
+.header_detail::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 15px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+
+
+/* More Menu */
+.bar_more_menu {
+    position: absolute;
+    top: 2rem;
+    /* right: 0; */
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.076);
+    padding: 0px 0px;
+    width: 150px;
+    list-style: none;
+    z-index: 10;
+    border: .5px solid var(--gray-300);
+}
+
+.bar_more_menu li {
+    padding: 0;
+    margin: 0;
+}
+
+.bar_more_menu li i {
+    font-size: .95rem;
+    margin-right: 10px;
+}
+
+.bar_more_menu li a {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 9px 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: .85rem;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.bar_more_menu li a:hover {
+    background-color: #f0f2f5;
+    color: #000;
+}
+
+
+@media (min-width: 992px) {
+    .top_card {
+        height: 3.4rem;
+    }
+}

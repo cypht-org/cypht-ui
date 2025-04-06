@@ -1,0 +1,868 @@
+@import url('./index.css');
+@import url('./main.css');
+
+
+.top__menu {
+    background-color: var(--background);
+    height: 3.7rem;
+}
+
+.top__menu button {
+    background-color: transparent;
+    border: .5px solid rgba(128, 128, 128, 0.413);
+    border-radius: 4px;
+    color: var(--primary-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+.rounded_circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(128, 128, 128, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary-color-100);
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    /* Animation douce au survol */
+}
+
+.search_content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.search_content i {
+    font-size: 1.05rem;
+}
+
+.search_content input,
+.search_content button {
+    border: none;
+    font-size: .95rem;
+}
+
+.search_content input:focus,
+.search_content button :focus {
+    outline: none;
+}
+
+
+
+/* Effet au survol */
+.rounded-circle:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+}
+
+
+.compose_container {
+    bottom: 2rem;
+}
+
+
+.group_menu_label {
+    font-weight: 600;
+    color: var(--gray-400);
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.group_menu {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.group_menu ul li {
+    list-style: none;
+    margin-bottom: 1.3rem;
+}
+
+.group_menu ul li a {
+    text-decoration: none;
+    color: var(--gray-400);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    gap: .7rem;
+}
+
+.group_menu ul li :hover {
+    color: var(--primary-color);
+}
+
+.group_menu ul li a i {
+    font-size: 1.4rem;
+}
+
+.group_menu ul li a span {
+    border: .5px solid var(--gray-300);
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: .9rem;
+}
+
+
+.group_menu button {
+    border: none;
+    background-color: var(--gray-50);
+    color: var(--gray-400);
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: .9rem;
+    padding: 4px 8px;
+
+    transition: all 0.3s ease-in-out;
+}
+
+
+.group_menu button i {
+    font-size: 1.1rem;
+}
+
+.group_menu button:hover {
+    color: var(--primary-color);
+    background-color: var(--gray-100);
+    border: .5 solid var(--gray-300);
+}
+
+
+.menu_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn_label {
+    display: flex;
+    justify-content: space-between;
+    gap: .7rem;
+}
+
+
+.form-check-input {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* ---------------------------------- Tags ---------------------------------- */
+.tags-list {
+    padding: 0.5rem;
+}
+
+.tags-list ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 1.8rem;
+}
+
+.tags-list>ul {
+    padding-left: 0;
+}
+
+.tags-list li {
+    position: relative;
+    /* padding: 0.3rem 0; */
+}
+
+.tags-list .tag-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* padding: 0.4rem 0.6rem; */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.tags-list .tag-item:hover {
+    background-color: var(--background);
+}
+
+.tags-list .bi-tags {
+    color: var(--primary-color);
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.tags-list .bi-chevron-down {
+    color: var(--gray-400);
+    font-size: 0.75rem;
+    transition: transform 0.2s ease;
+}
+
+.tags-list .bi-chevron-down.rotated {
+    transform: rotate(-90deg);
+}
+
+.tags-list .tag-node {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.tags-list ul.collapsed {
+    display: none;
+}
+
+/* Lignes de connexion */
+.tags-list li::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 1.2rem;
+    width: 0.8rem;
+    height: 1px;
+    background-color: var(--gray-200);
+}
+
+.tags-list li::after {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: var(--gray-200);
+}
+
+.tags-list li:last-child::after {
+    height: 1.2rem;
+}
+
+/* Suppression des lignes pour le niveau racine */
+.tags-list>ul {
+    padding-left: 0;
+}
+
+.tags-list>ul>li::before,
+.tags-list>ul>li::after {
+    display: none;
+}
+
+
+/* --------------------------------- Old -------------------------------- */
+
+
+.ib_content {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+}
+
+
+/* ---------------------------------- Menu ---------------------------------- */
+
+#menu__container {
+    width: 16rem;
+    margin-right: 2px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: var(--background); */
+}
+
+
+
+/* --------------------------------- Content -------------------------------- */
+
+#ib_main_content {
+    background-color: var(--body-background);
+}
+
+.ib__menu {
+    display: flex;
+    flex-direction: column;
+    width: 1rem;
+}
+
+/* ------------------------------- EMAIL CARD ------------------------------- */
+
+.mails__card {
+    display: flex;
+    width: 100%;
+    height: 4.2rem;
+    margin-bottom: 1.5px;
+    background-color: var(--background);
+    padding-left: 1.1rem;
+    /* padding-top: 2rem; */
+}
+
+/* ------------------------------ Menu Content ------------------------------ */
+.menu__content {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background);
+    height: 100%;
+    overflow: auto;
+    padding-top: 1rem;
+    row-gap: 2rem;
+}
+
+/* -------------------------------- Top menu -------------------------------- */
+
+.menu__content .top__card {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding-left: 1rem;
+}
+
+.menu__content .top__card button {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .56rem 0;
+    background-color: var(--primary-color);
+    color: rgb(244, 245, 247);
+    font-weight: 600;
+    text-transform: capitalize;
+    column-gap: .5rem;
+    font-size: .86rem;
+}
+
+
+.top__card button :hover {
+    opacity: .1px;
+}
+
+.top__card button i {
+    font-size: 1.1rem;
+}
+
+
+
+/* ---------------------------------- MENU Card ---------------------------------- */
+
+
+.menu__content .menu__items {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    row-gap: 10px;
+    row-gap: 1.5rem;
+    padding-left: 1rem;
+}
+
+
+.menu__content .menu__items a {
+    display: inline-flex;
+    width: 85%;
+    column-gap: 22px;
+    align-items: center;
+    text-decoration: none;
+    font-size: .9rem;
+    color: var(--icon-color);
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.menu__content .menu__items a i {
+    font-size: 1.2rem;
+}
+
+.menu__items a:hover {
+    color: var(--primary-color)
+}
+
+.menu__items a i:hover {
+    color: var(--primary-color)
+}
+
+.btn__label {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn__label div {
+    display: flex;
+    align-items: center;
+    column-gap: 22px;
+}
+
+.btn__label span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid .2px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+
+.active__menu {
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+}
+
+/* ------------------------------ Mail Overview ----------------------------- */
+
+
+/* ------------------------------ Compose Mail ------------------------------ */
+
+/* Left menu */
+
+.action__card button {
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 3px;
+    border-radius: 5px;
+    border: .6px solid rgba(128, 128, 128, 0.476);
+}
+
+/*  */
+.email__list {
+    position: relative;
+    min-height: 10px;
+}
+
+.email__item {
+    border: .6px solid rgba(128, 128, 128, 0.476);
+    border-radius: 5px;
+    margin-left: 5px;
+    padding: 2px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.email__initial {
+    background: #1E90FF;
+    color: #ffffff;
+    font-size: .7rem;
+    font-weight: 600;
+}
+
+.email__address {
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.email__item__overview {
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    margin-top: 8px;
+    /* width: 100%; */
+    max-width: 400px;
+    border: .6px solid rgba(128, 128, 128, 0.476);
+    background: var(--background);
+    padding: 8px;
+    border-radius: 5px;
+    display: none;
+    z-index: 10;
+}
+
+.email__item__overview::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--background) transparent;
+}
+
+.email__item:hover .email__item__overview {
+    display: flex;
+    /* Affiche lors du hover */
+}
+
+/* Compose email labal */
+.email__label {
+    font-size: .78rem;
+    font-weight:
+        500;
+    color: rgb(128, 128, 128);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.email__label i,
+.email__cc_label i,
+.email__bcc_label i,
+.email__to_label i {
+    font-size: 1.1rem;
+    color: #80B441;
+    opacity: .8;
+}
+
+/* Email Cc */
+.email__cc input {
+    font-size: .8rem;
+    font-weight: 500;
+    border: none;
+    margin-left: 2px;
+}
+
+.email__cc input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.email__cc_label {
+    font-size: .78rem;
+    font-weight: 500;
+    color: rgb(128, 128, 128);
+    gap: 2px;
+    margin-right: 2px;
+}
+
+/* Email Bcc */
+.email__bcc input {
+    font-size: .8rem;
+    font-weight: 500;
+    border: none;
+    margin-left: 2px;
+}
+
+.email__bcc input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.email__bcc_label {
+    font-size: .78rem;
+    font-weight: 500;
+    color: rgb(128, 128, 128);
+    gap: 2px;
+    margin-right: 2px;
+}
+
+/* Email To */
+
+
+.email__to input {
+    font-size: .8rem;
+    font-weight: 500;
+    border: none;
+    margin-left: 2px;
+}
+
+.email__to input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.email__to_label {
+    font-size: .78rem;
+    font-weight: 500;
+    color: rgb(128, 128, 128);
+    gap: 2px;
+    margin-right: 2px;
+}
+
+
+/* Subject */
+
+
+.subject__card input {
+    font-size: .8rem;
+    font-weight: 500;
+    margin-left: 20px;
+    /* border-color: red; */
+    border: 1px solid red;
+}
+
+.subject__card input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+
+/* text */
+
+.compose__body textarea {
+    border: none;
+    font-size: .85rem;
+    font-weight: 400;
+    margin-left: 1.25rem;
+    resize: none;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.message__card {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+/* body btn */
+
+.email__btn button {
+    border: .8px solid rgba(128, 128, 128, 0.74);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    color: gray;
+}
+
+.email__btn .menu__left button {
+    border: none;
+    background-color: transparent;
+    font-size: .8rem;
+    padding: 5px .7rem;
+    background-color: var(--primary-color);
+    color: whitesmoke;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.email__btn .menu__center {
+    margin-left: 1rem;
+}
+
+
+.email__btn .menu__right button,
+.menu__center button {
+    background-color: transparent;
+}
+
+.email__btn .menu__center button:hover {
+    color: #80B441;
+    border-color: #80B441;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.email__btn button i {
+    font-size: 1rem;
+}
+
+
+/*  */
+
+.delete__btn:hover {
+    border-color: rgba(255, 0, 0, 0.75);
+    color: rgba(255, 0, 0, 0.75);
+}
+
+
+/*  */
+
+.file__input {
+    display: flex;
+}
+
+
+/* Tablet */
+@media (min-width: 768px) {
+
+    /* Top bar */
+    .top__menu {
+        height: 4rem;
+    }
+
+    .rounded_circle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .search_content input {
+        width: 100% !important;
+        font-weight: 400;
+    }
+
+    .search_content input:focus {
+        outline: none;
+    }
+
+    .search_content {
+        width: 60%;
+    }
+
+
+    .menu__container ul {
+        height: 4rem;
+    }
+
+    .menu__container ul li i {
+        font-size: 1.7rem;
+    }
+
+    .compose_container {
+        bottom: 3rem;
+    }
+
+}
+
+
+/* Lg */
+@media (min-width: 992px) {
+
+    .menu__container {
+        max-height: 100dvh;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        height: 100dvh;
+        width: 4.5rem;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .logo_content {
+        width: 32px;
+        height: 32px;
+    }
+
+    .rounded_circle {
+        width: 40px;
+        height: 40px;
+    }
+
+    .menu_group ul li {
+        margin-bottom: .8rem;
+    }
+
+    .menu_group ul li a i,
+    .button_group a {
+        font-size: 1.28rem !important;
+    }
+
+    .menu_group ul li a i:hover,
+    .button_group a:hover {
+        color: var(--primary-color-500);
+    }
+
+    .button_group a {
+        color: var(--gray-400);
+    }
+
+    .group_menu ul li a span {
+        font-size: .75rem;
+    }
+
+
+    /* -------------------------------- Container ------------------------------- */
+
+    /* Top */
+    .home_menu_container {
+        height: 100vh;
+        width: 16rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home_menu_container .top_card {
+        height: 3.5rem;
+    }
+
+    .menu_card {
+        flex-grow: 1;
+        overflow-y: auto;
+        max-height: calc(100vh - 50px);
+        padding-right: 5px;
+    }
+
+
+
+
+    .desktop_right {
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background);
+    }
+
+
+    .desktop_right .top_card {
+
+        min-height: 3.5rem;
+        max-height: 3.5rem;
+    }
+
+
+
+    .group_menu ul li:hover {
+        color: var(--primary-color) !important;
+    }
+
+    .group_menu ul li a {
+        font-size: .92rem;
+    }
+
+    .group_menu ul li a i {
+        font-size: 1.2rem;
+    }
+
+
+    #compose_btn {
+        border: .5 solid var(--gray-300);
+        background-color: var(--primary-color);
+        width: 80%;
+        border-radius: 2px;
+        color: whitesmoke;
+        font-size: .82rem;
+        text-transform: capitalize;
+        height: 2rem;
+        display: flex;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+        /* font-weight: 500; */
+        /* box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1); */
+        box-shadow: 0px 2px 6px var(--primary-color-100);
+    }
+
+    #compose_btn i {
+        font-size: 1rem;
+    }
+
+
+    /*  */
+
+
+    .search_content {
+        width: 40%;
+    }
+}

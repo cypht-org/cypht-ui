@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("/assets/css/compose.css");
+/* body {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+} */
+
+.__content {
+    height: 100%;
+    display: flex;
+}
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar .sidebar-heading {
+    padding: 1rem;
+    font-size: 1.25rem;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-link {
+    color: #333;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.__page__content {
+    /* background-color: var(--background); */
+    background-color: #FDFDFD;
+    margin-left: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ----------------------------------- App ---------------------------------- */
+.app__content {
+    display: flex;
+    height: 100dvh;
+    background-color: #F6F6F8;
+}
+
+#main-content {
+    width: 100%;
+}
+
+/* ---------------------------------- Utils --------------------------------- */
+
+.btn_back {
+    border: none;
+    background-color: transparent;
+    color: var(--gray-700);
+}
+
+.btn_back i {
+    font-size: 2rem;
+}
+
+.btn_back:hover {
+    /* background-color: var(--gray-400); */
+}
+
+
+
+.items-center {
+    align-items: center;
+}
+
+
+.send_btn {
+    background-color: var(--primary-color-500);
+    border: none;
+    color: whitesmoke;
+    padding: 5px 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    min-height: 2.7rem;
+    border: .5px solid rgba(128, 128, 128, 0.371);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.047);
+
+}
+
+
+
+.send_btn i {
+    font-size: 1.2rem;
+}
+
+/* ------------------------------- Responsive ------------------------------- */
+.base__container {
+    /* height: 100dvh; */
+    height: 100dvh;
+    overflow: hidden;
+
+}
+
+
+/* ------------------------------- Email User ------------------------------- */
+
+.email-item {
+    background: white;
+    border-radius: 2px;
+    padding: 10px;
+    display: flex;
+    /* border: .85px solid #e0e0e0; */
+    transition: background 0.3s ease;
+    cursor: pointer;
+    overflow: auto;
+    /* column-gap: 9px; */
+    /* overflow: hidden; */
+}
+
+.email__user {
+    width: 18%;
+}
+
+.email__name {
+    font-size: .88rem;
+    font-weight: 700;
+    max-width: 85%;
+}
+
+.email__time {
+    font-size: .75rem;
+    font-weight: 500;
+}
+
+.email-item:hover {
+    background: #f5f5f5;
+}
+
+.email-subject {
+    font-size: .88rem;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.email-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    padding-left: 3px;
+}
+
+.email-message {
+    font-size: 13px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 43dvh;
+}
+
+.email-initial {
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.email-actions {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.email-actions i {
+    font-size: 17px;
+    color: #aaa;
+}
+
+.email-time {
+    font-size: 12px;
+}
+
+
+.email-actions {
+    display: none;
+    /* Cache le bouton par défaut */
+}
+
+.email-item:hover .email-actions {
+    display: flex;
+}
+
+
+.modal-dialog {
+    padding: 0 .7rem;
+}
+
+
+
+@media (min-width: 768px) {}
+
+/* ✅ lg - 992px et plus */
+@media (min-width: 992px) {
+
+    .email__user {
+        width: 25%;
+    }
+
+    .email-content {
+        width: 75%;
+    }
+
+    .email__name {
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .email-item:hover {
+        background: #f5f5f5;
+    }
+
+    .email-subject {
+        font-size: 12.5px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .email-message {
+        font-size: 13px;
+        color: #666;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 450px;
+        max-width: 480px;
+    }
+
+    .email-initial {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .email-actions {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    .email-actions i {
+        font-size: 17px;
+        color: #aaa;
+    }
+
+    .email-time {
+        font-size: 12px;
+    }
+
+
+    .email-actions {
+        display: none;
+        /* Cache le bouton par défaut */
+    }
+
+    .email-item:hover .email-actions {
+        display: flex;
+    }
+
+    .modal-dialog {
+        min-width: 400px;
+        padding: 0;
+        /* margin: 0; */
+    }
+
+    /* ------------------------------ Compose Mail ------------------------------ */
+
+    /* Modale flottante */
+    .compose_modal {
+        /* position: fixed;
+        bottom: 1%;
+        right: 1%;
+        height: 80%; */
+        /* Définit une largeur pour éviter les bugs */
+        /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        border: .5px solid rgba(128, 128, 128, 0.467);
+        display: flex;
+        flex-direction: column; */
+        /* Assure une bonne disposition du contenu */
+        /* justify-content: flex-end;
+        z-index: 100; */
+
+        /* Cacher le modal par défaut */
+        /* opacity: 0;
+        transform: translateY(20px); */
+        /* Le modal commence légèrement décalé */
+        /* pointer-events: none; */
+        /* Empêche les clics lorsque caché */
+    }
+
+    .show__compose_modal {
+        /* Juste pour tester, peut être enlevé */
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+        /* Active les interactions lorsque visible */
+    }
+
+    /* En-tête de la modale */
+
+    /* Server */
+    .email__server {
+        border: .8px solid rgba(128, 128, 128, 0.603);
+        border-radius: 2px;
+        min-height: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    /* Boutons d'action */
+    .compose__actions {
+        display: flex;
+        gap: 8px;
+    }
+
+    .btn-icon {
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    /* Corps de la modale */
+    .compose__body {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .compose__input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 5px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .compose__textarea {
+        width: 100%;
+        height: 150px;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        resize: none;
+    }
+
+    /* Pied de la modale */
+    .compose__footer {
+        padding: 10px;
+        display: flex;
+        justify-content: flex-start;
+        border-top: 1px solid #ddd;
+    }
+
+    .send-btn {
+        background: #1a73e8;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .send-btn:hover {
+        background: #1765c2;
+    }
+}
+
+/* ✅ xl - 1200px et plus */
+@media (min-width: 1200px) {
+
+    .email-message {
+        width: 600px;
+        max-width: 610px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .email-message {
+        width: 600px;
+        max-width: 610px;
+    }
+}
+
+/* ✅ xxl - 1400px et plus */
+@media (min-width: 1400px) {}

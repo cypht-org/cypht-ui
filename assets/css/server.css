@@ -1,0 +1,340 @@
+@import url('/assets/css/main.css');
+@import url('/assets/css/utils.css');
+@import url('/assets/css/index.css');
+@import url('/assets/css/new_sidebar.css');
+
+
+
+/* -------------------------------- SHORTCUTS ------------------------------- */
+
+.shortcuts_param_list h5 {
+    font-size: .95rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    display: flex;
+    gap: .4rem;
+}
+
+.shortcuts-grid {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-size: .85rem;
+    font-weight: normal;
+}
+
+.shortcut-item {
+    display: flex;
+    align-items: center;
+    font-size: .78rem;
+    gap: 1.15rem;
+}
+
+.shortcut-item .key {
+
+    flex-grow: 1;
+    font-weight: 600;
+
+}
+
+.shortcut-item .action {
+    width: 60%;
+    /* background-color: red; */
+}
+
+.shortcut-item i {
+    font-size: 1rem;
+}
+
+
+
+.float_btn_container {
+    right: 2.5rem !important;
+    bottom: 3rem !important;
+}
+
+.float_btn_container button {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: ease 0.2s;
+}
+
+.float_btn_container button:focus {
+    background-color: var(--primary-color-400);
+    color: #fff;
+}
+
+
+.offcanvas {
+    width: 94% !important;
+}
+
+@media (min-width: 768px) {
+    .offcanvas {
+        width: 55% !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .offcanvas {
+        width: 35% !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .offcanvas {
+        width: 30% !important;
+    }
+}
+
+/* ----------------------------------- OLD ---------------------------------- */
+
+.menu__card {
+    border-bottom: 2.5px solid #F6F6F8;
+}
+
+.server_menu_container {
+    width: 100%;
+    align-items: start;
+}
+
+.server_menu_container li {
+    /* width: 12rem; */
+    text-align: start;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* .menu__card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__card ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .85rem;
+    color: var(--icon-color);
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding-right: 12px;
+    position: relative;
+}
+
+.menu__card ul li a {
+    border-bottom: 2.5px solid blue;
+} */
+
+.label__description {
+    color: var(--label-description);
+}
+
+.menu__card ul {
+    display: flex;
+    /* border-bottom: 2.5px solid #F6F6F8; */
+    padding-left: 0;
+}
+
+.menu__card ul li {
+    list-style: none;
+    font-size: .8rem;
+    color: #A6A7AA;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin-bottom: -9px;
+}
+
+.menu__card ul li:hover {
+    color: var(--menu-primary);
+}
+
+.menu__card ul li button {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
+    margin-bottom: -8px;
+    background-color: transparent;
+
+}
+
+
+.active {
+    font-weight: 600 !important;
+    color: var(--menu-primary) !important;
+    border-color: var(--primary-color) !important;
+    background-color: transparent !important;
+}
+
+.interface__content {
+    height: calc(80vh - 150px);
+    padding-bottom: 2rem;
+}
+
+
+
+#provider_list {
+    cursor: pointer;
+}
+
+
+/* drop menu */
+
+#provider_list {
+    position: relative;
+}
+
+.dropdown_content {
+    position: absolute;
+    /* top: 100%;
+    left: 0; */
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    /* padding: 0;
+    opacity: 0;
+    transform: translateY(10px);
+    display: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    min-width: 150px;
+    z-index: 10; */
+}
+
+
+.show__drop__menu {
+    display: block;
+    background-color: red;
+}
+
+.pl-5 {
+    padding-left: 2rem;
+}
+
+
+.description__text {
+    font-size: .75rem;
+    font-weight: 400;
+    /* opacity: .7; */
+}
+
+
+
+
+#imap__psswd {
+    opacity: .7;
+}
+
+/* --------------------------- Import Config File --------------------------- */
+
+.btn-check:checked+.btn {
+    background-color: rgba(128, 128, 128, 0.066);
+    color: white;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.color__text {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.btn {
+    border-width: .5px;
+    border-color: rgba(128, 128, 128, 0.282);
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+    font-size: .78rem;
+    color: #00000077;
+}
+
+.btn-outline-primary:hover {
+    border-color: rgba(128, 128, 128, 0.282) !important;
+    /* color: #00000077 !important; */
+    /* color: #00000077 !important; */
+    /* font-weight: 500; */
+    /* 
+    border-color: #6b9837 !important;
+    */
+    /* color: #00000077 !important;
+    border: .5px solid rgba(128, 128, 128, 0.282) !important; */
+    /* background-color: #F8973F !important; */
+    /* Change le fond */
+    /* color: red !important; */
+    /* Change la couleur du texte */
+    /* border-color: #F8973F !important; */
+    /* Change la bordure */
+}
+
+.file__card {
+    height: 150px;
+    border: 1px dashed rgba(128, 128, 128, 0.284);
+    border-radius: 4px;
+}
+
+.file__card i {
+    font-size: 2rem;
+}
+
+.model__files__card {
+    display: inline-flex;
+    min-height: 34px;
+    border: 1px solid rgba(128, 128, 128, 0.284);
+    border-radius: 3px;
+    gap: 0rem;
+    font-size: .77rem;
+    color: #00000077;
+    font-weight: 500;
+}
+
+.model__files__card .item {
+    color: #00000077;
+    display: flex;
+    align-items: center;
+    padding: 0px 5.5px;
+    gap: .2rem;
+}
+
+.model__files__card .item i {
+    font-size: 1rem;
+}
+
+.model__files__card .item:hover {
+    color: var(--primary-color);
+}
+
+.model__files__card .item__two {
+    border-left: 1px solid rgba(128, 128, 128, 0.284);
+}
+
+/* Account Menu Styles */
+#acounts {
+    top: 60px;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
+
+#acounts.show {
+    display: flex;
+}
+
+#acounts .rounded-circle {
+    font-size: 14px;
+}
+
+#acounts a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}

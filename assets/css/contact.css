@@ -1,0 +1,406 @@
+/* @import url('/assets/css/main.css'); */
+@import url('/assets/css/sidebar.css');
+@import url('/assets/css/home.css');
+@import url('/assets/css/index.css');
+@import url('/assets/css/server.css');
+@import url('/assets/css/main.css');
+
+
+.es1__card {
+    display: flex;
+    flex-grow: 1;
+
+}
+
+
+.top__card,
+.items__list,
+.es1__overview__card {
+    background-color: var(--background);
+}
+
+
+/* ------------------------------- List Items ------------------------------- */
+.es1__list__card {
+    margin-right: 1.5px;
+    width: 20rem;
+}
+
+.es1__list__card .top__card {}
+
+
+.filter__body {
+    width: 120px;
+}
+
+.filter__body ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 7px;
+}
+
+.filter__body ul li {
+    list-style: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.form-check label {
+    user-select: none;
+    font-size: .74rem !important;
+}
+
+/* ---------------------------------- List ---------------------------------- */
+.items__list {
+    height: 100%;
+}
+
+
+/* Card */
+
+.contact__card {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 8px 5px;
+    border-radius: 3px;
+}
+
+.contact__card__hover:hover {
+    background-color: #dddddd42;
+
+}
+
+.contact__card .item__left {
+    font-size: .7rem;
+}
+
+.contact__card .item__right {
+    flex-grow: 1;
+    font-size: .88rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__card .item__right .full__name {
+    font-weight: 700;
+}
+
+.contact__card .item__right .__email {
+    color: #8b8b8b;
+}
+
+.contact__card__active,
+.select__card {
+    background-color: #80b44122;
+}
+
+
+/*  */
+
+
+.contact-avatar-wrapper {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.contact-avatar,
+.contact-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Avatar visible par défaut, checkbox cachée */
+.contact-avatar {
+    opacity: 1;
+}
+
+.contact-checkbox {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+/* Lorsque l'utilisateur survole l'avatar ou son parent */
+.contact-avatar-wrapper:hover .contact-avatar {
+    opacity: 0;
+}
+
+.contact-avatar-wrapper:hover .contact-checkbox {
+    opacity: 1;
+}
+
+/* Si le contact est sélectionné, afficher la checkbox et cacher l'avatar */
+.contact__card.active .contact-avatar {
+    opacity: 0;
+}
+
+.contact__card.active .contact-checkbox {
+    opacity: 1;
+}
+
+
+/* New Contact btn */
+
+.new__contact__btn button {
+    border: none;
+    /* Retire la bordure du bouton */
+    outline: none;
+    /* Retire la bordure de focus */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 0px 0px;
+    /* width: 30px;
+    height: 30px; */
+    /* Transition pour un effet au survol */
+}
+
+
+
+.new__contact__btn button:hover {
+    /* background-color: #F8973F; */
+    /* Change la couleur de fond au survol (orange ici) */
+    transform: scale(1.1);
+    /* Agrandit légèrement le bouton au survol */
+}
+
+.new__contact__btn button:focus {
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+    /* Ombre au focus */
+}
+
+
+.new__contact__btn button i {
+    font-size: 1.3rem;
+}
+
+/* ----------------------------- Type Add Model ----------------------------- */
+.card {
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.add-option {
+    border: .5px solid #e0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.radio,
+label {
+    cursor: pointer !important;
+}
+
+
+._radio {
+    width: 11px !important;
+    height: 11px !important;
+    border-radius: 50%;
+}
+
+
+._radio:checked {
+    background-color: var(--primary-color);
+    border: .8px solid #00000091;
+}
+
+
+
+.add-option.active,
+.add-option:hover {
+    border: .8px solid var(--primary-color-200);
+    background-color: #f8f9fa5e;
+}
+
+.form-check-input {
+    border: .7px solid #000;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.add-option:has(.form-check-input:checked) {
+    background-color: var(--primary-color-10);
+    border: .8px solid var(--primary-color-200);
+}
+
+
+.contact__type {
+    border-left: .95px solid rgba(128, 128, 128, 0.447);
+    margin-left: .5rem;
+    margin-top: .5rem;
+    padding-left: 1.2rem;
+    padding-top: .5rem;
+    padding-bottom: .8rem;
+}
+
+/* -------------------------------- Overview -------------------------------- */
+.es1__overview__card {
+    /* background-color: var(--background); */
+    margin-left: 1.5px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.es1__overview__top {
+    height: 3.85rem;
+}
+
+
+.overview__bt__action {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #616161;
+    border-radius: 4px;
+    /* padding: 5px 6px; */
+
+}
+
+.overview__bt__action:hover {
+    background-color: rgba(128, 128, 128, 0.11);
+    color: var(--primary-color-500);
+}
+
+.overview__bt__action:focus {
+    outline: none;
+}
+
+.type__label {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 0 1px rgba(134, 134, 134, 0.137);
+    border-radius: 4px;
+    color: #fff;
+    font-size: .8rem;
+    padding: 6px 15px;
+}
+
+.overview__label__value {
+    font-size: .8rem;
+    color: var(--primary-color-600);
+    padding-left: 1.4rem;
+    font-weight: 500;
+}
+
+
+
+/* test */
+
+
+.contact__menu {
+    padding: 0;
+
+}
+
+.contact__menu li a {
+    display: inline-flex;
+    width: 90%;
+    column-gap: 22px;
+    align-items: center;
+    text-decoration: none;
+    font-size: .85rem;
+    color: var(--icon-color);
+    text-transform: capitalize;
+    font-weight: 400;
+}
+
+.contact__menu li {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+}
+
+.contact__menu li a {
+    text-decoration: none;
+    color: var(--icon-color);
+    display: flex;
+    font-weight: 500;
+    font-size: .85rem;
+    display: flex;
+    gap: 10px;
+    padding: 7px 7px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact__menu li a i {
+    font-size: 1.3rem;
+}
+
+.contact__menu__active {
+    background-color: var(--primary-color-500);
+    color: #fff !important;
+}
+
+.contact__menu__active:hover {
+    background-color: var(--primary-color-500) !important;
+}
+
+.contact__menu li a:hover {
+    background-color: rgba(128, 128, 128, 0.112);
+    color: var(--primary-color)
+}
+
+
+.contact_profile {
+    height: 45px;
+    width: 45px;
+    /* margin-right: 5rem; */
+    padding: 0;
+}
+
+/* Modal */
+
+#local-contact,
+#ldap-contact {
+    width: 45vh !important;
+}
+
+
+
+.contact_container {
+    flex-grow: 1;
+}
+
+/* Table */
+@media (min-width: 768px) {
+
+    .contact_container {
+        width: 22rem;
+        flex-grow: inherit;
+    }
+}
+
+
+/* lg */
+@media (min-width: 992px) {
+    .contact_profile {
+        height: 40px;
+        width: 40px;
+    }
+
+
+    #local-contact {
+        width: 400px;
+    }
+
+    .modal-dialog {
+        width: 400px;
+    }
+}

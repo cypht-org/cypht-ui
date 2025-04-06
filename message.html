@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Message</title>
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    <!-- Icon 1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coswise/hicon-css@latest/web-fonts/hicon.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/message.css">
+</head>
+
+<body class="position-relative">
+    <div class="base__container d-flex flex-column-reverse flex-lg-row">
+
+        <div class="menu__container">
+
+            <!-- Mobile -->
+            <ul class="p-0 m-0 d-flex align-items-center justify-content-around d-lg-none" id="sidebar-menu">
+                <li> <a href="/home.html" class="menu-link sidebar_active">
+                        <i class="bi bi-grid-fill"></i>
+                    </a></li>
+                <li> <a href="/folder.html" class="menu-link">
+                        <i class="bi bi-folder"></i>
+                    </a></li>
+                <li> <a href="/contacts.html" class="menu-link">
+                        <i class="bi bi-people"></i>
+                    </a></li>
+                <li> <a href="/info.html" class="menu-link">
+                        <i class="bi bi-exclamation-diamond"></i>
+                    </a></li>
+                <li id="setting-btn" class="d-md-none"> <a class="menu-link" href="#">
+                        <i class="bi bi-gear"></i>
+                    </a></li>
+
+
+                <li class="d-none d-md-flex"> <a class="menu-link" href="/site.html">
+                        <i class="bi bi-diagram-2"></i>
+                    </a></li>
+
+                <li class="d-none d-md-flex" style="padding-top: 5px;"> <a href="/server.html" class="">
+                        <i class='bx bx-card'></i>
+                    </a></li>
+            </ul>
+
+            <div id="setting-menu"
+                class="position-absolute setting__container  align-items-end justify-content-end  me-3 d-lg-none">
+                <ul class="d-flex align-items-center justify-content-start column-gap-3 mb-2  py-0 px-3">
+                    <li class=""> <a href="/site.html" class="menu-link">
+                            <i class="bi bi-diagram-2-fill" style="font-size: 1.2rem;"></i>
+                            </i>Site
+                        </a></li>
+                    <li class=""> <a href="/server.html" class="menu-link">
+                            <i class='bx bxs-card'></i>Server
+                        </a></li>
+                </ul>
+            </div>
+            <!-- </nav> -->
+
+            <nav class="d-none d-lg-flex flex-column justify-content-between  magic-r-line py-2">
+                <div class="d-flex flex-column align-items-center  gap-4  justify-content-center">
+                    <div class="d-flexalign-items-center logo_content">
+                        <img class="object-fit-cover" src="/assets/images/svg/logo.svg" />
+                    </div>
+
+                    <div class="menu_group">
+                        <ul class="">
+                            <li><a href="/home.html" class="sidebar_active">
+                                    <i class="bi bi-grid-fill"></i>
+                                </a></li>
+                            <li><a href="/folder.html">
+                                    <i class="bi bi-folder"></i>
+                                </a></li>
+                            <li><a href="/contacts.html">
+                                    <i class="bi bi-people"></i>
+                                </a></li>
+                            <li><a href="/info.html">
+                                    <i class='bi bi-exclamation-diamond'></i>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="button_group align-items-center gap-3 d-flex flex-column justify-content-end ">
+                    <a href="/site.html"><i class="bi bi-gear"></i></a>
+                    <a href="/server.html"><i class="bi bi-hdd-network"></i></a>
+                    <div>
+                        <div class="rounded_circle">
+                            <img src="/assets/images/avatar.jpg" alt="" class="rounded-circle avatar">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="flex-1 position-relative d-flex" style="background-color: var(--background-2); max-height: 100dvh;">
+
+            <div class="d-none  d-lg-flex flex-column home_menu_container magic-r-line"
+                style="background-color: var(--background);">
+                <div class="top_card magic-b-line d-flex align-items-center justify-content-center">
+                    <button type="button" class="btn">
+                        Split dropup
+                    </button>
+                    <button type="button" class=" dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li>mailaccount 1</li>
+                        <li>mailaccount 2</li>
+                        <li>mailaccount 3</li>
+                    </ul>
+                </div>
+
+                <div class="menu_card d-flex flex-column  flex-grow-1 py-3 px-3">
+                    <div class="top_card mt-3 mb-3">
+                        <button id="compose_btn" type="button" class="compose-btn fw-medium"> <i
+                                class="bi bi-envelope"></i><span>compose</span></button>
+                    </div>
+
+                    <div class="menu_card desktop_scroll flex-1 d-flex flex-column">
+                        <div class="group_menu">
+                            <!-- <span class="group_menu_label">MENU</span> -->
+                            <ul class="p-0">
+                                <li> <a href="/home.html" class="menu_content active__menu">
+                                        <div class="btn_label">
+                                            <i class='bx bxs-inbox'></i>
+                                            Inbox
+                                        </div> <span>08</span>
+                                    </a></li>
+                                <li>
+                                    <a href="/calender.html"><i class='bx bx-calendar'></i>Calender</a>
+                                </li>
+                                <li>
+                                    <a href="/draft.html" class="menu_content">
+                                        <div class="btn_label"><i class='bx bx-edit'></i>Drafts</div>
+                                        <span>02</span>
+                                    </a>
+                                </li>
+                                <li><a href="/flagged.html"><i class='bx bxs-flag-alt'></i>Flagged</a>
+                                </li>
+                                <li><a href="/junk.html"><i class='bx bx-message-error'></i>Junk</a></li>
+                                <li><a href="/send.html"><i class='bx bx-mail-send'></i>send</a></li>
+                                <li><a href="/trash.html"><i class='bx bx-trash'></i>Trash</a></li>
+                                <li><a href="/unread.html"><i class='bx bx-envelope'></i>unread</a></li>
+                                <li> <a href="/everything.html"><i class='bx bx-package'></i>Everything</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="h-100 d-flex flex-column flex-1 bg-warning">
+                <div
+                    class="d-flex align-items-center justify-content-between justify-content-lg-start column-gap-lg-4  px-3 px-md-4 top_card  top-0 start-0 end-0">
+                    <div class="d-flex align-items-center back__btn">
+                        <button onclick="history.back()" id="bar__back__btn" class="m-0"
+                            style="text-decoration: none; color: var(--foreground); "><i
+                                class='bx bx-arrow-back'></i></button>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between gap-3">
+                        <div class="d-flex align-items-center"><button class="email_view__btn"><i
+                                    class='bx bx-trash'></i></button>
+                        </div>
+                        <div class="d-flex align-items-center"><button class="email_view__btn"><i
+                                    class='bx bx-message-alt-error'></i></button></div>
+                        <div class="d-flex align-items-center"><button class="email_view__btn"><i
+                                    class='bx bx-archive'></i></button>
+                        </div>
+
+                        <div class="position-relative d-flex align-items-center">
+                            <button id="bar_more_btn" class="email_view__btn"><i
+                                    class='bx bx-dots-vertical-rounded'></i></button>
+                            <ul class="d-none bar_more_menu">
+                                <li>
+                                    <a class="">
+                                        <i class="bi bi-box-arrow-up-right"></i>Forward
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a class=""><i class="bi bi-flag"></i>Flag</a>
+                                </li>
+                                <li>
+                                    <a class=""><i class="bi bi-box-arrow-in-up-right"></i>Move</a>
+                                </li>
+                                <li>
+                                    <a class=""><i class="bi bi-archive"></i>Archive</a>
+                                </li>
+                                <li>
+                                    <a class=""><i class="bi bi-input-cursor"></i>Snooze</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1 overflow-y-auto magic-t-line magic-b-line mail_content mail_content"
+                    style="background-color: var(--background);">
+                    <div class="px-4 py-4 flex-grow-1 overflow-auto  d-flex flex-column h-100">
+
+                        <div class="d-flex align-items-center gap-2">
+                            <div id="user-initial"></div>
+                            <div class="d-flex flex-column ">
+                                <div class="d-flex align-items-center">
+                                    <span id="email-sender"></span>
+                                </div>
+                                <div class="position-relative">
+                                    <button id="btn_dropdown"
+                                        class="clear__btn d-flex align-items-center gap-1 border-0 shadow-none">
+                                        <span class="detail__label">to me</span>
+                                        <i class='bx bxs-down-arrow'
+                                            style="font-size: 8px; color: rgb(82, 81, 81);"></i>
+                                    </button>
+
+                                    <ul class="header_detail">
+                                        <li>
+                                            <span class="fw-bold">Date :</span>
+                                            <span class="flex-1">29 janv. 2025 17:16</span>
+                                        </li>
+                                        <li>
+                                            <span class="fw-bold">From :</span>
+                                            <span>Demo User 'do-not-reply@demo.com'</span>
+                                        </li>
+                                        <li>
+                                            <span class="fw-bold">To :</span>
+                                            <span>muhngesteven@gmail.com</span>
+                                        </li>
+                                        <li>
+                                            <span class="fw-bold">Tags :</span>
+                                            <span>muhngesteven@gmail.com</span>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 mb-2 ">
+                            <span id="email-subject"></span>
+                        </div>
+
+                        <!--  -->
+                        <div class="flex-1">
+                            <span id="email-message"></span>
+
+                            <div class="attachment__content mt-5">
+                                <div id="attachment-card"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js" integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/assets/js/utils.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // attachment
+            function getFilePreview(file) {
+                const fileExtension = file.name.split(".").pop().toLowerCase();
+
+                if (["jpg", "jpeg", "png", "gif"].includes(fileExtension)) {
+                    return `<img src="/assets/images/${file.name}" alt="${file.name}" class="preview-img">`;
+                } else if (fileExtension === "pdf") {
+                    return `<div class="pdf-preview">
+                <img src="/assets/images/pdf_image.png" alt="PDF">
+              </div>`;
+                } else {
+                    return `<div class="file-preview">
+                <img src="/assets/images/doc_image.png" alt="DOC">
+              </div>`;
+                }
+            }
+            // Fonction pour récupérer les paramètres d'URL
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            // Récupérer l'ID de l'email depuis l'URL
+            const emailId = getQueryParam("emailId");
+
+            if (emailId) {
+                // Simuler une base de données d'emails (ou récupérer via API)
+                const colorMap = {
+                    A: { bg: "#FF5733", text: "#fff" },
+                    B: { bg: "#33FF57", text: "#000" },
+                    C: { bg: "#3357FF", text: "#fff" },
+                    D: { bg: "#FF33A8", text: "#fff" },
+                    E: { bg: "#FF8C33", text: "#000" },
+                    F: { bg: "#FFD700", text: "#000" },
+                    G: { bg: "#1E90FF", text: "#fff" },
+                    H: { bg: "#32CD32", text: "#000" },
+                    I: { bg: "#FF4500", text: "#fff" },
+                    J: { bg: "#8A2BE2", text: "#fff" },
+                    K: { bg: "#D2691E", text: "#fff" },
+                    L: { bg: "#DC143C", text: "#fff" },
+                    M: { bg: "#008B8B", text: "#fff" },
+                    N: { bg: "#B8860B", text: "#fff" },
+                    O: { bg: "#9932CC", text: "#fff" },
+                    P: { bg: "#FF1493", text: "#fff" },
+                    Q: { bg: "#00BFFF", text: "#fff" },
+                    R: { bg: "#4B0082", text: "#fff" },
+                    S: { bg: "#6A5ACD", text: "#fff" },
+                    T: { bg: "#48D1CC", text: "#000" },
+                    U: { bg: "#C71585", text: "#fff" },
+                    V: { bg: "#DAA520", text: "#000" },
+                    W: { bg: "#ADFF2F", text: "#000" },
+                    X: { bg: "#40E0D0", text: "#000" },
+                    Y: { bg: "#9ACD32", text: "#000" },
+                    Z: { bg: "#FF6347", text: "#fff" },
+                };
+
+                /* ------------------------------- Data Emails ------------------------------- */
+                const emails = [
+                    {
+                        id: 1,
+                        name: "Alice Johnson",
+                        subject: "UI/UX Consultation",
+                        message:
+                            "Hey, I’d love to discuss the user experience of our new app. Are you available this week?",
+                        time: "15 min ago",
+                        files: [{ name: "design-specs.pdf", size: "2MB" }],
+                    },
+                    {
+                        id: 2,
+                        name: "Bob Smith",
+                        subject: "Web Design Proposal",
+                        message:
+                            "We need a complete redesign of our website. Can you share your portfolio?",
+                        time: "30 min ago",
+                        files: [],
+                    },
+                    {
+                        id: 3,
+                        name: "Carla Gomez",
+                        subject: "New Project Inquiry",
+                        message: "I'm interested in your services for a new branding project.",
+                        time: "1 hour ago",
+                        files: [
+                            { name: "brand-brief.docx", size: "1.5MB" },
+                            { name: "logo.png", size: "500KB" },
+                        ],
+                    },
+                    {
+                        id: 4,
+                        name: "David Lee",
+                        subject: "Invoice for March",
+                        message:
+                            "Attached is the invoice for our last project. Let me know if you have any questions.",
+                        time: "2 hours ago",
+                        files: [{ name: "invoice-march.pdf", size: "400KB" }],
+                    },
+                    {
+                        id: 5,
+                        name: "Elena Brown",
+                        subject: "Meeting Notes",
+                        message:
+                            "I've summarized our last call. Let me know if you need any changes.",
+                        time: "Yesterday",
+                        files: [],
+                    },
+                    {
+                        id: 6,
+                        name: "Frank Wilson",
+                        subject: "Marketing Strategy",
+                        message:
+                            "Here's the latest marketing strategy document. Looking forward to your feedback.",
+                        time: "Yesterday",
+                        files: [{ name: "strategy.pdf", size: "3MB" }],
+                    },
+                    {
+                        id: 7,
+                        name: "Grace Miller",
+                        subject: "Job Application",
+                        message:
+                            "I've attached my resume and cover letter. Please let me know if you need more information.",
+                        time: "2 days ago",
+                        files: [
+                            { name: "resume.pdf", size: "1MB" },
+                            { name: "cover-letter.docx", size: "500KB" },
+                        ],
+                    },
+                    {
+                        id: 8,
+                        name: "Henry Clark",
+                        subject: "Partnership Proposal",
+                        message:
+                            "We’re looking to partner with your company. Let’s discuss the details.",
+                        time: "2 days ago",
+                        files: [],
+                    },
+                    {
+                        id: 9,
+                        name: "Isabelle Martin",
+                        subject: "Software Update",
+                        message:
+                            "A new update is available for your software. Please check the release notes.",
+                        time: "3 days ago",
+                        files: [{ name: "update-notes.pdf", size: "600KB" }],
+                    },
+                    {
+                        id: 10,
+                        name: "Jack Turner",
+                        subject: "Client Feedback",
+                        message:
+                            "Here’s some feedback from our recent project. Let me know your thoughts.",
+                        time: "4 days ago",
+                        files: [],
+                    },
+                    {
+                        id: 11,
+                        name: "Katherine Lopez",
+                        subject: "Product Launch",
+                        message:
+                            "Exciting news! We’re launching our new product next month. Stay tuned!",
+                        time: "5 days ago",
+                        files: [{ name: "launch-plan.pdf", size: "2MB" }],
+                    },
+                    {
+                        id: 12,
+                        name: "Leo Baker",
+                        subject: "Contract Agreement",
+                        message:
+                            "Please review the attached contract and let us know if any modifications are needed.",
+                        time: "6 days ago",
+                        files: [{ name: "contract.pdf", size: "5MB" }],
+                    },
+                    {
+                        id: 13,
+                        name: "Mia Edwards",
+                        subject: "Social Media Campaign",
+                        message:
+                            "We’ve prepared a new campaign for social media. Let me know what you think.",
+                        time: "1 week ago",
+                        files: [],
+                    },
+                    {
+                        id: 14,
+                        name: "Nathan Scott",
+                        subject: "Security Alert",
+                        message:
+                            "Your account has been accessed from a new device. If this wasn’t you, reset your password.",
+                        time: "1 week ago",
+                        files: [],
+                    },
+                    {
+                        id: 15,
+                        name: "Olivia Davis",
+                        subject: "Photography Contract",
+                        message:
+                            "Here is the contract for the upcoming photoshoot. Please sign and return it.",
+                        time: "2 weeks ago",
+                        files: [{ name: "photography-contract.pdf", size: "1.2MB" }],
+                    },
+                    {
+                        id: 16,
+                        name: "Peter Parker",
+                        subject: "Website Bug Report",
+                        message:
+                            "I found some bugs on your website. Please check the attached report.",
+                        time: "2 weeks ago",
+                        files: [{ name: "bug-report.pdf", size: "800KB" }],
+                    },
+                    {
+                        id: 17,
+                        name: "Quinn Foster",
+                        subject: "Service Request",
+                        message:
+                            "I need assistance with integrating your API into our system. Can we schedule a call?",
+                        time: "3 weeks ago",
+                        files: [],
+                    },
+                    {
+                        id: 18,
+                        name: "Rachel Adams",
+                        subject: "Event Invitation",
+                        message:
+                            "We’d love for you to join our upcoming tech event. Let us know if you’re interested!",
+                        time: "3 weeks ago",
+                        files: [{ name: "event-details.pdf", size: "1MB" }],
+                    },
+                    {
+                        id: 19,
+                        name: "Samuel Green",
+                        subject: "HR Policy Update",
+                        message:
+                            "Please review the new HR policies attached. Let me know if you have any questions.",
+                        time: "1 month ago",
+                        files: [{ name: "hr-policy.pdf", size: "2MB" }],
+                    },
+                    {
+                        id: 20,
+                        name: "Tina White",
+                        subject: "Freelance Opportunity",
+                        message:
+                            "We’re looking for a freelancer for a short-term project. Are you available?",
+                        time: "1 month ago",
+                        files: [],
+                    },
+                    {
+                        id: 21,
+                        name: "Umar Johnson",
+                        subject: "Tech Conference Details",
+                        message:
+                            "Here are the details for the upcoming tech conference. Let me know if you’ll attend.",
+                        time: "1 month ago",
+                        files: [{ name: "conference-agenda.pdf", size: "3MB" }],
+                    },
+                    {
+                        id: 22,
+                        name: "Victor Hall",
+                        subject: "App Feature Request",
+                        message:
+                            "We’d love to see a dark mode feature in your app. Any plans for that?",
+                        time: "5 weeks ago",
+                        files: [],
+                    },
+                    {
+                        id: 23,
+                        name: "Wendy Clark",
+                        subject: "Collaboration Inquiry",
+                        message:
+                            "We’d love to collaborate with your team on a new project. Can we chat?",
+                        time: "5 weeks ago",
+                        files: [],
+                    },
+                    {
+                        id: 24,
+                        name: "Xavier Martinez",
+                        subject: "Legal Compliance Document",
+                        message:
+                            "Please review the attached legal compliance document and provide feedback.",
+                        time: "6 weeks ago",
+                        files: [{ name: "compliance.pdf", size: "4MB" }],
+                    },
+                    {
+                        id: 25,
+                        name: "Yasmine Reed",
+                        subject: "Customer Feedback Survey",
+                        message:
+                            "We value your opinion! Please take a moment to complete our feedback survey.",
+                        time: "6 weeks ago",
+                        files: [{ name: "survey-link.txt", size: "1KB" }],
+                    },
+                    {
+                        id: 26,
+                        name: "Zane Thompson",
+                        subject: "Payment Confirmation",
+                        message:
+                            "Your payment has been received successfully. Please find the receipt attached.",
+                        time: "7 weeks ago",
+                        files: [{ name: "receipt.pdf", size: "200KB" }],
+                    },
+                    {
+                        id: 27,
+                        name: "Abigail Turner",
+                        subject: "Newsletter Subscription",
+                        message:
+                            "You’ve been subscribed to our monthly newsletter. Stay tuned for updates!",
+                        time: "7 weeks ago",
+                        files: [],
+                    },
+                    {
+                        id: 28,
+                        name: "Benjamin Carter",
+                        subject: "Internship Application",
+                        message:
+                            "I’ve submitted my application for the internship. Looking forward to your response.",
+                        time: "8 weeks ago",
+                        files: [{ name: "resume.pdf", size: "1MB" }],
+                    },
+                    {
+                        id: 29,
+                        name: "Charlotte Brooks",
+                        subject: "Product Feedback",
+                        message:
+                            "I recently purchased your product and have some feedback. Hope you find it useful!",
+                        time: "8 weeks ago",
+                        files: [],
+                    },
+                    {
+                        id: 30,
+                        name: "Daniel Evans",
+                        subject: "Training Session Reminder",
+                        message:
+                            "Reminder: Your training session is scheduled for next week. See attached schedule.",
+                        time: "2 months ago",
+                        files: [{ name: "training-schedule.pdf", size: "500KB" }],
+                    },
+                    {
+                        id: 31,
+                        name: "Emily Watson",
+                        subject: "Part-Time Job Inquiry",
+                        message:
+                            "Are there any part-time opportunities available at your company?",
+                        time: "2 months ago",
+                        files: [],
+                    },
+                    {
+                        id: 32,
+                        name: "Felix Martin",
+                        subject: "Investment Proposal",
+                        message:
+                            "I’d love to discuss a potential investment opportunity. Let me know when you’re free.",
+                        time: "2 months ago",
+                        files: [{ name: "proposal.pdf", size: "3MB" }],
+                    },
+                    {
+                        id: 33,
+                        name: "Gabriella Adams",
+                        subject: "Refund Request",
+                        message:
+                            "I’d like to request a refund for my recent purchase. Please see attached details.",
+                        time: "2 months ago",
+                        files: [{ name: "refund-request.pdf", size: "700KB" }],
+                    },
+                    {
+                        id: 34,
+                        name: "Harrison Lee",
+                        subject: "Networking Event Invitation",
+                        message:
+                            "Join us for an exclusive networking event this month. Details attached.",
+                        time: "2 months ago",
+                        files: [{ name: "event-invite.pdf", size: "1MB" }],
+                    },
+                    {
+                        id: 35,
+                        name: "Ivy Nelson",
+                        subject: "Bug Fix Confirmation",
+                        message:
+                            "The reported bug has been fixed. Let us know if you experience any issues.",
+                        time: "3 months ago",
+                        files: [],
+                    },
+                    {
+                        id: 36,
+                        name: "James Foster",
+                        subject: "Contract Renewal",
+                        message:
+                            "Your contract is due for renewal. Please review the terms and confirm.",
+                        time: "3 months ago",
+                        files: [{ name: "renewal-contract.pdf", size: "2MB" }],
+                    },
+                    {
+                        id: 37,
+                        name: "Kylie Bennett",
+                        subject: "Webinar Registration",
+                        message:
+                            "Thank you for registering for our upcoming webinar. See details attached.",
+                        time: "3 months ago",
+                        files: [{ name: "webinar-details.pdf", size: "1.5MB" }],
+                    },
+                    {
+                        id: 38,
+                        name: "Liam Walker",
+                        subject: "Supplier Agreement",
+                        message:
+                            "Please find the updated supplier agreement attached. Let us know your feedback.",
+                        time: "3 months ago",
+                        files: [{ name: "supplier-agreement.pdf", size: "2.5MB" }],
+                    },
+                    {
+                        id: 39,
+                        name: "Megan Diaz",
+                        subject: "Conference Call Notes",
+                        message:
+                            "Here are the notes from our last conference call. Let me know if anything needs updating.",
+                        time: "3 months ago",
+                        files: [{ name: "call-notes.pdf", size: "800KB" }],
+                    },
+                    {
+                        id: 40,
+                        name: "Noah Richardson",
+                        subject: "Job Offer",
+                        message:
+                            "Congratulations! We’re pleased to offer you the position. Please see attached details.",
+                        time: "4 months ago",
+                        files: [{ name: "job-offer.pdf", size: "1.2MB" }],
+                    },
+                ];
+
+                // Trouver l'email correspondant
+                const email = emails.find((e) => e.id == emailId);
+
+                if (email) {
+
+                    const initials = email.name
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")
+                        .toUpperCase();
+                    const firstLetter = initials[0] || "A"; // Par défaut "A" si le nom est vide
+                    const colors = colorMap[firstLetter] || { bg: "#000", text: "#fff" };
+                    const hasFiles = email.files.length > 0;
+
+                    const userInitialDiv = `
+                <div class="d-flex align-items-center column-gap-2">
+                      <div class="d-flex align-items-center justify-content-center rounded-circle "
+                        style="height: 50px; width: 50px; background-color: ${colors.bg}; color: ${colors.text}; font-weight: bold;">
+                        <span class="email-initial">${initials}</span>
+                      </div>
+                      <div class="d-flex justify-content-center>
+                        <span>${email.name}</span>
+                      </div>
+                </div>
+            `;
+                    $("#user-initial").html(userInitialDiv);
+                    $("#email-sender").text(email.name);
+                    $("#email-sender-mail").text("<sender@mail.com>");
+                    $("#email-timer").text(email.time);
+                    $("#email-subject").text(email.subject);
+                    $("#attachment-length").text(email.files.length);
+
+                    if (!!hasFiles) {
+                        $("#attachment-card").html(`
+              <div>
+                <span class="d-flex align-items-center attachment-title attachment_card">
+                  <i class='bx bx-paperclip bx-rotate-90'></i>
+                  <span class="fw-normal label__attachment">
+                    <span class="fw-semibold mx-1">${email.files.length}</span>
+                    attachment(s)
+                  </span>
+                </span>
+          
+                <div class="attachment-section mt-3 d-flex">
+                  ${email.files
+                                .map(
+                                    (file) => `
+                        <div class="attachment-item me-3">
+                          ${getFilePreview(file)}
+                          <span class="file-name">${file.name}</span>
+                        </div>
+                      `
+                                )
+                                .join("")}
+                </div> 
+              </div>
+            `);
+                    } else {
+                        $("#attachment-card").html(""); // Effacer le contenu si pas de fichiers
+                    }
+
+                    $("#email-message").html(`
+              <div>
+                 <span>${email.message}</span>
+              </div>
+              `);
+                } else {
+                    $("#email-content").html("<p>Email non trouvé</p>");
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

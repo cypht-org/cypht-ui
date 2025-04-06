@@ -1,0 +1,440 @@
+@import url("./main.css");
+@import url("./contact.css");
+
+
+/* ------------------------------ Compose Mail ------------------------------ */
+
+/* Modale flottante */
+.compose_modal {
+    position: absolute;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(202, 202, 202, 0.1);
+    backdrop-filter: blur(1px);
+    display: none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    /* background-color: red;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
+    height: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    border: .5px solid rgba(128, 128, 128, 0.467);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none; */
+}
+
+.show__compose_modal {
+    /* Juste pour tester, peut être enlevé */
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    /* Active les interactions lorsque visible */
+}
+
+/* En-tête de la modale */
+
+/* Server */
+.email__server {
+    border: .8px solid rgba(128, 128, 128, 0.603);
+    border-radius: 2px;
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Boutons d'action */
+.compose__actions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-icon {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Corps de la modale */
+.compose__body {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.compose__input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.compose__textarea {
+    width: 100%;
+    height: 150px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: none;
+}
+
+/* Pied de la modale */
+.compose__footer {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    border-top: 1px solid #ddd;
+}
+
+.send-btn {
+    background: #1a73e8;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.send-btn:hover {
+    background: #1765c2;
+}
+
+/* !!! */
+.to_card {
+    width: 6dvw;
+    font-size: .85rem;
+    display: flex;
+}
+
+
+.compose_search_input {
+    border: none;
+    font-size: .79rem;
+    font-weight: 600;
+    /* padding-top: 5px; */
+    /* border: 1px solid red; */
+}
+
+.compose_search_input:focus {
+    /* border: none; */
+    outline: none;
+    /* border-color: transparent; */
+}
+
+
+.email-container-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 40px;
+    background-color: white;
+}
+
+.email-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+    flex: 1;
+    /* Permet aux emails de prendre l'espace disponible */
+}
+
+.email-tag {
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color-200);
+    color: var(--gray-800);
+    padding: 0px 8px;
+    padding-top: 2px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.email-tag i {
+    font-size: .85rem;
+    margin-top: 2px;
+    font-weight: bold;
+    cursor: pointer;
+    /* color: red; */
+}
+
+.email-tag .close_icon {
+    font-size: 1rem !important;
+}
+
+.email-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    /* Fait en sorte que l'input prenne l'espace restant */
+    min-width: 150px;
+}
+
+.email_list_container {
+    position: relative;
+}
+
+.compo-email-item,
+#no-result {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.compo-email-item:hover,
+#no-result:hover {
+    background: #f0f0f0;
+}
+
+.compo-email-item {
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.compo-email-item .compo_email {
+    font-weight: 500;
+    font-size: .8rem;
+    color: var(--gray-500);
+}
+
+.compo-email-item .compo_name {
+    font-weight: 600;
+    font-size: .88rem;
+}
+
+.email_list_container {
+    position: relative;
+}
+
+#email_list,
+#no-result {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 90dvh;
+    overflow-y: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 1000;
+    display: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    scrollbar-width: thin;
+    /* Pour Firefox */
+    scrollbar-color: var(--primary-color-500) #f1f1f1;
+}
+
+
+/* Espacement entre l'input et les suggestions */
+.email_list_container input {
+    margin-bottom: 5px;
+}
+
+/* Afficher les suggestions lorsqu'il y a des résultats */
+.email_list_container.active #email_list,
+.email_list_container.active #no-result {
+    display: flex;
+}
+
+/* Personnalisation du scroll pour Chrome, Edge et Safari */
+#email_list::-webkit-scrollbar {
+    width: 6px;
+    /* Réduit la largeur du scroll */
+}
+
+#email_list::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Couleur du scroll */
+    border-radius: 3px;
+}
+
+#email_list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Couleur de fond */
+}
+
+/* Style de la suggestion "aucun résultat" */
+#no-result {
+    padding: 8px;
+    /* text-align: center; */
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.show_no-result {
+    display: flex;
+}
+
+#no-result:hover {
+    background-color: #f8f9fa;
+}
+
+#no-result i {
+    font-size: 2rem;
+    /* color: var(--primary-color-500); */
+}
+
+
+/* --------------------------------- Object --------------------------------- */
+
+
+.object_container {
+    border-top: .8px solid var(--gray-200);
+    border-bottom: .8px solid var(--gray-200);
+}
+
+
+.object_label {
+    font-size: .85rem;
+}
+
+.object_input {
+
+    font-size: .9rem;
+    border: none;
+}
+
+.object_input:focus {
+    outline: none;
+}
+
+
+/* --------------------------------- Message -------------------------------- */
+
+textarea {
+    field-sizing: content;
+    border: none;
+}
+
+
+/* --------------------------------- Action --------------------------------- */
+
+
+.compose_btn {
+    border: none;
+    color: var(--primary-color-500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: .5px solid rgba(128, 128, 128, 0.371);
+    background: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.047);
+}
+
+.compose_btn i {
+    font-size: 1.2rem;
+}
+
+.compose_btn:focus {
+    /* border: none; */
+}
+
+
+/* ---------------------------------- Heart --------------------------------- */
+
+#close_modal_btn i {
+    font-size: 1.5rem;
+}
+
+
+/* ------------------------------- Attachment ------------------------------- */
+
+
+.attachment_container {
+    margin-top: 3rem;
+    border-top: .5px solid rgba(128, 128, 128, 0.371);
+}
+
+#file_list {
+    margin: 0;
+    padding: 0;
+}
+
+#file_list li {
+    list-style: none;
+}
+
+
+#file_list li i {
+    font-size: 1.5rem;
+    /* color: var(--red-500); */
+}
+
+.pdf_file {
+    color: var(--red-500);
+}
+
+.text_file {
+    color: var(--blue-500);
+}
+
+.audio_file,
+.video_file {
+    color: var(--orange-500);
+}
+
+.image_file {
+    color: var(--orange-300);
+}
+
+.zip_file {
+    color: var(--violet-600);
+}
+
+.table_file {
+    color: var(--green-600);
+}
+
+.show_attachment {
+    display: flex;
+}
+
+#file_list li .title {
+    font-size: .85rem;
+    color: var(--gray-600);
+}
+
+#file_list li .size {
+    font-size: .75rem;
+    color: var(--gray-400);
+    margin-top: -4px;
+}
+
+
+@media (min-width: 992px) {
+
+    .compose_modal {
+        /* background-color: red; */
+        left: initial;
+        right: 2%;
+        top: 10%;
+        bottom: 1%;
+        width: 500px;
+        border: .5px solid rgba(128, 128, 128, 0.169);
+        border-radius: 4px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.026);
+    }
+}

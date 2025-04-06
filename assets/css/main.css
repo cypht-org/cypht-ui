@@ -498,3 +498,673 @@ body {
 .scrollable::-webkit-scrollbar-track {
     background-color: transparent;
 }
+
+/* -------------------------------- Drop Down ------------------------------- */
+
+.drop_down_content {
+    border: .5px solid var(--gray-300);
+    border-radius: 3px;
+    height: 30px;
+    font-size: .72rem;
+    display: flex;
+}
+
+
+.drop_down_content .icon_card {
+    background-color: var(--gray-100);
+    font-size: 1.1rem;
+    color: var(--primary-color-500);
+}
+
+
+/* !!! WARNING  */
+.drop__down__content {
+    border: .5px solid var(--gray-300);
+    border-radius: 5px;
+    height: 32px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 10px 13px;
+}
+
+.drop_down_content #drop-down-btn {
+    width: 100%;
+}
+
+.drop_down_content #drop-down-btn .item_selected {
+    width: 90%;
+}
+
+
+.drop_down_content button {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+}
+
+.drop_down_content button i {
+    font-size: 1.2rem
+}
+
+.drop_down_content .item_selected {
+    display: flex;
+    align-items: center;
+    font-size: .72rem;
+    font-weight: 500;
+    column-gap: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.drop_down_content .item_selected i {
+    font-size: .9rem;
+}
+
+.drop_down_list,
+.limit_list {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    right: 0px;
+    background: var(--background);
+    border-radius: 4px;
+    transition: 0.5s;
+    border: .5px solid var(--gray-300);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 50;
+}
+
+
+.drop_down_list ul,
+.limit_list ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.drop_down_list ul li,
+.limit_list ul li {
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: .72rem;
+    display: flex;
+    column-gap: 1px;
+    align-items: center;
+    color: #555;
+    font-weight: 500;
+    transition: 0.5s;
+    opacity: .8;
+}
+
+.drop_down_list ul li:hover,
+.limit_list ul li:hover {
+    background: #f0f0f0;
+    color: #151515;
+    opacity: 1;
+}
+
+.active__drop__menu {
+    display: flex;
+    opacity: 1;
+    top: 35px;
+}
+
+.icon__rotate {
+    transform: rotate(15deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+/* ------------------------------ Drop menu base ----------------------------- */
+.drop__down__base {
+    border: .8px solid rgba(128, 128, 128, 0.475);
+    border-radius: 5px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0px 4px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.026);
+    cursor: pointer;
+}
+
+
+.drop__down__base button {
+
+    border: none;
+}
+
+
+
+.rotate-icon {
+    transform: rotate(180deg);
+}
+
+
+
+/* -------------------------------- Server Menu Bar -------------------------------- */
+.parameter__menu__card {
+    background-color: var(--background);
+    padding-left: 2rem;
+    width: 12rem;
+}
+
+.parameter__menu__card .title__card {
+    margin-top: 2rem;
+}
+
+.parameter__menu__card .item__card {
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+.parameter__menu__card .item__card__label {
+    color: var(--menu-secondary);
+    opacity: .8;
+    font-weight: 500;
+    font-size: .75rem;
+}
+
+.parameter__menu__card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: .4rem;
+    color: var(--menu-secondary);
+    font-size: .84rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    border-right: 1px solid rgba(128, 128, 128, 0.196);
+}
+
+.parameter__menu__card__b-left ul {
+    list-style: none;
+    padding: 0;
+    margin-top: .4rem;
+    color: var(--menu-secondary);
+    font-size: .84rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    border-left: 1px solid rgba(128, 128, 128, 0.196);
+}
+
+.parameter__menu__card ul li {
+    margin-bottom: .2rem;
+}
+
+.parameter__menu__card ul li a {
+    text-decoration: none;
+    color: var(--menu-secondary);
+    padding-right: .9rem;
+}
+
+.parameter__active__menu {
+    color: var(--primary-color) !important;
+}
+
+
+.config__title {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    font-size: .85rem;
+    color: var(--menu-primary);
+    font-weight: 600;
+    opacity: .7;
+}
+
+.config__description {
+    margin-left: 1.5rem;
+    font-size: .8rem;
+    width: 500px;
+    opacity: .7;
+}
+
+
+
+/* ---------------------------------- Form ---------------------------------- */
+.input__modal {
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    border-radius: 4px;
+    height: 2.2rem;
+}
+
+
+
+
+/* ------------------------------- Table & Table header ------------------------------- */
+
+.table__card {
+    border: 1px solid rgba(128, 128, 128, 0.228);
+    border-radius: 3px;
+    margin-top: .6rem;
+}
+
+.table_left_line_card {
+    border-left: .5px solid rgba(128, 128, 128, 0.228);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.table__card__title {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: #F8F9FB;
+    padding: 0 7px;
+    height: 2.4rem;
+    display: flex;
+}
+
+.table__card__title span {
+    height: 100%;
+    font-size: .76rem;
+    padding-left: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--foreground);
+}
+
+.table__card__title span i {
+    font-size: 1rem;
+    padding-right: .3rem;
+}
+
+/* ------------------------------- Table Item ------------------------------- */
+.table__card__item {
+    border-top: 1px solid rgba(128, 128, 128, 0.228);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 0 7px;
+    min-height: 3rem;
+    display: flex;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.table__card__item:hover {
+    background-color: rgba(128, 128, 128, 0.067);
+}
+
+.table__card__item span {
+    height: 100%;
+    font-size: .76rem;
+    padding-left: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.table__card__item #imap__server {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8px;
+    /* gap: -2px; */
+}
+
+.table__card__item span {
+    font-size: .76rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.table__card__item #imap__server .protocol {
+    margin-top: -8px;
+}
+
+/* ------------------------------ Table Actions ----------------------------- */
+
+#imap__actions,
+#feed__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#imap__actions button,
+#feed__actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .5px solid rgba(128, 128, 128, 0.363);
+    padding: 3.5px;
+    border-radius: 4px;
+}
+
+#imap__actions button,
+#feed__actions button {
+    font-size: 1rem;
+    color: gray;
+}
+
+
+
+
+.edit_btn:hover {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+.test_btn:hover {
+    color: #5193EC !important;
+    border-color: #5193EC !important;
+}
+
+.hide_btn:hover {
+    color: #D589ED !important;
+    border-color: #D589ED !important;
+}
+
+.delete_btn:hover {
+    color: rgba(255, 0, 0, 0.61) !important;
+    border-color: rgba(255, 0, 0, 0.472) !important;
+}
+
+
+/* ---------------------------- Field Form ---------------------------- */
+
+.filed__card {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: .7rem;
+    
+}
+
+.field__label {
+    font-size: .8rem;
+    font-weight: 500;
+    opacity: .9;
+}
+
+
+.param__field {
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    border-radius: 4px;
+    width: 350px;
+    height: 2.3rem;
+}
+
+.base__field {
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    border-radius: 4px;
+    height: 2.3rem;
+}
+
+
+
+.filed__card input {
+    padding: 0 10px;
+    font-weight: 500;
+}
+
+.filed__card input:focus {
+    outline: none;
+    border-color: #80B441;
+}
+
+
+/* btn */
+
+.btn-reset,
+.btn-connect,
+.btn-delete {
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: .95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-reset i,
+.btn-connect i {
+    font-size: 1rem;
+}
+
+/* Bouton Reset */
+.btn-reset {
+    border: .7px solid #e0e0e0;
+    color: #333;
+    background-color: transparent;
+}
+
+.btn-reset:hover {
+    background-color: #d6d6d6;
+}
+
+/* Bouton Connect */
+.btn-connect {
+    background-color: #80B441;
+    color: white;
+    flex-grow: 1;
+}
+
+.btn-connect:hover {
+    background-color: #6b9837;
+}
+
+/* ---------------------------- Menu Card ---------------------------- */
+.menu__card {
+    border-bottom: 2.5px solid #F6F6F8;
+}
+
+
+.label__description {
+    color: var(--label-description);
+}
+
+.menu__card ul {
+    display: flex;
+    padding-left: 0;
+}
+
+.menu__card ul li {
+    list-style: none;
+    font-size: .8rem;
+    color: #A6A7AA;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+    margin-bottom: -9px;
+}
+
+.menu__card ul li:hover {
+    color: var(--menu-primary);
+}
+
+.menu__card ul li button {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 10px;
+    margin-bottom: -8px;
+    background-color: transparent;
+
+}
+
+
+.active {
+    font-weight: 600 !important;
+    color: var(--menu-primary) !important;
+    border-color: var(--primary-color) !important;
+    background-color: transparent !important;
+}
+
+/* destroy button */
+.btn-delete {
+    background-color: var(--second-danger-color);
+    /* Rouge vif */
+    color: white;
+    flex-grow: 1;
+}
+
+.btn-delete:hover {
+    background-color: var(--danger-color);
+}
+
+
+/* --------------------------------- Search --------------------------------- */
+.search__content {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    padding: 0 4px;
+}
+
+.search__content input {
+    border: none;
+    padding: 0 5px;
+    outline: none;
+    font-size: .8rem;
+}
+
+
+/* --------------------------------- header --------------------------------- */
+
+.popup__card {
+    position: absolute;
+    top: 100%;
+    left: -5rem;
+    background: #fff;
+    border: .5px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.063);
+    border-radius: 4px;
+    min-width: 50px;
+    margin-top: 8px;
+    display: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 40;
+}
+
+/* Affichage du menu */
+.show__popup {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.popup__card .popup__title {
+    padding-top: 4px;
+    margin-bottom: 8px;
+    font-size: .78rem;
+    /* color: #C0392B; */
+    font-weight: 600;
+}
+
+.popup__icon {
+    transition: transform 0.4s ease;
+}
+
+
+/* -------------------------------- Drop Menu ------------------------------- */
+
+
+.dropdown-btn {
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    border-radius: 4px;
+    width: 350px;
+    min-height: 2.3rem;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    border-radius: 4px;
+    width: 100%;
+    height: 2.3rem;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.dropdown-btn button i {
+    transition: transform 0.4s ease;
+}
+
+.dropdown-menu-custom,
+.table-dropdown-menu-custom {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: 0.01rem solid rgba(128, 128, 128, 0.622);
+    border-radius: 4px;
+    width: 100%;
+    top: 45px;
+    left: 0;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu-custom a,
+.table-dropdown-menu-custom a {
+    color: #333;
+    padding: 10px 10px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: .82rem;
+    font-weight: 500;
+}
+
+.dropdown-menu-custom a:hover {
+    background-color: #f1f1f1;
+
+}
+
+.rotate-icon {
+    transform: rotate(180deg);
+}
+
+.show {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.show-block {
+    display: flex !important;
+}
+
+
+@media (min-width: 768px) {
+    .popup__card {
+        left: 0;
+    }
+}
