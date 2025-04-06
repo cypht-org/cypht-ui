@@ -301,8 +301,54 @@
 
 }
 
+.dark {
+    --body-background: #1e1e2f;
+    --border-color: #2c2f4a;
+    --primary-color: #80B441;
+    --toggle-color: #555;
+
+    /* Primary color shades adapted for dark background */
+    --primary-color-10: #1b2a14;
+    --primary-color-25: #22371a;
+    --primary-color-50: #2b4821;
+    --primary-color-100: #3e662f;
+    --primary-color-200: #51843e;
+    --primary-color-300: #6aa94d;
+    --primary-color-400: #80B441;
+    --primary-color-500: #95c657;
+    --primary-color-600: #a6d16f;
+    --primary-color-700: #b7dc87;
+    --primary-color-800: #c9e8a0;
+    --primary-color-900: #dcf4b8;
+
+    --background: hsl(222, 47%, 11%);
+    --foreground: #F5F5F5;
+    --muted: #2a2b3c;
+    --muted-foreground: #b0b0b0;
+    --popover: #2a2b3c;
+    --popover-foreground: #f3f3f3;
+    --border: #3c3c4c;
+    --input: #3c3c4c;
+    --card: #2a2b3c;
+    --card-foreground: #f3f3f3;
+    --primary: #80B441;
+    --primary-foreground: #f0fdf4;
+    --secondary: #3c3c4c;
+    --secondary-foreground: #e6e6e6;
+    --accent: #3c3c4c;
+    --accent-foreground: #e6e6e6;
+    --destructive: #dc2626;
+    --destructive-foreground: #fff;
+    --ring: #80B441;
+
+    /* Adjust any custom colors as needed */
+    --background-2: #292a3a;
+    --label-description: rgba(255, 255, 255, 0.6);
+}
+
 body {
     background-color: #f5f5f5fa;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .__parent {
@@ -337,6 +383,48 @@ body {
 .magic-t-line {
     border-top: 1.5px solid #F6F6F8;
 }
+
+/* Dark mode support */
+/* @media (prefers-color-scheme: dark) { */
+.dark .magic-b-line {
+    border-bottom: 1.5px solid #2C2C2E;
+}
+
+.dark .magic-l-line {
+    border-left: 1.5px solid #2C2C2E;
+}
+
+.dark .magic-r-line {
+    border-right: 1.5px solid #2C2C2E;
+}
+
+.dark .magic-t-line {
+    border-top: 1.5px solid #2C2C2E;
+}
+
+.dark .btn, .dark button {
+    color: whitesmoke;
+    background: var(--background);
+}
+.dark input,
+.dark textarea,
+.dark select,
+.dark button {
+    background-color: var(--background);
+    color: whitesmoke;
+    /* border: 1px solid #444444; */
+}
+
+.dark input:focus,
+.dark textarea:focus,
+.dark select:focus,
+.dark button:focus {
+    border-color: #F6F6F8;
+    outline: none;
+    background-color: #444444;
+}
+
+/* } */
 
 .clear__btn {
     border: 0;
@@ -530,6 +618,28 @@ body {
     padding: 10px 13px;
 }
 
+/*-------------DARK MODE --------------*/
+.dark .drop_down_content {
+    border: .5px solid #444444;
+}
+
+.dark .drop_down_content .icon_card {
+    background-color: var(--background);
+    color: #ffffff;
+}
+
+.dark .drop__down__content {
+    /* border: .5px solid #555555; */
+    background-color: #2C2C2E;
+    color: whitesmoke;
+}
+
+/* Optional: Highlight effect for focused dropdown (dark mode) */
+.dark .drop__down__content:focus {
+    border-color: #F6F6F8;
+    background-color: #444444;
+}
+
 .drop_down_content #drop-down-btn {
     width: 100%;
 }
@@ -561,11 +671,18 @@ body {
     cursor: pointer;
     position: relative;
 }
+.dark .drop_down_content .item_selected, .dark .drop_down_content #limit_selected, #pagination-info {
+    color: whitesmoke;
+}
 
 .drop_down_content .item_selected i {
     font-size: .9rem;
 }
 
+/* .dark .drop_down_list,
+.dark .limit_list {
+    color: whitesmoke;
+} */
 .drop_down_list,
 .limit_list {
     display: none;
@@ -603,6 +720,11 @@ body {
     font-weight: 500;
     transition: 0.5s;
     opacity: .8;
+}
+
+.dark .drop_down_list ul li,
+.dark .limit_list ul li {
+    color: whitesmoke;
 }
 
 .drop_down_list ul li:hover,
@@ -651,6 +773,30 @@ body {
 }
 
 
+/*---------- mails list-----------------*/
+.email-item {
+    background: var(--background);
+}
+
+.email-item:hover {
+    background: #f5f5f5;
+}
+
+.dark .email-subject, .dark .email-message, .dark .email__time {
+    color: #AAAAAA !important;
+}
+
+.dark .email-item:hover {
+    background: #1e2636;
+}
+
+.dark #compose-mail span {
+    color: var(--gray-100);
+}
+
+.dark {
+    --bs-border-color: #444444;
+}
 
 /* -------------------------------- Server Menu Bar -------------------------------- */
 .parameter__menu__card {
@@ -887,7 +1033,7 @@ body {
     flex-direction: column;
     gap: 6px;
     margin-bottom: .7rem;
-    
+
 }
 
 .field__label {

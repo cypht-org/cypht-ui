@@ -131,3 +131,29 @@
         padding-left: 4.4rem !important;
     }
 }
+
+/*-------------DARK MODE------------------*/
+
+@media (prefers-color-scheme: dark) {
+    .dark-mode .menu__container,
+    .dark-mode nav {
+        background-color: var(--background);
+        /* or use a darker var like --gray-900 */
+    }
+
+    .dark-mode .menu__container ul li i {
+        color: var(--gray-500);
+        /* slightly lighter in dark mode */
+    }
+
+    .dark-mode .account_card {
+        border-color: var(--primary-color-700);
+        background-color: var(--gray-900);
+        color: var(--gray-100);
+    }
+
+    .dark-mode .account_card button {
+        border-color: var(--gray-500);
+        color: var(--gray-100);
+    }
+}
