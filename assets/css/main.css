@@ -322,6 +322,7 @@
     --primary-color-900: #dcf4b8;
 
     --background: hsl(222, 47%, 11%);
+    --background-2: #242e41;
     --foreground: #F5F5F5;
     --muted: #2a2b3c;
     --muted-foreground: #b0b0b0;
@@ -341,13 +342,12 @@
     --destructive-foreground: #fff;
     --ring: #80B441;
 
-    /* Adjust any custom colors as needed */
-    --background-2: #292a3a;
+    --background-2: #242e41;
     --label-description: rgba(255, 255, 255, 0.6);
 }
 
 body {
-    background-color: #f5f5f5fa;
+    background-color: var(--background);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -369,37 +369,37 @@ body {
 }
 
 .magic-b-line {
-    border-bottom: 1.5px solid #F6F6F8;
+    border-bottom: 1.5px solid var(--background-2);
 }
 
 .magic-l-line {
-    border-left: 1.5px solid #F6F6F8;
+    border-left: 1.5px solid var(--background-2);
 }
 
 .magic-r-line {
-    border-right: 1.5px solid #F6F6F8;
+    border-right: 1.5px solid var(--background-2);
 }
 
 .magic-t-line {
-    border-top: 1.5px solid #F6F6F8;
+    border-top: 1.5px solid var(--background-2);
 }
 
 /* Dark mode support */
 /* @media (prefers-color-scheme: dark) { */
 .dark .magic-b-line {
-    border-bottom: 1.5px solid #2C2C2E;
+    border-bottom: 1.5px solid var(--background-2);
 }
 
 .dark .magic-l-line {
-    border-left: 1.5px solid #2C2C2E;
+    border-left: 1.5px solid var(--background-2);
 }
 
 .dark .magic-r-line {
-    border-right: 1.5px solid #2C2C2E;
+    border-right: 1.5px solid var(--background-2);
 }
 
 .dark .magic-t-line {
-    border-top: 1.5px solid #2C2C2E;
+    border-top: 1.5px solid var(--background-2);
 }
 
 .dark .btn, .dark button {
@@ -421,7 +421,32 @@ body {
 .dark button:focus {
     border-color: #F6F6F8;
     outline: none;
-    background-color: #444444;
+}
+
+.dark .form-control:focus {
+    color: whitesmoke !important;
+    background-color: var(--background-2);
+    border-color: var(--background);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem var(--background-2);
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+    color: whitesmoke;
+}
+
+.dark .border-bottom {
+    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--background-2) !important;
+}
+
+.dark .border-top {
+    border-top: var(--bs-border-width) var(--bs-border-style) var(--background-2) !important;
+}
+
+.dark .object_container {
+    border-top: .8px solid var(--background-2);
+    border-bottom: .8px solid var(--background-2);
 }
 
 /* } */
@@ -623,9 +648,14 @@ body {
     border: .5px solid #444444;
 }
 
-.dark .drop_down_content .icon_card {
+.dark .drop_down_content .icon_card, .dark .modal-content, .dark .offcanvas-start, .dark .dropdown-menu-custom, .dark .dropdown-item, .dark .bar_more_menu, .dark #email_list, .dark #no-result {
     background-color: var(--background);
-    color: #ffffff;
+    color: whitesmoke;
+}
+
+.dark .bar_more_menu {
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.076); */
+    border: .5px solid var(--background-2);
 }
 
 .dark .drop__down__content {
@@ -671,8 +701,8 @@ body {
     cursor: pointer;
     position: relative;
 }
-.dark .drop_down_content .item_selected, .dark .drop_down_content #limit_selected, #pagination-info {
-    color: whitesmoke;
+.dark .drop_down_content .item_selected, .dark .drop_down_content #limit_selected, .dark #pagination-info, .dark .account_name, .dark .account_email, .dark .account_card small {
+    color: whitesmoke !important;
 }
 
 .drop_down_content .item_selected i {
@@ -782,7 +812,7 @@ body {
     background: #f5f5f5;
 }
 
-.dark .email-subject, .dark .email-message, .dark .email__time {
+.dark .email-subject, .dark .email-message, .dark #email-subject, .dark #email-message, .dark .email__time, .dark #email-sender, .dark #btn_dropdown, .dark .header_detail span, .dark .label__attachment, .dark .file-name {
     color: #AAAAAA !important;
 }
 
@@ -1107,13 +1137,17 @@ body {
 
 /* Bouton Connect */
 .btn-connect {
-    background-color: #80B441;
+    background-color: var(--primary-color-500) !important;
     color: white;
     flex-grow: 1;
 }
 
-.btn-connect:hover {
-    background-color: #6b9837;
+.btn-connect:hover, .send_btn:hover, #compose_btn:hover {
+    background-color: #6b9837 !important;
+}
+
+#attachment_btn:hover, .menu__right button:hover {
+    background-color: #242e41;
 }
 
 /* ---------------------------- Menu Card ---------------------------- */

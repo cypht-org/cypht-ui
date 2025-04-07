@@ -387,9 +387,13 @@
                     <div class="flex-1 position-relative">
                         <div id="to-container" class="email-container text-dark mb-2"></div>
                         <div class="email_list_container">
-                            <input type="text" id="to-input" class="compose_search_input"
+                            <div>
+                                <input type="text" id="to-input" class="compose_search_input"
                                 placeholder="Saisir un email...">
-                            <div id="email_list" class="py-2"></div>
+                                <a href="">Cc</a>
+                                <a href="">Bcc</a>
+                            </div>
+                            <div id="email_list" class=""></div>
                             <div id="no-result" class="flex-column ">
                                 <div class="d-flex align-items-center gap-1">
                                     <i class='bx bxs-user-circle'></i>
@@ -503,7 +507,7 @@
     <!-- 4 -->
     <div id="acounts"
         class="position-absolute start-0 top-0 end-0 accounts_container  d-flex align-items-center justify-content-center d-none  py-2">
-        <div class="account_card bg-white rounded-3 shadow-sm d-flex flex-column bg-primary">
+        <div class="account_card rounded-3 shadow-sm d-flex flex-column">
             <!-- Storage Info -->
             <div class="d-flex gap-2 align-items-center  ps-1 border-bottom pb-2">
                 <button id="close_account_list" class=" align-items-center gap-2">
@@ -529,7 +533,7 @@
                     </div>
                     <div class="d-flex items-center justify-content-center gap-4 w-100 pt-3">
                         <button class=""><i class='bx bx-user'></i>Profile</button>
-                        <button><i class='bx bx-log-out'></i>Logout</button>
+                        <button class="bg-danger"><i class='bx bx-log-out'></i>Logout</button>
                     </div>
                 </div>
 
