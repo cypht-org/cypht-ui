@@ -1146,6 +1146,20 @@ body {
     background-color: #6b9837 !important;
 }
 
+/* Circle Button */
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    text-align: center;
+    line-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #attachment_btn:hover, .menu__right button:hover {
     background-color: #242e41;
 }
