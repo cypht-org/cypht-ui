@@ -4,6 +4,9 @@
 .dev_param_list {
       bottom: 15px;
       top: 15px;
+      background-color: var(--background);
+      border-radius: .9rem .9rem 0 0;
+      margin: 0 .4rem;
 }
 
 .dev_param_list span {
@@ -39,8 +42,10 @@
 
 
 @media (min-width: 992px) {
+
+
       .dev_param_list {
-            width: 88%;
+            margin: 0 1.4rem;
       }
 
 

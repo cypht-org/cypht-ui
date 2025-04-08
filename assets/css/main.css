@@ -858,16 +858,22 @@ body {
 }
 
 
-
-
 .edit_btn:hover {
     color: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
 }
 
-.test_btn:hover {
-    color: #5193EC !important;
+.update_btn {
+    color: #5193EC;
     border-color: #5193EC !important;
+    transition: ease-in-out 0.2s;
+}
+
+.update_btn:hover {
+    background-color: #5193EC !important;
+    border-color: #5193EC !important;
+    color: white;
+    transition: ease-in-out 0.2s;
 }
 
 .hide_btn:hover {
@@ -875,9 +881,16 @@ body {
     border-color: #D589ED !important;
 }
 
+.delete_btn {
+    border-color: rgba(255, 0, 0, 0.707) !important;
+    color: rgba(255, 0, 0, 0.707);
+}
+
 .delete_btn:hover {
-    color: rgba(255, 0, 0, 0.61) !important;
-    border-color: rgba(255, 0, 0, 0.472) !important;
+    background-color: rgba(255, 0, 0, 0.707) !important;
+    border-color: rgba(255, 0, 0, 0.707) !important;
+    color: white;
+    transition: ease -in-out 0.2s;
 }
 
 

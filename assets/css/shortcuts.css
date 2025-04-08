@@ -73,16 +73,26 @@
 
 
 /* ----------------------------- Issoini-Takashi ---------------------------- */
+
+
+.parameter_content {
+
+    background-color: transparent !important;
+    /* border-radius: .9rem .9rem .5rem .5rem;
+    background-color: var(--background) */
+}
+
 .shortcut_card {
+    border-radius: .9rem .9rem .5rem .5rem;
+    background-color: var(--background);
     width: 100%;
     border: .8px solid var(--gray-200) !important;
-    border-radius: 5px;
+
 }
 
 .shortcut_card_top {
     border-bottom: .8px solid var(--primary-color-200) !important;
     margin-bottom: .5rem;
-    /* padding-bottom: 90rem; */
 }
 
 .shortcut_card_top span {
@@ -121,6 +131,13 @@
 
 @media (min-width: 992px) {
 
+
+    .shortcut_card {
+        /* width: 100%; */
+        border: .8px solid var(--gray-200) !important;
+        /* border-radius: .9rem .9rem .5rem .5rem; */
+    }
+
     .shortcuts-grid {
         font-size: .8rem;
     }
@@ -142,11 +159,17 @@
         display: flex;
     }
 
+    .icon_label_indicator {
+        margin-top: 1rem;
+    }
+
     .icon_label_indicator i {
-        background-color: var(--gray-100);
-        padding: 4px;
-        border-radius: 4px;
-        font-size: 1.1rem;
+        border-radius: .4rem;
+        border: .8px solid var(--gray-200) !important;
+        background-color: var(--background);
+        padding: 8px;
+        font-size: 1.4rem;
+        color: var(--primary-color) !important;
     }
 
     .shortcut_container {

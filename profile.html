@@ -70,7 +70,6 @@
                 </ul>
             </div>
             <!-- </nav> -->
-
             <nav class="d-none d-lg-flex flex-column justify-content-between  magic-r-line py-2">
                 <div class="d-flex flex-column align-items-center  gap-4  justify-content-center">
                     <div class="d-flexalign-items-center logo_content">
@@ -139,7 +138,7 @@
                 </div>
 
 
-                <div class="flex-1 d-flex d-lg-flex flex-1 magic-t-line column-gap-4 mb-2">
+                <div class="flex-1 d-flex d-lg-flex flex-1 magic-t-line column-gap-5 mb-2">
                     <div class="d-none d-lg-block parameter_menu_card">
                         <ul>
                             <li><a href="/server.html"><i class="bi bi-app-indicator"></i>General</a></li>
@@ -157,9 +156,7 @@
                     </div>
 
                     <div class="flex-1 d-flex flex-column position-relative parameter_view_card">
-
-                        <div class="d-flex column-gap-3  py-4  parameter_title_card ps-4">
-
+                        <div class="d-flex column-gap-3 py-4 parameter_title_card ps-4">
                             <div>
                                 <div class="param_icon_card d-flex">
                                     <i class="bx bx-user"></i>
@@ -173,95 +170,259 @@
                             </div>
                         </div>
 
-                        <div class="parameter_content flex-1 d-flex flex-column mx-3 mx-lg-0 pt-lg-3 position-relative">
-                            <div class="position-absolute  dev_param_list fw-medium d-flex flex-column row-gap-4 px-2  pt-4 px-lg-4 desktop_scroll  end-0 start-0  overflow-y-auto"
-                                style="bottom: 15px; top: 15px;">
+                        <div class="d-flex justify-content-center px-4">
+                            <div
+                                class="d-flex justify-content-between p-2 px-lg-5  parameter_view_menu_card d-flex align-items-center">
 
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-hover text-center align-middle">
-                                        <thead class="table-dark">
-                                            <tr>
-                                                <th><i class='bx bx-card'></i> IMAP Server</th>
-                                                <th><i class='bx bx-user'></i> Username</th>
-                                                <th><i class='bx bx-envelope'></i> Email Address
-                                                </th>
-                                                <th><i class='bx bx-reply'></i> Reply-to</th>
-                                                <th><i class='bx bx-server'></i> SMTP Server
-                                                </th>
-                                                <th class="small_td_th" style="width: 2rem;"><i
-                                                        class='bx bx-pencil'></i> Signature
-                                                </th>
-                                                <th class="small_td_th"><i class='bx bx-comment'></i> Remark
-                                                </th>
-                                                <th class="small_td_th"><i class='bx bx-check-circle'></i>
-                                                    Default
-                                                </th>
-                                                <th class="small_td_th"><i class='bx bx-dots-vertical-rounded'></i>
-                                                    Actions</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>imap.example.com</td>
-                                                <td>DemoUser</td>
-                                                <td>demo@example.com</td>
-                                                <td>reply@example.com</td>
-                                                <td>smtp.example.com</td>
-                                                <td>-- --</td>
-                                                <td>-- --</td>
-                                                <td>
-                                                    <small class="">-- --</small>
-                                                </td>
-                                                <td class="">
+                                <span class="fw-medium" style="font-size: .8rem;">4 Server(s)</span>
+                                <div>
+                                    <button type="button" data-bs-toggle="offcanvas" data-bs-target="#new-server"
+                                        aria-controls="offcanvasRight" class="btn btn-sm new_config_btn">
+                                        <i class='bx bx-user-plus'></i>
+                                        New Profile
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
 
-                                                    <button class="btn btn-sm test_btn me-1" data-bs-toggle="tooltip"
-                                                        title="Edit"><i class='bx bx-candles'></i></button>
-                                                    <button class="btn btn-sm delete_btn " data-bs-toggle="tooltip"
-                                                        title="Delete"><i class='bx bx-trash'></i></button>
+                        <div
+                            class="parameter_content flex-1 d-flex flex-column  mx-3 mx-lg-0 pt-lg-3 position-relative">
+                            <div
+                                class="position-absolute  dev_param_list fw-medium  px-2 pb-4  pt-4 px-lg-4 desktop_scroll  end-0 start-0  overflow-y-auto  bottom-0 top-0  align-items-center d-flex  flex-column">
 
-                                            </tr>
-                                            <tr>
-                                                <td>imap.example.com</td>
-                                                <td>DemoUser</td>
-                                                <td>demo@example.com</td>
-                                                <td>reply@example.com</td>
-                                                <td>smtp.example.com</td>
-                                                <td>-- --</td>
-                                                <td>-- --</td>
-                                                <td>
-                                                    <small class="">-- --</small>
-                                                </td>
-                                                <td class="">
-
-                                                    <button class="btn btn-sm test_btn me-1" data-bs-toggle="tooltip"
-                                                        title="Edit"><i class='bx bx-candles'></i></button>
-                                                    <button class="btn btn-sm delete_btn " data-bs-toggle="tooltip"
-                                                        title="Delete"><i class='bx bx-trash'></i></button>
-
-                                            </tr>
-                                            <tr>
-                                                <td>imap.example.com</td>
-                                                <td>DemoUser</td>
-                                                <td>demo@example.com</td>
-                                                <td>reply@example.com</td>
-                                                <td>smtp.example.com</td>
-                                                <td>-- --</td>
-                                                <td>-- --</td>
-                                                <td>
-                                                    <small class="">-- --</small>
-                                                </td>
-                                                <td class="">
-
-                                                    <button class="btn btn-sm test_btn me-1" data-bs-toggle="tooltip"
-                                                        title="Edit"><i class='bx bx-candles'></i></button>
-                                                    <button class="btn btn-sm delete_btn " data-bs-toggle="tooltip"
-                                                        title="Delete"><i class='bx bx-trash'></i></button>
-
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <div class=" w-100 d-flex justify-content-center">
+                                    <div class="server_list_label">
+                                        <span class="px-3 py-2"><i class='bx bxs-card'></i>Profiles list</span>
+                                    </div>
                                 </div>
 
+                                <!-- 1  -->
+                                <div class="server_list_container">
+                                    <div class="d-flex items-center  border server_list_card">
+                                        <div class="left_card h-100 px-2  d-none d-lg-flex items-center">
+                                            <div class=" icon_label_indicator">
+                                                <i class='bx bx-dialpad-alt'></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 cursor-pointer right_card">
+                                            <div class="d-flex justify-content-between  py-2 px-3 profile_top_card">
+                                                <div class="d-flex flex-column prtop_imapserver">
+                                                    <span class="server_list_card_label"><i class='bx bx-card'></i>
+                                                        IMAP
+                                                        Server</span>
+                                                    <span id="imap_server">imap.gmail.com</span>
+                                                </div>
+                                                <div class="d-flex items-center prtop_actions d-lg-none">
+                                                    <button class="update_btn me-1" data-bs-toggle="tooltip"
+                                                        title="Edit"><i class='bx bx-candles'></i></button>
+                                                    <button class="delete_btn " data-bs-toggle="tooltip"
+                                                        title="Delete"><i class='bx bx-trash'></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="gap-4 row profile_bottom_card p-3">
+                                                <div class="col-lg-6 col-12 d-flex flex-column row-gap-3">
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-user'></i>Username</small>
+                                                        <small class="bottom_card_container_value">Bin user</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-envelope'></i>Email</small>
+                                                        <small
+                                                            class="bottom_card_container_value">binuser@gmail.com</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class="bi bi-reply"></i>Reply-to</small>
+                                                        <small
+                                                            class="bottom_card_container_value">reply003@gmail.com</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-plug'></i>SMTP Server</small>
+                                                        <small class="bottom_card_container_value">Bin user</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg d-flex flex-column row-gap-3">
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-note'></i>Signature</small>
+                                                        <small class="bottom_card_container_value">Lorem ipsum, dolor
+                                                            sit amet
+                                                            consectetur adipisicing elit.
+                                                            Earum itaque tempore sint.</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-comment'></i>Remark</small>
+                                                        <small class="bottom_card_container_value">No remark</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-check-circle'></i>Default</small>
+                                                        <small class="bottom_card_container_value">No remark</small>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2  -->
+                                <div class="server_list_container">
+                                    <div class="d-flex items-center  border server_list_card">
+                                        <div class="left_card h-100 px-2  d-none d-lg-flex items-center">
+                                            <div class=" icon_label_indicator">
+                                                <i class='bx bx-dialpad-alt'></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 cursor-pointer right_card">
+                                            <div class="d-flex justify-content-between  py-2 px-3 profile_top_card">
+                                                <div class="d-flex flex-column prtop_imapserver">
+                                                    <span class="server_list_card_label"><i class='bx bx-card'></i>
+                                                        IMAP
+                                                        Server</span>
+                                                    <span id="imap_server">imap.gmail.com</span>
+                                                </div>
+                                                <div class="d-flex items-center prtop_actions d-lg-none">
+                                                    <button class="update_btn me-1" data-bs-toggle="tooltip"
+                                                        title="Edit"><i class='bx bx-candles'></i></button>
+                                                    <button class="delete_btn " data-bs-toggle="tooltip"
+                                                        title="Delete"><i class='bx bx-trash'></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="gap-4 row profile_bottom_card p-3">
+                                                <div class="col-lg-6 col-12 d-flex flex-column row-gap-3">
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-user'></i>Username</small>
+                                                        <small class="bottom_card_container_value">Bin user</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-envelope'></i>Email</small>
+                                                        <small
+                                                            class="bottom_card_container_value">binuser@gmail.com</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class="bi bi-reply"></i>Reply-to</small>
+                                                        <small
+                                                            class="bottom_card_container_value">reply003@gmail.com</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-plug'></i>SMTP Server</small>
+                                                        <small class="bottom_card_container_value">Bin user</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg d-flex flex-column row-gap-3">
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-note'></i>Signature</small>
+                                                        <small class="bottom_card_container_value">Lorem ipsum, dolor
+                                                            sit amet
+                                                            consectetur adipisicing elit.
+                                                            Earum itaque tempore sint.</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-comment'></i>Remark</small>
+                                                        <small class="bottom_card_container_value">No remark</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-check-circle'></i>Default</small>
+                                                        <small class="bottom_card_container_value">No remark</small>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 3  -->
+                                <div class="server_list_container">
+                                    <div class="d-flex items-center  border server_list_card">
+                                        <div class="left_card h-100 px-2  d-none d-lg-flex items-center">
+                                            <div class=" icon_label_indicator">
+                                                <i class='bx bx-dialpad-alt'></i>
+                                            </div>
+                                        </div>
+                                        <div class="flex-1 cursor-pointer right_card">
+                                            <div class="d-flex justify-content-between  py-2 px-3 profile_top_card">
+                                                <div class="d-flex flex-column prtop_imapserver">
+                                                    <span class="server_list_card_label"><i class='bx bx-card'></i>
+                                                        IMAP
+                                                        Server</span>
+                                                    <span id="imap_server">imap.gmail.com</span>
+                                                </div>
+                                                <div class="d-flex items-center prtop_actions d-lg-none">
+                                                    <button class="update_btn me-1" data-bs-toggle="tooltip"
+                                                        title="Edit"><i class='bx bx-candles'></i></button>
+                                                    <button class="delete_btn " data-bs-toggle="tooltip"
+                                                        title="Delete"><i class='bx bx-trash'></i></button>
+                                                </div>
+                                            </div>
+
+                                            <div class="gap-4 row profile_bottom_card p-3">
+                                                <div class="col-lg-6 col-12 d-flex flex-column row-gap-3">
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-user'></i>Username</small>
+                                                        <small class="bottom_card_container_value">Bin user</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-envelope'></i>Email</small>
+                                                        <small
+                                                            class="bottom_card_container_value">binuser@gmail.com</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class="bi bi-reply"></i>Reply-to</small>
+                                                        <small
+                                                            class="bottom_card_container_value">reply003@gmail.com</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-plug'></i>SMTP Server</small>
+                                                        <small class="bottom_card_container_value">Bin user</small>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-lg d-flex flex-column row-gap-3">
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-note'></i>Signature</small>
+                                                        <small class="bottom_card_container_value">Lorem ipsum, dolor
+                                                            sit amet
+                                                            consectetur adipisicing elit.
+                                                            Earum itaque tempore sint.</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-comment'></i>Remark</small>
+                                                        <small class="bottom_card_container_value">No remark</small>
+                                                    </div>
+                                                    <div class="bottom_card_container">
+                                                        <small class="bottom_card_container_label"><i
+                                                                class='bx bx-check-circle'></i>Default</small>
+                                                        <small class="bottom_card_container_value">No remark</small>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -297,6 +458,122 @@
                 </div>
             </div>
         </div>
+
+        <!-- 2 -->
+        <div class="offcanvas offcanvas-end my-2 mx-2 rounded" tabindex="-1" id="new-server"
+            aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <div class="w-100">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h6 id="offcanvasRightLabel" class="fw-semibold">Add New Profile</h6>
+                        <div class="d-flex align-items-center">
+                            <button type="button" class=" text-reset clear__btn type__two__btn"
+                                style="font-size: 1.4rem;" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                                    class='bx bx-x'></i></button>
+                        </div>
+                    </div>
+
+                    <small class="fw-normal d-flex" style="width: 80%;">
+                        Add a new contact by entering essential details more.
+
+                    </small>
+                </div>
+            </div>
+
+            <div class="offcanvas-body scrollable mt-2 mb-4" style="max-height: 80vh; padding-left: .6rem;">
+                <div class="" style="height: 70vh;">
+                    <div class="d-flex flex-column row-gap-0">
+
+                        <!-- Person -->
+                        <small class="fw-semibold d-flex align-items-center gap-2 mb-2 ms-2"
+                            style="color: var(--menu-primary); font-size: .88rem;">
+                            <i class='bi bi-plugin' style="font-size: 1.1rem;"></i>Profile Info
+                        </small>
+                        <div class="mx-2 mt-2  d-flex flex-column" style="width: 93%">
+                            <div class="filed__card mb-3">
+                                <small class="field__label">Display Name</small>
+                                <input id="display_name" type="text" class="base__field" style="font-size: .8rem;"
+                                    placeholder="Enter display name">
+                            </div>
+                            <div class="filed__card mb-3">
+                                <small class="field__label">Email Address</small>
+                                <input id="email" type="email" class="base__field" style="font-size: .8rem;"
+                                    placeholder="Enter email address">
+                            </div>
+                            <div class="filed__card mb-3">
+                                <small class="field__label">IMAP Server</small>
+                                <div class="dropdown-container w-100">
+                                    <div id="imap-server-list"
+                                        class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                        <span style="font-size: .8rem;">Select IMAP Server</span>
+                                        <button class="clear__btn border-0 bg-transparent" style="font-size: 1.1rem;">
+                                            <i class='bx bx-chevron-down icon'></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="dropdown-menu-custom">
+                                        <a href="#">Option 1</a>
+                                        <a href="#">Option 2</a>
+                                        <a href="#">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="d-inline-flex flex-column mb-3 row-gap-1 w-100">
+                                <small class="field__label">SMTP Server</small>
+                                <div class="dropdown-container">
+                                    <div
+                                        class="dropdown-origin dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                        <span style="font-size: .8rem;">Select SMTP Server</span>
+                                        <button class="clear__btn border-0 bg-transparent" style="font-size: 1.1rem;">
+                                            <i class='bx bx-chevron-down icon'></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="dropdown-menu-custom">
+                                        <a href="#">Option 1</a>
+                                        <a href="#">Option 2</a>
+                                        <a href="#">Option 3</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filed__card mb-3">
+                                <small class="field__label">Signature</small>
+                                <textarea name="" id="" type="text" class=" scrollable w-100"
+                                    style="font-size: .8rem;"></textarea>
+                            </div>
+                            <div class="filed__card mb-3">
+                                <small class="field__label">Remark</small>
+                                <textarea name="" id="" type="text" class=" scrollable w-100"
+                                    style="font-size: .8rem;"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-check d-flex">
+                                    <input class="form-check-input cursor-pointer" type="checkbox" value=""
+                                        id="ex-profile-check">
+                                    <label
+                                        class="form-check-label fw-normal d-flex align-items-center cursor-pointer px-1 fw-medium"
+                                        style="font-size: .8rem;" for="ex-profile-check">
+                                        Set as default
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <!-- <button>Cancel</button> -->
+                                <button class="btn w-100 mt-1 py-2 text-white  btn-connect"
+                                    style="font-size: .88rem;">Save profile</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+
         <!-- Js -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
             integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
