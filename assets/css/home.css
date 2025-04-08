@@ -132,6 +132,11 @@
     transition: all 0.3s ease-in-out;
 }
 
+.dark .group_menu button {
+    background-color: #1e2636;
+    color: var(--gray-400);
+}
+
 
 .group_menu button i {
     font-size: 1.1rem;
@@ -139,7 +144,13 @@
 
 .group_menu button:hover {
     color: var(--primary-color);
-    background-color: var(--gray-100);
+    background-color: #1e2636;
+    border: .5 solid var(--gray-300);
+}
+
+.dark .group_menu button:hover {
+    color: var(--primary-color);
+    background-color: #242e41;
     border: .5 solid var(--gray-300);
 }
 

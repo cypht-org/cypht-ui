@@ -18,14 +18,15 @@
     </script>
 </head>
 
-<body>
+<body class="dark">
     <div class="login__container d-md-flex align-items-md-center justify-content-md-center p-0 m-0 overflow-y-auto "
         style="height: 100dvh;">
         <div class="login__content d-flex lg:row position-relative p-lg-0 m-lg-0">
             <div class="d-flex flex-column justify-content-center gap-4 ms-4 px-2 px-md-1 card__left">
                 <div class="">
                     <div class="image__content">
-                        <img src="/assets/images/svg/logo_dark.svg" class="" alt="Logo">
+                        <img class="dark d-none" src="/assets/images/svg/cypht-logo.svg" class="" alt="Logo">
+                        <img class="light d-none" src="/assets/images/svg/logo_dark.svg" class="" alt="Logo">
                     </div>
                 </div>
 
@@ -49,7 +50,7 @@
                                 placeholder="Enter your password">
                         </div>
 
-                        <button type="submit" onclick="redirect_to_page()" class="fw-bold rounded-1 mt-2">
+                        <button type="submit" onclick="redirect_to_page()" class="btn-connect fw-bold rounded-1 mt-2">
                             login
                         </button>
                     </form>

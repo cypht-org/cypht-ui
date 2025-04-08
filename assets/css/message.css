@@ -115,7 +115,7 @@
     position: absolute;
     top: 2rem;
     left: -50%;
-    background: #fff;
+    background: var(--background);
     border: 1px solid #ddd;
     box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.052);
     border-radius: 4px;
@@ -127,6 +127,11 @@
     display: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
     z-index: 10;
+}
+.dark .header_detail {
+    background: var(--background);
+    border: 1px solid var(--background-2);
+    box-shadow: 0px 4px 7px rgba(110, 110, 110, 0.052);
 }
 
 /* Affichage du menu */
@@ -179,15 +184,15 @@
 }
 
 /* Petit triangle indicateur */
-.header_detail::before {
-    content: "";
+/* .header_detail::before { */
+    /* content: "";
     position: absolute;
     top: -5px;
     left: 15px;
     border-width: 5px;
     border-style: solid;
-    border-color: transparent transparent #fff transparent;
-}
+    border-color: transparent transparent #fff transparent; */
+/* } */
 
 
 

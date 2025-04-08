@@ -50,8 +50,9 @@
     width: 360px;
     min-height: 25rem;
     max-height: 70dvh;
+    background-color: var(--background);
     padding: 1.2rem;
-    border: .5px solid var(--primary-color-200);
+    border: .5px solid var(--background-2);
 }
 
 #close_account_list {
@@ -129,5 +130,31 @@
         justify-content: start !important;
         padding-bottom: 0.5rem !important;
         padding-left: 4.4rem !important;
+    }
+}
+
+/*-------------DARK MODE------------------*/
+
+@media (prefers-color-scheme: dark) {
+    .dark-mode .menu__container,
+    .dark-mode nav {
+        background-color: var(--background);
+        /* or use a darker var like --gray-900 */
+    }
+
+    .dark-mode .menu__container ul li i {
+        color: var(--gray-500);
+        /* slightly lighter in dark mode */
+    }
+
+    .dark-mode .account_card {
+        border-color: var(--primary-color-700);
+        background-color: var(--gray-900);
+        color: var(--gray-100);
+    }
+
+    .dark-mode .account_card button {
+        border-color: var(--gray-500);
+        color: var(--gray-100);
     }
 }

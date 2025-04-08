@@ -5,6 +5,43 @@
 body {
     background-color: #EDF1F3;
 }
+body.dark {
+    background-color: var(--background);
+}
+
+.dark .login__content {
+    /* border: ; */
+    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.026); */
+    /* background-color: var(--background-2); */
+    /* background-color: #EDF1F3; */
+    background-color: #242e41;
+    /* background-color: #1e2636; */
+    /* background-color: hsl(0, 0%, 100%); */
+}
+
+.dark .login__content h5, .dark .login__content span, .dark .login__content label, .dark small {
+    color: whitesmoke;
+}
+
+img.light {
+    display: block !important;
+}
+
+.dark img.light {
+    display: none !important;
+}
+
+.dark img.dark {
+    display: block !important;
+}
+
+img.dark {
+    display: none !important;
+}
+
+.dark .extra__label {
+    color: var(--primary-color-200) !important;
+}
 
 .text-muted {
     width: 70%;
