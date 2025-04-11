@@ -763,11 +763,12 @@ body {
 }
 
 .table__card__title {
+    border-bottom: .7px solid rgba(128, 128, 128, 0.228);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-    background-color: #F8F9FB;
+    background-color: transparent;
     padding: 0 7px;
-    height: 2.4rem;
+    height: 3rem;
     display: flex;
 }
 
@@ -789,9 +790,9 @@ body {
 
 /* ------------------------------- Table Item ------------------------------- */
 .table__card__item {
-    border-top: 1px solid rgba(128, 128, 128, 0.228);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-bottom: .7px solid rgba(128, 128, 128, 0.228);
+    /* border-top-left-radius: 3px;
+    border-top-right-radius: 3px; */
     padding: 0 7px;
     min-height: 3rem;
     display: flex;

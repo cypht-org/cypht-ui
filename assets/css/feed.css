@@ -14,60 +14,6 @@
       font-size: .7rem;
 }
 
-.table-dark {
-      --bs-table-bg: #ededed77;
-      --bs-table-color: var(--foreground);
-      border: .5px solid rgba(128, 128, 128, 0.228);
-}
-
-
-
-thead tr {
-      font-size: .8rem;
-      font-weight: 300 !important;
-}
-
-thead tr th {
-      font-size: .8rem;
-      font-weight: 600 !important;
-}
-
-tbody tr td {
-      font-size: .8rem;
-      font-weight: 400 !important;
-      /* text-align: start; */
-      /* padding: 8px 12px !important; */
-}
-
-.td_action {
-      /* font-size: .8rem;
-      font-weight: 400 !important; */
-      background-color: rebeccapurple !important;
-      display: flex !important;
-      align-items: center !important;
-      text-align: center !important;
-      /* padding: 8px 12px !important; */
-}
-
-
-td button {
-
-      border-radius: .3rem !important;
-}
-
-td button i {
-      font-size: 1rem;
-}
-
-th span {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-}
-
-th span i {
-      font-size: 1rem;
-}
 
 .table-bordered {
       border: .5px solid rgba(128, 128, 128, 0.228) !important;

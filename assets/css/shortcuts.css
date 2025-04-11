@@ -75,13 +75,6 @@
 /* ----------------------------- Issoini-Takashi ---------------------------- */
 
 
-.parameter_content {
-
-    background-color: transparent !important;
-    /* border-radius: .9rem .9rem .5rem .5rem;
-    background-color: var(--background) */
-}
-
 .shortcut_card {
     border-radius: .9rem .9rem .5rem .5rem;
     background-color: var(--background);

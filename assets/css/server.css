@@ -118,8 +118,6 @@
 }
 
 .parameter_content {
-    /* border-radius: .9rem .9rem .5rem .5rem;
-    */
     background-color: transparent
 }
 
@@ -170,8 +168,80 @@
 }
 
 .new_config_btn i {
-    font-size: 1rem;
+    font-size: .94rem;
     color: var(--primary-color-700) !important;
+}
+
+.param_view_description {
+    font-weight: normal;
+    font-size: .78rem;
+}
+
+/* ---------------------------- Server list CARD ---------------------------- */
+
+.param_server_list_container i {
+    font-size: 1.05rem;
+}
+
+.server_list_card_title {
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+.server_list_card_description {
+    font-size: .78rem;
+    margin-left: 2px;
+    color: var(--gray-600);
+}
+
+
+.server_list_card {
+    background-color: var(--background);
+}
+
+
+
+/* ---------------------------------- Table --------------------------------- */
+
+
+.table-dark {
+    --bs-table-bg: #ededed77;
+    --bs-table-color: var(--foreground);
+    border: .5px solid rgba(128, 128, 128, 0.228);
+}
+
+
+thead tr th {
+    font-size: .83rem;
+    font-weight: 600 !important;
+}
+
+tbody tr td {
+    font-size: .83rem;
+    font-weight: 400 !important;
+    text-align: start;
+    padding: 8px 12px !important;
+}
+
+
+
+td button {
+
+    border-radius: .3rem !important;
+}
+
+td button i {
+    font-size: 1rem;
+}
+
+th span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+th span i {
+    font-size: 1rem;
 }
 
 /*  */
@@ -191,10 +261,18 @@
 
 @media (min-width: 992px) {
 
+
     .parameter_title_card {
         height: 5rem;
         /* border-radius: .9rem .9rem 0 0; */
 
+    }
+
+
+    .param_view_description {
+        /* font-size: .78rem; */
+        width: 65dvh;
+        /* background-color: rebeccapurple; */
     }
 
     .offcanvas {

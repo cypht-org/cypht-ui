@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block List Page</title>
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Icon 1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coswise/hicon-css@latest/web-fonts/hicon.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/block_list.css">
+</head>
+
+<body class="position-relative">
+    <div class="base__container d-flex flex-column-reverse flex-lg-row">
+
+        <div class="menu__container magic-t-line">
+
+            <!-- Mobile -->
+            <ul class="p-0 m-0 d-flex align-items-center justify-content-around d-lg-none" id="sidebar-menu">
+                <li> <a href="/home.html" class="menu-link">
+                        <i class="bi bi-grid"></i>
+                    </a></li>
+                <li> <a href="/folder.html" class="menu-link">
+                        <i class="bi bi-folder"></i>
+                    </a></li>
+                <li> <a href="/contacts.html" class="menu-link">
+                        <i class="bi bi-people"></i>
+                    </a></li>
+                <li> <a href="/info.html" class="menu-link">
+                        <i class="bi bi-exclamation-diamond"></i>
+                    </a></li>
+                <li id="setting-btn" class="d-md-none"> <a class="menu-link sidebar_active" href="#">
+                        <i class="bi bi-gear-fill"></i>
+                    </a></li>
+
+
+                <li class="d-none d-md-flex"> <a class="menu-link" href="/site.html">
+                        <i class="bi bi-diagram-2"></i>
+                    </a></li>
+
+                <li class="d-none d-md-flex" style="padding-top: 5px;"> <a href="/server.html" class="sidebar_active">
+                        <i class='bx bxs-card'></i>
+                    </a></li>
+            </ul>
+
+            <div id="setting-menu"
+                class="position-absolute setting__container  align-items-end justify-content-end  me-3 d-lg-none">
+                <ul class="d-flex align-items-center justify-content-start column-gap-3 mb-2  py-0 px-3">
+                    <li class=""> <a href="/site.html" class="menu-link">
+                            <i class="bi bi-diagram-2" style="font-size: 1.2rem;"></i>
+                            </i>Site
+                        </a></li>
+                    <li class=""> <a href="/server.html" class="menu-link">
+                            <i class='bx bxs-card'></i>Server
+                        </a></li>
+                </ul>
+            </div>
+            <!-- </nav> -->
+
+            <nav class="d-none d-lg-flex flex-column justify-content-between  magic-r-line py-2">
+                <div class="d-flex flex-column align-items-center  gap-4  justify-content-center">
+                    <div class="d-flexalign-items-center logo_content">
+                        <img class="object-fit-cover" src="/assets/images/svg/logo.svg" />
+                    </div>
+
+                    <div class="menu_group">
+                        <ul class="">
+                            <li><a href="/home.html">
+                                    <i class="bi bi-grid-fill"></i>
+                                </a></li>
+                            <li><a href="/folder.html">
+                                    <i class="bi bi-folder"></i>
+                                </a></li>
+                            <li><a href="/contacts.html">
+                                    <i class="bi bi-people"></i>
+                                </a></li>
+                            <li><a href="/info.html">
+                                    <i class='bi bi-exclamation-diamond'></i>
+                                </a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="button_group align-items-center gap-3 d-flex flex-column justify-content-end ">
+                    <a href="/site.html"><i class="bi bi-diagram-2"></i></a>
+                    <a href="/server.html" class="sidebar_active"><i class="bi bi-hdd-network-fill"></i></a>
+                    <div>
+                        <div class="rounded_circle">
+                            <img src="/assets/images/avatar.jpg" alt="" class="rounded-circle avatar">
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="flex-1 position-relative d-flex flex-column" style="background-color: var(--background-2);">
+            <!-- Mobile -->
+            <div class="d-flex flex-column  d-lg-none">
+                <div class="d-flex align-items-center justify-content-between column-gap-2 top__menu px-3 px-md-4 ">
+                    <div class="pt-2 mobile_menu_title d-flex align-items-center ">
+                        <button data-bs-toggle="offcanvas" data-bs-target="#off-home-menu"
+                            aria-controls="offcanvasExample"
+                            class="d-flex align-items-center justify-content-center p-1">
+                            <i class='bx bx-menu' style="font-size: 1.5rem;"></i>
+                        </button>
+                        <span class="ms-2">Server
+                            Settings</span>
+
+                    </div>
+                    <div>
+                        <div class="rounded_circle">
+                            <img src="/assets/images/avatar.jpg" alt="" class="rounded-circle avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop -->
+            <div class="d-flex d-lg-flex flex-1 magic-t-line">
+
+                <div class="d-none d-lg-block parameter__menu__card">
+                    <div class="title__card mb-2">
+                        <h3 class="fw-semibold">Settings</h3>
+                    </div>
+
+                    <div class="item__card d-flex flex-column">
+                        <span class="item__card__label">Menu</span>
+                        <ul class="">
+                            <li><a href="/server.html">Servers Settings</a></li>
+                            <li><a href="/filters.html">Filters</a></li>
+                            <li><a href="/block_list.html" class="parameter__active__menu">Block List</a></li>
+                            <li><a href="/feed.html">Feeds</a></li>
+                            <li><a href="/dev.html">Dev</a></li>
+                            <li><a href="/shortcuts.html">Shortcuts</a></li>
+                            <li><a href="/profile.html">Profile</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="flex-1 position-relative">
+                    <div class="h-100 d-flex flex-column  px-md-5  pt-lg-3 ps-lg-3 overflow-y-auto desktop_scroll top-0 button-0  end-0 gap-4"
+                        style=" background-color: var(--background)">
+
+                        <div class="py-2 param_label_container px-3">
+                            <div class="param_title fw-bold d-flex align-items-center">
+
+                                <div class="param_icon_card d-inline-flex d-none d-lg-block">
+                                    <i class="bi bi-sliders2-vertical"></i>
+                                </div>
+
+                                <span>Block List</span>
+                            </div>
+                            <small class="param_description">Lorem ipsum
+                                dolor sit
+                                amet
+                                consectetur
+                                adipisicing elit.
+                                Dolorum officiis doloribus
+                            </small>
+
+                            <div>
+                            </div>
+                        </div>
+
+                        <!--  -->
+                        <div class="flex-grow-1 position-relative">
+                            <div
+                                class="position-absolute fw-medium d-flex flex-column row-gap-4 shortcuts_param_list  end-0 start-0 bottom-0 top-0 px-3">
+
+                                <div class="col-xl-11 col-xxl-9 d-flex flex-column">
+                                    <div class="d-flex justify-content-between mb-1 label__card">
+                                        <small class="d-flex align-items-center column-gap-2 title"><i
+                                                class='bx bx-card' style="font-size: 1rem;"></i>Server List</small>
+
+                                        <small class="mt-1 description">
+                                            Server list Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        </small>
+                                    </div>
+
+                                    <div class=" mt-2 p-0 d-flex gap-1 gap-md-2 gap-lg-3 flex-wrap">
+                                        <div class="d-flex  gap-3">
+                                            <div class="option-card" onclick="selectOption(this)">
+                                                <div style="padding-top: 3.8px;">
+                                                    <div class="radio-circle"></div>
+                                                </div>
+                                                <span>
+                                                    server@example.gik
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  gap-3">
+                                            <div class="option-card" onclick="selectOption(this)">
+                                                <div style="padding-top: 3.8px;">
+                                                    <div class="radio-circle"></div>
+                                                </div>
+                                                <span>
+                                                    server@example.gik
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  gap-3">
+                                            <div class="option-card" onclick="selectOption(this)">
+                                                <div style="padding-top: 3.8px;">
+                                                    <div class="radio-circle"></div>
+                                                </div>
+                                                <span>
+                                                    server@example.gik
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex  gap-3">
+                                            <div class="option-card" onclick="selectOption(this)">
+                                                <div style="padding-top: 3.8px;">
+                                                    <div class="radio-circle"></div>
+                                                </div>
+                                                <span>
+                                                    server@example.gik
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-11 col-xxl-9 d-flex flex-column pb-0 pt-1 row-gap-2 mt-3 flex-1">
+                                    <div
+                                        class="d-flex flex-column gap-3 flex-md-row align-items-md-center justify-content-md-between">
+                                        <div class="clear_space d-flex flex-column description__text"
+                                            style="font-size: .88rem;">
+                                            <small>Quickly add an account from popular E-mail providers</small>
+                                            <small class="mt-1">
+                                                To manually configure an account,
+                                                use the <a href="" class="label_action fw-medium">IMAP/SMTP</a> section.
+                                            </small>
+                                        </div>
+
+                                        <div class="smtp__action__card" style="margin-right: .7rem;">
+                                            <button id="config_btn" type="button" data-bs-toggle="modal"
+                                                data-bs-target="#block-list-modal" class="simple_btn px-3">
+                                                Change Default Behaviour</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex-1 position-relative mt-3">
+                                        <div class="position-absolute scrollable top-0  bottom-0 end-0"
+                                            style="left: -4.5px;">
+
+                                            <div class="table__card p-0 m-0">
+                                                <!-- Table header -->
+                                                <div class="d-flex table__card__title px-2 fw-semibold">
+                                                    <span class="flex-1" style="width: 60%;"><i
+                                                            class='bx bx-user'></i>Sender</span>
+                                                    <span class="table_left_line_card" style="width: 20%;"><i
+                                                            class='bx bx-layer'></i>Behavior</span>
+                                                    <span class="table_left_line_card" style="width: 20%;"><i
+                                                            class='bx bx-dots-vertical-rounded'></i>Actions</span>
+                                                </div>
+
+                                                <!-- Table Items -->
+                                                <div>
+                                                    <div class="d-flex justify-content-between px-2 table__card__item"
+                                                        style="height: 1.8rem;">
+                                                        <span id="feed_name" style="width: 60%;">
+                                                            Demo
+                                                        </span>
+                                                        <div id="table-modal"
+                                                            class="table_left_line_card fw-medium table-dropdown-container"
+                                                            style="width: 20%;">
+                                                            <span id="feed_name"
+                                                                class="d-flex column-gap-1 table-dropdown-btn w-100  justify-content-center"
+                                                                style="width: 60%;">
+                                                                Default <i class='bx bx-pen' style="font-size: 1rem;">
+                                                                </i>
+                                                            </span>
+
+
+                                                            <div class="table-dropdown-menu-custom p-2">
+                                                                <div
+                                                                    class=" d-inline-flex flex-column  justify-content-start mt-3 row-gap-1 w-100">
+                                                                    <small class="fw-medium w-75 text-start"
+                                                                        style="font-size: .8rem;">Action</small>
+                                                                    <div class="table-dropdown-container">
+                                                                        <div id="table-modal"
+                                                                            class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                                                            <span style="font-size: .8rem;">Select
+                                                                                Options</span>
+                                                                            <button
+                                                                                class="clear__btn border-0 bg-transparent"
+                                                                                style="font-size: 1.1rem;">
+                                                                                <i class='bx bx-chevron-down icon'></i>
+                                                                            </button>
+                                                                        </div>
+
+                                                                        <div class="table-dropdown-menu-custom">
+                                                                            <a href="#">Option 1</a>
+                                                                            <a href="#">Option 2</a>
+                                                                            <a href="#">Option 3</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="w-100 d-flex justify-content-end pt-3">
+                                                                    <div class="" style="width: 30%;">
+                                                                        <button class="btn-connect w-100">Save <i
+                                                                                class='bx bx-transfer-alt'></i></button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="feed__actions" class="table_left_line_card"
+                                                            style="width: 20%;">
+                                                            <button class="update_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Test"><i class='bx bx-candles'> </i></button>
+
+                                                            <button class="delete_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Delete"><i class='bx bx-trash'></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="d-flex justify-content-between px-2 table__card__item"
+                                                        style="height: 1.8rem;">
+                                                        <span id="feed_name" style="width: 60%;">
+                                                            Demo
+                                                        </span>
+                                                        <div id="table-modal"
+                                                            class="table_left_line_card fw-medium table-dropdown-container"
+                                                            style="width: 20%;">
+                                                            <span id="feed_name"
+                                                                class="d-flex column-gap-1 table-dropdown-btn w-100  justify-content-center"
+                                                                style="width: 60%;">
+                                                                Default <i class='bx bx-pen' style="font-size: 1rem;">
+                                                                </i>
+                                                            </span>
+
+
+                                                            <div class="table-dropdown-menu-custom p-2">
+                                                                <div
+                                                                    class=" d-inline-flex flex-column  justify-content-start mt-3 row-gap-1 w-100">
+                                                                    <small class="fw-medium w-75 text-start"
+                                                                        style="font-size: .8rem;">Action</small>
+                                                                    <div class="table-dropdown-container">
+                                                                        <div id="table-modal"
+                                                                            class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                                                            <span style="font-size: .8rem;">Select
+                                                                                Options</span>
+                                                                            <button
+                                                                                class="clear__btn border-0 bg-transparent"
+                                                                                style="font-size: 1.1rem;">
+                                                                                <i class='bx bx-chevron-down icon'></i>
+                                                                            </button>
+                                                                        </div>
+
+                                                                        <div class="table-dropdown-menu-custom">
+                                                                            <a href="#">Option 1</a>
+                                                                            <a href="#">Option 2</a>
+                                                                            <a href="#">Option 3</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="w-100 d-flex justify-content-end pt-3">
+                                                                    <div class="" style="width: 30%;">
+                                                                        <button class="btn-connect w-100">Save <i
+                                                                                class='bx bx-transfer-alt'></i></button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="feed__actions" class="table_left_line_card"
+                                                            style="width: 20%;">
+                                                            <button class="update_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Test"><i class='bx bx-candles'> </i></button>
+
+                                                            <button class="delete_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Delete"><i class='bx bx-trash'></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="d-flex justify-content-between px-2 table__card__item"
+                                                        style="height: 1.8rem;">
+                                                        <span id="feed_name" style="width: 60%;">
+                                                            Demo
+                                                        </span>
+                                                        <div id="table-modal"
+                                                            class="table_left_line_card fw-medium table-dropdown-container"
+                                                            style="width: 20%;">
+                                                            <span id="feed_name"
+                                                                class="d-flex column-gap-1 table-dropdown-btn w-100  justify-content-center"
+                                                                style="width: 60%;">
+                                                                Default <i class='bx bx-pen' style="font-size: 1rem;">
+                                                                </i>
+                                                            </span>
+
+
+                                                            <div class="table-dropdown-menu-custom p-2">
+                                                                <div
+                                                                    class=" d-inline-flex flex-column  justify-content-start mt-3 row-gap-1 w-100">
+                                                                    <small class="fw-medium w-75 text-start"
+                                                                        style="font-size: .8rem;">Action</small>
+                                                                    <div class="table-dropdown-container">
+                                                                        <div id="table-modal"
+                                                                            class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                                                            <span style="font-size: .8rem;">Select
+                                                                                Options</span>
+                                                                            <button
+                                                                                class="clear__btn border-0 bg-transparent"
+                                                                                style="font-size: 1.1rem;">
+                                                                                <i class='bx bx-chevron-down icon'></i>
+                                                                            </button>
+                                                                        </div>
+
+                                                                        <div class="table-dropdown-menu-custom">
+                                                                            <a href="#">Option 1</a>
+                                                                            <a href="#">Option 2</a>
+                                                                            <a href="#">Option 3</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="w-100 d-flex justify-content-end pt-3">
+                                                                    <div class="" style="width: 30%;">
+                                                                        <button class="btn-connect w-100">Save <i
+                                                                                class='bx bx-transfer-alt'></i></button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="feed__actions" class="table_left_line_card"
+                                                            style="width: 20%;">
+                                                            <button class="update_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Test"><i class='bx bx-candles'> </i></button>
+
+                                                            <button class="delete_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Delete"><i class='bx bx-trash'></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="d-flex justify-content-between px-2 table__card__item"
+                                                        style="height: 1.8rem;">
+                                                        <span id="feed_name" style="width: 60%;">
+                                                            Demo
+                                                        </span>
+                                                        <div id="table-modal"
+                                                            class="table_left_line_card fw-medium table-dropdown-container"
+                                                            style="width: 20%;">
+                                                            <span id="feed_name"
+                                                                class="d-flex column-gap-1 table-dropdown-btn w-100  justify-content-center"
+                                                                style="width: 60%;">
+                                                                Default <i class='bx bx-pen' style="font-size: 1rem;">
+                                                                </i>
+                                                            </span>
+
+
+                                                            <div class="table-dropdown-menu-custom p-2">
+                                                                <div
+                                                                    class=" d-inline-flex flex-column  justify-content-start mt-3 row-gap-1 w-100">
+                                                                    <small class="fw-medium w-75 text-start"
+                                                                        style="font-size: .8rem;">Action</small>
+                                                                    <div class="table-dropdown-container">
+                                                                        <div id="table-modal"
+                                                                            class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                                                            <span style="font-size: .8rem;">Select
+                                                                                Options</span>
+                                                                            <button
+                                                                                class="clear__btn border-0 bg-transparent"
+                                                                                style="font-size: 1.1rem;">
+                                                                                <i class='bx bx-chevron-down icon'></i>
+                                                                            </button>
+                                                                        </div>
+
+                                                                        <div class="table-dropdown-menu-custom">
+                                                                            <a href="#">Option 1</a>
+                                                                            <a href="#">Option 2</a>
+                                                                            <a href="#">Option 3</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="w-100 d-flex justify-content-end pt-3">
+                                                                    <div class="" style="width: 30%;">
+                                                                        <button class="btn-connect w-100">Save <i
+                                                                                class='bx bx-transfer-alt'></i></button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="feed__actions" class="table_left_line_card"
+                                                            style="width: 20%;">
+                                                            <button class="update_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Test"><i class='bx bx-candles'> </i></button>
+
+                                                            <button class="delete_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Delete"><i class='bx bx-trash'></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="d-flex justify-content-between px-2 table__card__item"
+                                                        style="height: 1.8rem;">
+                                                        <span id="feed_name" style="width: 60%;">
+                                                            Demo
+                                                        </span>
+                                                        <div id="table-modal"
+                                                            class="table_left_line_card fw-medium table-dropdown-container"
+                                                            style="width: 20%;">
+                                                            <span id="feed_name"
+                                                                class="d-flex column-gap-1 table-dropdown-btn w-100  justify-content-center"
+                                                                style="width: 60%;">
+                                                                Default <i class='bx bx-pen' style="font-size: 1rem;">
+                                                                </i>
+                                                            </span>
+
+
+                                                            <div class="table-dropdown-menu-custom p-2">
+                                                                <div
+                                                                    class=" d-inline-flex flex-column  justify-content-start mt-3 row-gap-1 w-100">
+                                                                    <small class="fw-medium w-75 text-start"
+                                                                        style="font-size: .8rem;">Action</small>
+                                                                    <div class="table-dropdown-container">
+                                                                        <div id="table-modal"
+                                                                            class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                                                            <span style="font-size: .8rem;">Select
+                                                                                Options</span>
+                                                                            <button
+                                                                                class="clear__btn border-0 bg-transparent"
+                                                                                style="font-size: 1.1rem;">
+                                                                                <i class='bx bx-chevron-down icon'></i>
+                                                                            </button>
+                                                                        </div>
+
+                                                                        <div class="table-dropdown-menu-custom">
+                                                                            <a href="#">Option 1</a>
+                                                                            <a href="#">Option 2</a>
+                                                                            <a href="#">Option 3</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="w-100 d-flex justify-content-end pt-3">
+                                                                    <div class="" style="width: 30%;">
+                                                                        <button class="btn-connect w-100">Save <i
+                                                                                class='bx bx-transfer-alt'></i></button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="feed__actions" class="table_left_line_card"
+                                                            style="width: 20%;">
+                                                            <button class="update_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Test"><i class='bx bx-candles'> </i></button>
+
+                                                            <button class="delete_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Delete"><i class='bx bx-trash'></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="d-flex justify-content-between px-2 table__card__item"
+                                                        style="height: 1.8rem;">
+                                                        <span id="feed_name" style="width: 60%;">
+                                                            Demo
+                                                        </span>
+                                                        <div id="table-modal"
+                                                            class="table_left_line_card fw-medium table-dropdown-container"
+                                                            style="width: 20%;">
+                                                            <span id="feed_name"
+                                                                class="d-flex column-gap-1 table-dropdown-btn w-100  justify-content-center"
+                                                                style="width: 60%;">
+                                                                Default <i class='bx bx-pen' style="font-size: 1rem;">
+                                                                </i>
+                                                            </span>
+
+
+                                                            <div class="table-dropdown-menu-custom p-2">
+                                                                <div
+                                                                    class=" d-inline-flex flex-column  justify-content-start mt-3 row-gap-1 w-100">
+                                                                    <small class="fw-medium w-75 text-start"
+                                                                        style="font-size: .8rem;">Action</small>
+                                                                    <div class="table-dropdown-container">
+                                                                        <div id="table-modal"
+                                                                            class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                                                            <span style="font-size: .8rem;">Select
+                                                                                Options</span>
+                                                                            <button
+                                                                                class="clear__btn border-0 bg-transparent"
+                                                                                style="font-size: 1.1rem;">
+                                                                                <i class='bx bx-chevron-down icon'></i>
+                                                                            </button>
+                                                                        </div>
+
+                                                                        <div class="table-dropdown-menu-custom">
+                                                                            <a href="#">Option 1</a>
+                                                                            <a href="#">Option 2</a>
+                                                                            <a href="#">Option 3</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="w-100 d-flex justify-content-end pt-3">
+                                                                    <div class="" style="width: 30%;">
+                                                                        <button class="btn-connect w-100">Save <i
+                                                                                class='bx bx-transfer-alt'></i></button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="feed__actions" class="table_left_line_card"
+                                                            style="width: 20%;">
+                                                            <button class="update_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Test"><i class='bx bx-candles'> </i></button>
+
+                                                            <button class="delete_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Delete"><i class='bx bx-trash'></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <div class="d-flex justify-content-between px-2 table__card__item"
+                                                        style="height: 1.8rem;">
+                                                        <span id="feed_name" style="width: 60%;">
+                                                            Demo
+                                                        </span>
+                                                        <div id="table-modal"
+                                                            class="table_left_line_card fw-medium table-dropdown-container"
+                                                            style="width: 20%;">
+                                                            <span id="feed_name"
+                                                                class="d-flex column-gap-1 table-dropdown-btn w-100  justify-content-center"
+                                                                style="width: 60%;">
+                                                                Default <i class='bx bx-pen' style="font-size: 1rem;">
+                                                                </i>
+                                                            </span>
+
+
+                                                            <div class="table-dropdown-menu-custom p-2">
+                                                                <div
+                                                                    class=" d-inline-flex flex-column  justify-content-start mt-3 row-gap-1 w-100">
+                                                                    <small class="fw-medium w-75 text-start"
+                                                                        style="font-size: .8rem;">Action</small>
+                                                                    <div class="table-dropdown-container">
+                                                                        <div id="table-modal"
+                                                                            class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                                                            <span style="font-size: .8rem;">Select
+                                                                                Options</span>
+                                                                            <button
+                                                                                class="clear__btn border-0 bg-transparent"
+                                                                                style="font-size: 1.1rem;">
+                                                                                <i class='bx bx-chevron-down icon'></i>
+                                                                            </button>
+                                                                        </div>
+
+                                                                        <div class="table-dropdown-menu-custom">
+                                                                            <a href="#">Option 1</a>
+                                                                            <a href="#">Option 2</a>
+                                                                            <a href="#">Option 3</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="w-100 d-flex justify-content-end pt-3">
+                                                                    <div class="" style="width: 30%;">
+                                                                        <button class="btn-connect w-100">Save <i
+                                                                                class='bx bx-transfer-alt'></i></button>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div id="feed__actions" class="table_left_line_card"
+                                                            style="width: 20%;">
+                                                            <button class="update_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Test"><i class='bx bx-candles'> </i></button>
+
+                                                            <button class="delete_btn clear__btn"
+                                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                                title="Delete"><i class='bx bx-trash'></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <!-- 1. Menu -->
+    <div class="offcanvas offcanvas-start my-1 ms-1 rounded d-flex flex-column d-lg-none" tabindex="-1"
+        id="off-home-menu" aria-labelledby="offcanvasExampleLabel" style="width: 330px; ">
+
+        <div class="offcanvas-body">
+            <div class="mt-2" style="width: 90px;">
+                <img src="/assets/images/svg/logo_dark.svg" class="" alt="Logo">
+            </div>
+            <div class="d-flex flex-column menu_modal mb-2 mt-5 scrollable "
+                style="max-height: calc(97dvh - 120px); overflow-y: auto;">
+
+                <div class="group_menu">
+                    <ul class="p-0">
+                        <li><a href="/server.html">Servers Settings</a></li>
+                        <li><a href="/filters.html">Filters</a></li>
+                        <li><a href="/block_list.html" class="active__menu">Block List</a></li>
+                        <li><a href="/feed.html">Feeds</a></li>
+                        <li><a href="/dev.html">Dev</a></li>
+                        <li><a href="/shortcuts.html">Shortcuts</a></li>
+                        <li><a href="/shortcuts.html">Profile</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. -->
+    <div class="modal fade" id="block-list-modal" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-1">
+
+                <div class="modal-header border-0">
+                    <div class="d-flex flex-column justify-content-between  w-100">
+                        <div class="d-flex justify-content-between">
+                            <h6 id="offcanvasRightLabel" class="fw-semibold">Add to block-list</h6>
+                            <div class="d-inline-flex">
+                                <button type="button" class=" text-reset clear__btn type__two__btn"
+                                    data-bs-dismiss="modal" style="font-size: 1.2rem; margin-top: -6px;"
+                                    aria-label="Close"><i class='bx bx-x'></i></button>
+                            </div>
+                        </div>
+
+                        <small class="fw-normal w-75" style="font-size: .75rem;">Step
+                            of
+                            Lorem,
+                            ipsum
+                            dolor sit amet
+                            consectetur adipisicing elit. </small>
+                    </div>
+                </div>
+
+
+                <div class="modal-body">
+
+                    <div class="d-flex flex-row">
+                        <small class="d-flex align-items-center column-gap-1 title fw-semibold"><i class='bx bxs-card'
+                                style="font-size: 1rem;"></i>server_2@example.gif</small>
+                    </div>
+
+                    <div class="d-inline-flex flex-column mt-3 row-gap-1 w-100">
+                        <small class="fw-medium w-75" style="font-size: .8rem;">Default Behaviour</small>
+                        <div class="dropdown-container">
+                            <div id="bloack-option-list"
+                                class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                <span style="font-size: .8rem;">Select Options</span>
+                                <button class="clear__btn border-0 bg-transparent" style="font-size: 1.1rem;">
+                                    <i class='bx bx-chevron-down icon'></i>
+                                </button>
+                            </div>
+
+                            <div class="dropdown-menu-custom">
+                                <a href="#">Option 1</a>
+                                <a href="#">Option 2</a>
+                                <a href="#">Option 3</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-100 d-flex justify-content-end pt-3">
+                        <div class="" style="width: 30%;">
+                            <button class="btn-connect w-100">Save <i class='bx bx-transfer-alt'></i></button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/assets/js/utils.js"></script>
+    <script>
+        function selectOption(selected) {
+            document.querySelectorAll('.option-card').forEach(el => {
+                el.classList.remove('active');
+                el.querySelector('.radio-circle').classList.remove('active');
+            });
+
+            selected.classList.add('active');
+            selected.querySelector('.radio-circle').classList.add('active');
+        }
+
+
+        $(document).ready(function () {
+            $("#bloack-option-list").click(function () {
+                $(".dropdown-menu-custom").toggleClass("show");
+                $(".icon").toggleClass("rotate-icon");
+            });
+
+            $(document).click(function (e) {
+                if (!$(e.target).closest(".dropdown-container").length) {
+                    $(".dropdown-menu-custom").removeClass("show");
+                    $(".icon").removeClass("rotate-icon");
+                }
+            });
+
+
+            // 2
+            $("#table-modal").click(function () {
+                $(".table-dropdown-menu-custom").toggleClass("show");
+                // $(".icon").toggleClass("rotate-icon");
+            });
+
+            $(document).click(function (e) {
+                if (!$(e.target).closest(".table-dropdown-container").length) {
+                    $(".table-dropdown-menu-custom").removeClass("show");
+                    // $(".icon").removeClass("rotate-icon");
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
