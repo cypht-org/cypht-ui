@@ -102,6 +102,7 @@
     background-color: var(--background);
     border: .8px solid var(--gray-200) !important;
     border-radius: 5px;
+    padding: 1rem;
 }
 
 .parameter_view_card {

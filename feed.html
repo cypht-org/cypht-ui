@@ -61,7 +61,7 @@
                 class="position-absolute setting__container  align-items-end justify-content-end  me-3 d-lg-none">
                 <ul class="d-flex align-items-center justify-content-start column-gap-3 mb-2  py-0 px-3">
                     <li class=""> <a href="/site.html" class="menu-link">
-                            <i class="bi bi-diagram-2" style="font-size: 1.2rem;"></i>
+                            <i class="bi bi-diagram-2-fill" style="font-size: 1.2rem;"></i>
                             </i>Site
                         </a></li>
                     <li class=""> <a href="/server.html" class="menu-link">
@@ -70,7 +70,6 @@
                 </ul>
             </div>
             <!-- </nav> -->
-
             <nav class="d-none d-lg-flex flex-column justify-content-between  magic-r-line py-2">
                 <div class="d-flex flex-column align-items-center  gap-4  justify-content-center">
                     <div class="d-flexalign-items-center logo_content">
@@ -108,7 +107,8 @@
             </nav>
         </div>
 
-        <div class="flex-1 position-relative d-flex flex-column" style="background-color: var(--background-2);">
+        <div class="flex-1 position-relative d-flex flex-column px-lg-4 px-xxl-5"
+            style="background-color: var(--background-3);">
             <!-- Mobile -->
             <div class="d-flex flex-column  d-lg-none">
                 <div class="d-flex align-items-center justify-content-between column-gap-2 top__menu px-3 px-md-4 ">
@@ -131,239 +131,249 @@
             </div>
 
             <!-- Desktop -->
-            <div class="d-flex d-lg-flex flex-1 magic-t-line">
+            <div class="flex-1 d-flex flex-column">
 
-                <div class="d-none d-lg-block parameter__menu__card">
-                    <div class="title__card mb-2">
-                        <h3 class="fw-semibold">Settings</h3>
-                    </div>
-
-                    <div class="item__card d-flex flex-column">
-                        <span class="item__card__label">Menu</span>
-                        <ul class="">
-                            <li><a href="/server.html">Servers Settings</a></li>
-                            <li><a href="/filters.html">Filters</a></li>
-                            <li><a href="/block_list.html">Block List</a></li>
-                            <li><a href="/feed.html" class="parameter__active__menu">Feeds</a></li>
-                            <li><a href="/dev.html">Dev</a></li>
-                            <li><a href="/shortcuts.html">Shortcuts</a></li>
-                            <li><a href="/profile.html">Profile</a></li>
-                        </ul>
-                    </div>
-
+                <div class="d-none d-lg-flex align-items-center server_title_card mt-4">
+                    <h4 class="fw-semibold">Settings</h4>
                 </div>
 
-                <div class="flex-1 position-relative">
-                    <div class="h-100 d-flex flex-column  px-md-5  pt-lg-3 ps-lg-3 overflow-y-auto desktop_scroll top-0 button-0  end-0 gap-4"
-                        style=" background-color: var(--background)">
 
-                        <div class="py-2 param_label_container px-3">
-                            <div class="param_title fw-bold d-flex align-items-center">
+                <div class="flex-1 d-flex d-lg-flex flex-1 magic-t-line column-gap-5 mb-2">
+                    <div class="d-none d-lg-block parameter_menu_card">
+                        <ul>
+                            <li><a href="/server.html"><i class="bi bi-app-indicator"></i>General</a></li>
+                            <li><a href="/filters.html"><i class='bx bx-collection'></i>Filters</a></li>
+                            <li><a href="/block_list.html"><i class="bi bi-view-list"></i>Block List</a></li>
+                            <li><a href="/feed.html" class="parameter_active_menu"><i
+                                        class='bx bx-candles'></i>Feeds</a></li>
+                            <li><a href="/dev.html"><i class="bi bi-cpu-fill"></i>Dev</a>
+                            </li>
+                            <li><a href="/shortcuts.html"><i class="bi bi-command"></i>Shortcuts</a></li>
+                            <li><a href="/profile.html">
+                                    <i class='bx bx-user'></i>
+                                    Profile</a></li>
+                        </ul>
 
-                                <div class="param_icon_card d-inline-flex d-none d-lg-block">
-                                    <i class="bi bi-sliders2-vertical"></i>
-                                </div>
+                    </div>
 
-                                <span>Feeds</span>
-                            </div>
-                            <small class="param_description">Lorem ipsum
-                                dolor sit
-                                amet
-                                consectetur
-                                adipisicing elit.
-                                Dolorum officiis doloribus
-                            </small>
-
+                    <div class="flex-1 d-flex flex-column position-relative parameter_view_card">
+                        <div class="d-flex column-gap-3 py-4 parameter_title_card ps-4">
                             <div>
+                                <div class="param_icon_card d-flex">
+                                    <i class="bx bx-candles"></i>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <span class="parameter_title">Feed</span>
+                                <small class="param_description">Profile lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Dolorum officiis doloribus</small>
                             </div>
                         </div>
 
-                        <!--  -->
-                        <div class="flex-grow-1 position-relative">
-                            <div
-                                class="position-absolute mb-4 fw-medium d-flex flex-column row-gap-4 pb-4 shortcuts_param_list  end-0 start-0 px-3">
+                        <div class="flex-1 px-4 d-flex flex-column">
+                            <div class="d-flex justify-content-center">
+                                <div
+                                    class="d-flex justify-content-between parameter_view_menu_card d-flex align-items-center">
 
-                                <div class="d-flex column-gap-4  p-0">
-                                    <div class="flex-1">
+                                    <span class="fw-medium" style="font-size: .8rem;">4 Feed(s)</span>
+                                    <div>
+                                        <button id="bt_feed_modal" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#tag-modal" class="btn btn-sm new_config_btn">
+                                            <i class='bi bi-plugin'></i>
+                                            Add an RSS/ATOM Feed
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
-                                        <div class="d-flex justify-content-between mb-3">
-                                            <small class="d-flex align-items-center column-gap-2 fw-semibold"><i
-                                                    class='bx bx-card' style="font-size: 1rem;"></i>Add an RSS/ATOM
-                                                Feed
-                                                list</small>
-                                        </div>
-
-                                        <!-- Profile table -->
-                                        <div class="table-responsive">
+                            <div class="parameter_content flex-1 d-flex flex-column  mx-lg-0 position-relative">
+                                <div
+                                    class="position-absolute  dev_param_list fw-medium  pb-2  pt-3  desktop_scroll  end-0 start-0  overflow-y-auto  bottom-0 top-0  align-items-center d-flex  flex-column ">
+                                    <div class="flex-1 w-100 feed_list_card px-2 px-lg-0">
+                                        <div class="table-responsive pt-4">
                                             <table class="table table-bordered table-hover text-center align-middle">
                                                 <thead class="table-dark">
                                                     <tr>
                                                         <th>
-                                                            Name
+                                                            <span> <i class="bi bi-filter-left"></i>
+                                                                Name</span>
                                                         </th>
                                                         <th>
 
-                                                            <span class=" flex-1">Site address or feed URL</span>
+                                                            <span class=" flex-1"><i class="bi bi-link-45deg"></i> Site
+                                                                address or feed URL</span>
                                                         </th>
                                                         <th>
-                                                            <span class="" style="width: 15%;"><i
-                                                                    class='bx bx-dots-vertical-rounded'></i>Actions</span>
+                                                            <div class="">
+                                                                <span class="" style="width: 15%;"><i
+                                                                        class='bx bx-dots-vertical-rounded'></i>Actions</span>
+                                                            </div>
                                                         </th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>Demo</td>
-                                                        <td>https://rss.art19.com/new-heights</td>
+                                                    <tr class="cursor-pointer">
+                                                        <td>
+                                                            <div class="text-start">
+                                                                <span>Demo</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-start">
+                                                                <span>https://rss.art19.com/new-heights</span>
+                                                            </div>
+                                                        </td>
                                                         <td class="">
+                                                            <div>
 
-                                                            <button class="btn btn-sm update_btn me-1"
-                                                                data-bs-toggle="tooltip" title="Edit"><i
-                                                                    class='bx bx-candles'></i></button>
-                                                            <button class="btn btn-sm delete_btn "
-                                                                data-bs-toggle="tooltip" title="Delete"><i
-                                                                    class='bx bx-trash'></i></button>
+                                                                <button class="btn btn-sm update_btn me-1"
+                                                                    data-bs-toggle="tooltip" title="Edit"><i
+                                                                        class='bx bx-candles'></i></button>
+                                                                <button class="btn btn-sm delete_btn "
+                                                                    data-bs-toggle="tooltip" title="Delete"><i
+                                                                        class='bx bx-trash'></i></button>
+                                                            </div>
                                                     </tr>
+                                                    <tr class="cursor-pointer">
+                                                        <td>
+                                                            <div class="text-start">
+                                                                <span>Demo</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-start">
+                                                                <span>https://rss.art19.com/new-heights</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="">
+                                                            <div>
+
+                                                                <button class="btn btn-sm update_btn me-1"
+                                                                    data-bs-toggle="tooltip" title="Edit"><i
+                                                                        class='bx bx-candles'></i></button>
+                                                                <button class="btn btn-sm delete_btn "
+                                                                    data-bs-toggle="tooltip" title="Delete"><i
+                                                                        class='bx bx-trash'></i></button>
+                                                            </div>
+                                                    </tr>
+                                                    <tr class="cursor-pointer">
+                                                        <td>
+                                                            <div class="text-start">
+                                                                <span>Demo</span>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="text-start">
+                                                                <span>https://rss.art19.com/new-heights</span>
+                                                            </div>
+                                                        </td>
+                                                        <td class="">
+                                                            <div>
+
+                                                                <button class="btn btn-sm update_btn me-1"
+                                                                    data-bs-toggle="tooltip" title="Edit"><i
+                                                                        class='bx bx-candles'></i></button>
+                                                                <button class="btn btn-sm delete_btn "
+                                                                    data-bs-toggle="tooltip" title="Delete"><i
+                                                                        class='bx bx-trash'></i></button>
+                                                            </div>
+                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-
-                                    <div class="d-none flex-column row-gap-4 mx-2 position-sticky top-0 d-xl-flex">
-                                        <div class="d-flex flex-column">
-                                            <small class="d-flex align-items-center column-gap-2 py-1 fw-semibold"><i
-                                                    class='bx bx-rss' style="font-size: 1rem;"></i>Add an RSS/ATOM Feed
-                                                Form</small>
-
-                                            <span class="label__description"
-                                                style=" font-size: .75rem; width: 280px;">Lorem
-                                                ipsum
-                                                dolor sit
-                                                amet
-                                                consectetur
-                                                adipisicing elit.</span>
-                                        </div>
-
-                                        <div class="">
-                                            <div class="filed__card">
-                                                <small class="field__label">Feed Name</small>
-                                                <input id="new_feed_name" name="new_feed_name" type="text"
-                                                    class="param__field" style="font-size: .8rem;"
-                                                    placeholder="Enter Feed name">
-                                            </div>
-                                            <div class="filed__card">
-                                                <small class="field__label">Site address or feed URL</small>
-                                                <input id="new_feed_address" type="text" class="param__field"
-                                                    style="font-size: .8rem;"
-                                                    placeholder="Enter Site address or feed URL">
-                                            </div>
-                                            <div class="filed__card" style="width: 350px;">
-                                                <div class="w-100 d-flex column-gap-2 " style="margin-top: 1.15rem;">
-                                                    <button class="btn-connect">Save <i
-                                                            class='bx bx-transfer-alt'></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <!-- 1. Menu -->
+        <div class="offcanvas offcanvas-start my-1 ms-1 rounded d-flex flex-column d-lg-none" tabindex="-1"
+            id="off-home-menu" aria-labelledby="offcanvasExampleLabel" style="width: 330px; ">
+
+            <div class="offcanvas-body">
+                <div class="mt-2" style="width: 90px;">
+                    <img src="/assets/images/svg/logo_dark.svg" class="" alt="Logo">
+                </div>
+                <div class="d-flex flex-column menu_modal mb-2 mt-5 scrollable "
+                    style="max-height: calc(97dvh - 120px); overflow-y: auto;">
+
+                    <div class="group_menu">
+
+                        <ul class="p-0">
+                            <li><a href="/server.html"><i class="bi bi-app-indicator"></i>General</a></li>
+                            <li><a href="/filters.html"><i class='bx bx-collection'></i>Filters</a></li>
+                            <li><a href="/block_list.html"><i class="bi bi-view-list"></i>Block List</a></li>
+                            <li><a href="/feed.html" class="parameter_active_menu"><i
+                                        class='bx bx-candles'></i>Feeds</a></li>
+                            <li><a href="/dev.html"><i class="bi bi-cpu-fill"></i>Dev</a></li>
+                            <li><a href="/shortcuts.html"><i class="bi bi-command"></i>Shortcuts</a></li>
+                            <li><a href="/profile.html"><i class='bx bx-user'></i>Profile</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="modal fade" id="tag-modal" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content p-1">
+                    <div class="modal-header border-0">
+                        <div class="d-flex flex-column">
+                            <small class="d-flex align-items-center column-gap-2 py-1 fw-semibold"><i class='bx bx-rss'
+                                    style="font-size: 1rem;"></i>Add an RSS/ATOM Feed
+                                Form</small>
+
+                            <span class="label__description" style=" font-size: .75rem; width: 280px;">Lorem
+                                ipsum
+                                dolor sit
+                                amet
+                                consectetur
+                                adipisicing elit.</span>
+                        </div>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="filed__card mb-3">
+                            <small class="field__label">Feed Name</small>
+                            <input id="tag_designation" type="text" class="base__field" style="font-size: .8rem;"
+                                placeholder="Enter first name">
+                        </div>
+
+                        <div class="filed__card">
+                            <small class="field__label">Site address or feed URL</small>
+                            <input id="new_feed_address" type="text" class="base__field" style="font-size: .8rem;"
+                                placeholder="Enter Site address or feed URL">
+                        </div>
+
+                        <div class="w-100 d-flex justify-content-end pt-3">
+                            <div class="" style="width: 30%;">
+                                <button class="btn-connect w-100">Save <i class='bx bx-transfer-alt'></i></button>
 
                             </div>
                         </div>
                     </div>
-
-                    <div class="float_btn_container position-absolute compose_container  d-flex align-items-center justify-content-center rounded-2 d-xl-none"
-                        style="right: .9rem;  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.346);">
-                        <button id="bt_feed_modal" type="button" data-bs-toggle="modal" data-bs-target="#tag-modal"
-                            class="compose-btn btn d-flex align-items-center justify-content-center shadow rounded-2 p-md-3 rounded-md-3">
-                            <i class="bi bi-plugin"></i>
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Modal -->
-    <!-- 1. Menu -->
-    <div class="offcanvas offcanvas-start my-1 ms-1 rounded d-flex flex-column d-lg-none" tabindex="-1"
-        id="off-home-menu" aria-labelledby="offcanvasExampleLabel" style="width: 330px; ">
+        <!-- Js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+            integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
+            integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        <div class="offcanvas-body">
-            <div class="mt-2" style="width: 90px;">
-                <img src="/assets/images/svg/logo_dark.svg" class="" alt="Logo">
-            </div>
-            <div class="d-flex flex-column menu_modal mb-2 mt-5 scrollable "
-                style="max-height: calc(97dvh - 120px); overflow-y: auto;">
-
-                <div class="group_menu">
-
-                    <ul class="p-0">
-                        <li><a href="/server.html">Servers Settings</a></li>
-                        <li><a href="/filters.html">Filters</a></li>
-                        <li><a href="/block_list.html">Block List</a></li>
-                        <li><a href="/feed.html" class="active__menu">Feeds</a></li>
-                        <li><a href="/dev.html">Dev</a></li>
-                        <li><a href="/shortcuts.html">Shortcuts</a></li>
-                        <li><a href="/shortcuts.html">Profile</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2. -->
-    <div class="modal fade" id="tag-modal" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-1">
-                <div class="modal-header border-0">
-                    <div class="d-flex flex-column">
-                        <small class="d-flex align-items-center column-gap-2 py-1 fw-semibold"><i class='bx bx-rss'
-                                style="font-size: 1rem;"></i>Add an RSS/ATOM Feed
-                            Form</small>
-
-                        <span class="label__description" style=" font-size: .75rem; width: 280px;">Lorem
-                            ipsum
-                            dolor sit
-                            amet
-                            consectetur
-                            adipisicing elit.</span>
-                    </div>
-                </div>
-
-                <div class="modal-body">
-                    <div class="filed__card mb-3">
-                        <small class="field__label">Feed Name</small>
-                        <input id="tag_designation" type="text" class="base__field" style="font-size: .8rem;"
-                            placeholder="Enter first name">
-                    </div>
-
-                    <div class="filed__card">
-                        <small class="field__label">Site address or feed URL</small>
-                        <input id="new_feed_address" type="text" class="base__field" style="font-size: .8rem;"
-                            placeholder="Enter Site address or feed URL">
-                    </div>
-
-                    <div class="w-100 d-flex justify-content-end pt-3">
-                        <div class="" style="width: 30%;">
-                            <button class="btn-connect w-100">Save <i class='bx bx-transfer-alt'></i></button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
-        integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="/assets/js/utils.js"></script>
+        <script src="/assets/js/utils.js"></script>
 </body>
 
 </html>

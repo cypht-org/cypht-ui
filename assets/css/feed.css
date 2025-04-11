@@ -1,14 +1,28 @@
-@import url('/assets/css/main.css');
 @import url('/assets/css/server.css');
 
-.table-dark {
-    --bs-table-bg: #F8F9FB;
-    --bs-table-color: var(--foreground);
-    border: 1px solid rgba(128, 128, 128, 0.228);
+
+.parameter_view_menu_card {
+      padding: .5rem !important;
 }
 
+
+.parameter_view_menu_card button {
+      font-size: .7rem !important;
+}
+
+.parameter_view_menu_card button i {
+      font-size: .7rem;
+}
+
+.table-dark {
+      --bs-table-bg: #ededed77;
+      --bs-table-color: var(--foreground);
+      border: .5px solid rgba(128, 128, 128, 0.228);
+}
+
+
+
 thead tr {
-      background-color: red !important;
       font-size: .8rem;
       font-weight: 300 !important;
 }
@@ -21,7 +35,20 @@ thead tr th {
 tbody tr td {
       font-size: .8rem;
       font-weight: 400 !important;
+      /* text-align: start; */
+      /* padding: 8px 12px !important; */
 }
+
+.td_action {
+      /* font-size: .8rem;
+      font-weight: 400 !important; */
+      background-color: rebeccapurple !important;
+      display: flex !important;
+      align-items: center !important;
+      text-align: center !important;
+      /* padding: 8px 12px !important; */
+}
+
 
 td button {
 
@@ -30,4 +57,49 @@ td button {
 
 td button i {
       font-size: 1rem;
+}
+
+th span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+}
+
+th span i {
+      font-size: 1rem;
+}
+
+.table-bordered {
+      border: .5px solid rgba(128, 128, 128, 0.228) !important;
+}
+
+.feed_list_card {
+      /* margin: 0 1.4rem; */
+      background-color: var(--background);
+      border-radius: .4rem .4rem 0 0;
+}
+
+
+
+@media (min-width: 992px) {
+
+      .parameter_view_menu_card,
+      .feed_list_card {
+            padding: .5rem 3rem !important;
+      }
+
+      .parameter_view_menu_card button {
+            font-size: .72rem !important;
+      }
+
+      .parameter_view_menu_card button i {
+            font-size: .76rem;
+      }
+
+      .feed_list_card {
+            /* margin: 0 1.4rem;
+            background-color: var(--background);
+            border-radius: .9rem .9rem 0 0; */
+      }
+
 }
