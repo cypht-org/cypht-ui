@@ -14,6 +14,7 @@
     --primary-color: #80B441;
     --toggle-color: #DDD;
 
+    --param-view-background: #F8F8F8;
     /* --------------------------------- COLORS --------------------------------- */
 
     /* 1 Primary color */
@@ -750,9 +751,10 @@ body {
 /* ------------------------------- Table & Table header ------------------------------- */
 
 .table__card {
-    border: 1px solid rgba(128, 128, 128, 0.228);
-    border-radius: 3px;
+    border: .5px solid rgba(128, 128, 128, 0.228);
+    border-radius: 6px;
     margin-top: .6rem;
+    display: inline-flex;
 }
 
 .table_left_line_card {
@@ -763,12 +765,12 @@ body {
 }
 
 .table__card__title {
-    border-bottom: .7px solid rgba(128, 128, 128, 0.228);
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background-color: transparent;
+    background-color: var(--param-view-background);
+    /* border-bottom: .7px solid rgba(128, 128, 128, 0.228); */
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
     padding: 0 7px;
-    height: 3rem;
+    height: 2.8rem;
     display: flex;
 }
 
@@ -790,11 +792,9 @@ body {
 
 /* ------------------------------- Table Item ------------------------------- */
 .table__card__item {
-    border-bottom: .7px solid rgba(128, 128, 128, 0.228);
-    /* border-top-left-radius: 3px;
-    border-top-right-radius: 3px; */
+    border-top: .7px solid rgba(128, 128, 128, 0.228);
     padding: 0 7px;
-    min-height: 3rem;
+    min-height: 2.8rem;
     display: flex;
     cursor: pointer;
     transition: background 0.2s;
@@ -940,12 +940,33 @@ body {
 
 /* btn */
 
+.submit_btn {
+    background-color: var(--primary-color-25);
+    color: var(--primary-color-700) !important;
+    font-weight: 600;
+    font-size: .8rem !important;
+    padding: 8px;
+    border-radius: .3rem !important;
+    box-shadow: 0px 4px 6px rgba(168, 18, 18, 0.026);
+    border: 1px solid var(--primary-color-400) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit_btn i {
+    font-size: .94rem;
+    color: var(--primary-color-700) !important;
+}
+
 .btn-reset,
 .btn-connect,
 .btn-delete {
     border: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     font-size: .95rem;
     font-weight: 600;
     cursor: pointer;
@@ -1180,27 +1201,32 @@ body {
 /*--------------- Filters & Block list page----------------------*/
 .option-card {
     display: inline-flex;
+    align-items: center;
     gap: 2px;
-    padding: 8px 10px;
-    border: .5px solid #ccc;
+    padding: 6px 15px;
+    border: .4px solid #ddd;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    font-size: .8rem;
+    font-size: .78rem;
     font-weight: 400;
     max-width: 250px;
+    color: var(--gray-500);
 }
 
 
 .option-card:hover {
-    background: rgba(0, 0, 0, 0.015);
-    border-color: #80b4417b;
+    background: var(--primary-color-10);
+    border-color: var(--primary-color-600);
+    color: #00000096;
+    font-weight: 500;
 }
 
 .option-card.active {
-    border-color: #000;
-    background: rgba(160, 160, 160, 0.05);
-    border-color: #80b4417b;
+    background: var(--primary-color-25) !important;
+    border-color: var(--primary-color-600);
+    color: #00000096;
+    font-weight: 500;
 }
 
 

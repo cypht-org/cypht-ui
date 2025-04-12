@@ -425,3 +425,44 @@ $(document).ready(function() {
         $("#acounts").removeClass("show-block");
     });
 });
+
+/* ------------------------------- Serve List ------------------------------- */
+function selectOption(selected) {
+  document.querySelectorAll('.option-card').forEach(el => {
+      el.classList.remove('active');
+      el.querySelector('.radio-circle').classList.remove('active');
+  });
+
+  selected.classList.add('active');
+  selected.querySelector('.radio-circle').classList.add('active');
+}
+
+
+// $(document).ready(function () {
+//   $("#bloack-option-list").click(function () {
+//       $(".dropdown-menu-custom").toggleClass("show");
+//       $(".icon").toggleClass("rotate-icon");
+//   });
+
+//   $(document).click(function (e) {
+//       if (!$(e.target).closest(".dropdown-container").length) {
+//           $(".dropdown-menu-custom").removeClass("show");
+//           $(".icon").removeClass("rotate-icon");
+//       }
+//   });
+
+
+//   // 2
+//   $("#table-modal").click(function () {
+//       $(".table-dropdown-menu-custom").toggleClass("show");
+//       // $(".icon").toggleClass("rotate-icon");
+//   });
+
+//   $(document).click(function (e) {
+//       if (!$(e.target).closest(".table-dropdown-container").length) {
+//           $(".table-dropdown-menu-custom").removeClass("show");
+//           // $(".icon").removeClass("rotate-icon");
+//       }
+//   });
+
+// });

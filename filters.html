@@ -61,7 +61,7 @@
                 class="position-absolute setting__container  align-items-end justify-content-end  me-3 d-lg-none">
                 <ul class="d-flex align-items-center justify-content-start column-gap-3 mb-2  py-0 px-3">
                     <li class=""> <a href="/site.html" class="menu-link">
-                            <i class="bi bi-diagram-2" style="font-size: 1.2rem;"></i>
+                            <i class="bi bi-diagram-2-fill" style="font-size: 1.2rem;"></i>
                             </i>Site
                         </a></li>
                     <li class=""> <a href="/server.html" class="menu-link">
@@ -70,7 +70,6 @@
                 </ul>
             </div>
             <!-- </nav> -->
-
             <nav class="d-none d-lg-flex flex-column justify-content-between  magic-r-line py-2">
                 <div class="d-flex flex-column align-items-center  gap-4  justify-content-center">
                     <div class="d-flexalign-items-center logo_content">
@@ -108,7 +107,8 @@
             </nav>
         </div>
 
-        <div class="flex-1 position-relative d-flex flex-column" style="background-color: var(--background-2);">
+        <div class="flex-1 position-relative d-flex flex-column px-lg-4 px-xxl-5"
+            style="background-color: var(--background-3);">
             <!-- Mobile -->
             <div class="d-flex flex-column  d-lg-none">
                 <div class="d-flex align-items-center justify-content-between column-gap-2 top__menu px-3 px-md-4 ">
@@ -131,192 +131,206 @@
             </div>
 
             <!-- Desktop -->
-            <div class="d-flex d-lg-flex flex-1 magic-t-line">
+            <div class="flex-1 d-flex flex-column">
 
-                <div class="d-none d-lg-block parameter__menu__card">
-                    <div class="title__card mb-2">
-                        <h3 class="fw-semibold">Settings</h3>
-                    </div>
-
-                    <div class="item__card d-flex flex-column">
-                        <span class="item__card__label">Menu</span>
-                        <ul class="">
-                            <li><a href="/server.html">Servers Settings</a></li>
-                            <li><a href="/filters.html" class="parameter__active__menu">Filters</a></li>
-                            <li><a href="/block_list.html">Block List</a></li>
-                            <li><a href="/feed.html">Feeds</a></li>
-                            <li><a href="/dev.html">Dev</a></li>
-                            <li><a href="/shortcuts.html">Shortcuts</a></li>
-                            <li><a href="/profile.html">Profile</a></li>
-                        </ul>
-                    </div>
-
+                <div class="d-none d-lg-flex align-items-center server_title_card mt-4">
+                    <h4 class="fw-semibold">Settings</h4>
                 </div>
 
-                <div class="flex-1 position-relative">
-                    <div class="h-100 d-flex flex-column  px-md-2  pt-lg-3 ps-lg-3 overflow-y-auto desktop_scroll top-0 button-0  end-0 gap-4"
-                        style=" background-color: var(--background)">
 
-                        <div class="py-2 param_label_container px-3">
-                            <div class="param_title fw-bold d-flex align-items-center">
+                <div class="flex-1 d-flex d-lg-flex flex-1 magic-t-line column-gap-5 mb-2">
+                    <div class="d-none d-lg-block parameter_menu_card">
+                        <ul>
+                            <li><a href="/server.html"><i class="bi bi-app-indicator"></i>General</a></li>
+                            <li><a href="/filters.html" class="parameter_active_menu"><i
+                                        class='bx bx-collection'></i>Filters</a></li>
+                            <li><a href="/block_list.html"><i class="bi bi-view-list"></i>Block List</a></li>
+                            <li><a href="/feed.html"><i class='bx bx-candles'></i>Feeds</a></li>
+                            <li><a href="/dev.html"><i class="bi bi-cpu-fill"></i>Dev</a>
+                            </li>
+                            <li><a href="/shortcuts.html"><i class="bi bi-command"></i>Shortcuts</a></li>
+                            <li><a href="/profile.html">
+                                    <i class='bx bx-user'></i>
+                                    Profile</a></li>
+                        </ul>
 
-                                <div class="param_icon_card d-inline-flex d-none d-lg-block">
-                                    <i class="bi bi-sliders2-vertical"></i>
-                                </div>
+                    </div>
 
-                                <span>Filters</span>
-                            </div>
-                            <small class="param_description">Lorem ipsum
-                                dolor sit
-                                amet
-                                consectetur
-                                adipisicing elit.
-                                Dolorum officiis doloribus
-                            </small>
-
+                    <div class="flex-1 d-flex flex-column position-relative parameter_view_card">
+                        <div class="d-flex column-gap-3 py-4 parameter_title_card ps-4">
                             <div>
+                                <div class="param_icon_card d-flex">
+                                    <i class="bx bx-collection"></i>
+                                </div>
+                            </div>
+
+                            <div class="d-flex flex-column">
+                                <span class="parameter_title">Filters</span>
+                                <small class="param_description">Filters lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Dolorum officiis doloribus</small>
                             </div>
                         </div>
 
-                        <!--  -->
-                        <div class="flex-grow-1 position-relative">
+                        <div class="parameter_content flex-1 d-flex flex-column  mx-lg-0 position-relative">
                             <div
-                                class="position-absolute mb-4 fw-medium d-flex flex-column row-gap-4 pb-4 shortcuts_param_list  end-0 start-0 bottom-0 top-0 px-3">
-
-                                <div class="col-xl-11 col-xxl-9 d-flex flex-column">
-                                    <div class="d-flex justify-content-between mb-1 label__card">
-                                        <small class="d-flex align-items-center column-gap-2 title"><i
-                                                class='bx bx-card' style="font-size: 1rem;"></i>Server List</small>
-
-                                        <small class="mt-1 description">
-                                            Server list Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        </small>
-                                    </div>
-
-                                    <div class=" mt-2 p-0 d-flex gap-1 gap-md-2 gap-lg-3 flex-wrap">
-                                        <div class="d-flex  gap-3">
-                                            <div class="option-card" onclick="selectOption(this)">
-                                                <div style="padding-top: 3.8px;">
-                                                    <div class="radio-circle"></div>
-                                                </div>
-                                                <span>
-                                                    server@example.gik
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex  gap-3">
-                                            <div class="option-card" onclick="selectOption(this)">
-                                                <div style="padding-top: 3.8px;">
-                                                    <div class="radio-circle"></div>
-                                                </div>
-                                                <span>
-                                                    server@example.gik
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex  gap-3">
-                                            <div class="option-card" onclick="selectOption(this)">
-                                                <div style="padding-top: 3.8px;">
-                                                    <div class="radio-circle"></div>
-                                                </div>
-                                                <span>
-                                                    server@example.gik
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex  gap-3">
-                                            <div class="option-card" onclick="selectOption(this)">
-                                                <div style="padding-top: 3.8px;">
-                                                    <div class="radio-circle"></div>
-                                                </div>
-                                                <span>
-                                                    server@example.gik
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-xl-11 col-xxl-9 d-flex flex-column pb-0 pt-1 row-gap-2 mt-3 flex-1">
-                                    <div
-                                        class="d-flex flex-column gap-3 flex-md-row align-items-md-center justify-content-md-between">
-                                        <div class="clear_space d-flex flex-column description__text"
-                                            style="font-size: .88rem;">
-                                            <small>Quickly add an account from popular E-mail providers</small>
-                                            <small class="mt-1">
-                                                To manually configure an account,
-                                                use the <a href="" class="label_action fw-medium">IMAP/SMTP</a> section.
-                                            </small>
-                                        </div>
-
-                                        <div class="d-flex column-gap-3 col-9 col-md-4 col-lg-5 col-xl-4"
-                                            style="margin-right: .7rem;">
-
-                                            <button id="config_btn" type="button" data-bs-toggle="offcanvas"
-                                                data-bs-target="#filter-modal" aria-controls="offcanvasRight"
-                                                class="simple_btn px-2 px-lg-1 column-gap-1"><i
-                                                    class='bx bxs-filter-alt'></i>Add
-                                                Filter</button>
-                                            <button id="config_btn" type="button" data-bs-toggle="offcanvas"
-                                                data-bs-target="#script-modal" aria-controls="offcanvasRight"
-                                                class="simple_btn px-2 px-lg-1  column-gap-1"><i
-                                                    class='bx bx-code-block'></i>Add Script</button>
-
-
-                                        </div>
-                                    </div>
-
-                                    <div class="flex-1  position-relative mt-3">
-                                        <div class="position-absolute scrollable top-0 start-0 bottom-0 end-0">
-
-                                            <div class="table__card p-0 m-0">
-                                                <div class="d-flex table__card__title px-2 fw-semibold">
-                                                    <span class="flex-1"><i class='bx bx-sort'></i>Priority</span>
-                                                    <span class="table_left_line_card d-flex justify-content-start px-2"
-                                                        style="width: 55%;"><i class='bx bx-camera-home'></i>Name</span>
-
-                                                    <span class="table_left_line_card" style="width: 25%;"><i
-                                                            class='bx bx-dots-vertical-rounded'></i>Actions</span>
-                                                </div>
-
-                                                <!-- Table Items -->
+                                class="position-absolute fw-medium  pb-2  pt-3  desktop_scroll  end-0 start-0  overflow-y-auto  bottom-0 top-0  align-items-center d-flex  flex-column">
+                                <div class="flex-1 w-100 px-4 d-flex flex-column gap-2">
+                                    <div class="d-flex justify-content-center">
+                                        <div class="d-flex flex-column parameter_view_menu_card">
+                                            <div class="d-flex gap-1 mb-1 param_server_list_card">
                                                 <div>
-                                                    <div class="d-flex justify-content-between px-2 table__card__item"
-                                                        style="height: 1.8rem;">
-                                                        <span id="feed_name" class="fw-semibold px-3 flex-1"
-                                                            style="font-size: .8rem;">
-                                                            1
+                                                    <div>
+                                                        <i class='bx bx-card' style="font-size: 1rem;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <small
+                                                        class="d-flex align-items-center column-gap-2 server_list_card_title">Server
+                                                        List</small>
+
+                                                    <small class="description__text">
+                                                        Server list Lorem ipsum dolor sit amet consectetur
+                                                        adipisicing elit.
+                                                    </small>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                class="col-xl-11 col-xxl-9 mt-2 ps-3 d-flex gap-1 gap-md-2 gap-lg-3 flex-wrap">
+                                                <div class="d-flex  gap-3">
+                                                    <div class="option-card active" onclick="selectOption(this)">
+                                                        <div class="radio-circle active"></div>
+                                                        <span>
+                                                            server@example.gik
                                                         </span>
-                                                        <span
-                                                            class="table_left_line_card d-flex justify-content-start px-2"
-                                                            style="width: 55%;">
-                                                            Filter Demo text
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex  gap-3">
+                                                    <div class="option-card" onclick="selectOption(this)">
+                                                        <div class="radio-circle"></div>
+                                                        <span>
+                                                            binsrh@example.
                                                         </span>
-                                                        <div id="feed__actions" class="table_left_line_card"
-                                                            style="width: 25%;">
-                                                            <div class="form-check form-switch">
-                                                                <input class="form-check-input cursor-pointer"
-                                                                    type="checkbox" value="" id="filter_status" checked>
-                                                            </div>
-
-
-                                                            <button class="update_btn clear__btn"
-                                                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                title="Test"><i class='bx bx-candles'> </i></button>
-
-                                                            <button class="delete_btn clear__btn"
-                                                                data-bs-toggle="tooltip" data-bs-placement="top"
-                                                                title="Delete"><i class='bx bx-trash'></i></button>
-                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <!-- </div> -->
+                                        </div>
+                                    </div>
 
+                                    <div
+                                        class="col-xl-11 col-xxl-9 d-flex flex-column pb-0 row-gap-2 mt-3 flex-1 parameter_view_menu_card">
+                                        <div
+                                            class="d-flex flex-column gap-3 flex-md-row align-items-md-center justify-content-md-between">
+                                            <div class="clear_space d-flex flex-column description__text"
+                                                style="font-size: .88rem;">
+                                                <small>Quickly add an account from popular E-mail providers</small>
+                                                <small class="mt-1">
+                                                    To manually configure an account,
+                                                    use the <a href="" class="label_action fw-medium">IMAP/SMTP</a>
+                                                    section.
+                                                </small>
+                                            </div>
+
+                                            <div
+                                                class="smtp__action__card d-flex justify-content-lg-end column-gap-3 col-9 col-md-4 col-lg-5 col-xl-4">
+
+                                                <button id="config_btn" type="button" data-bs-toggle="offcanvas"
+                                                    data-bs-target="#filterModal" aria-controls="offcanvasRight"
+                                                    class="btn btn-sm new_config_btn">
+                                                    <i class='bx bxs-filter-alt'></i>Add
+                                                    Filter
+                                                </button>
+                                                <button id="script_btn" type="button" data-bs-toggle="offcanvas"
+                                                    data-bs-target="#filterScript" aria-controls="offcanvasRight"
+                                                    class="btn btn-sm new_config_btn">
+                                                    <i class='bx bx-code-block'></i>Add Script</button>
+                                            </div>
+                                        </div>
+                                        <!-- Table -->
+                                        <div class="d-flex flex-column mt-3 table__card mb-3">
+                                            <div class="d-flex table__card__title fw-semibold">
+                                                <span class="flex-1" style="width: 50%;"><i
+                                                        class='bx bx-user'></i>Sender</span>
+                                                <span class="table_left_line_card" style="width: 30%;"><i
+                                                        class='bx bx-layer'></i>Behavior</span>
+                                                <span class="table_left_line_card" style="width: 20%;"><i
+                                                        class='bx bx-dots-vertical-rounded'></i>Actions</span>
+                                            </div>
+
+                                            <!-- Table Items -->
+                                            <div class="flex-1 position-relative flex  flex-column">
+
+                                                <div class="d-flex justify-content-between table__card__item">
+                                                    <div class="d-flex items-center" style="width: 50%;">
+                                                        <span id="feed_name px-1">
+                                                            Demo
+                                                        </span>
+                                                    </div>
+                                                    <div id="table-modal"
+                                                        class="table_left_line_card fw-medium table-dropdown-container"
+                                                        style="width: 30%;">
+                                                        <span id="feed_name"
+                                                            class="d-flex column-gap-1 table-dropdown-btn w-100  justify-content-center"
+                                                            style="width: 60%;">
+                                                            Default <i class='bx bx-pen' style="font-size: 1rem;">
+                                                            </i>
+                                                        </span>
+
+
+                                                        <div class="table-dropdown-menu-custom p-2">
+                                                            <div
+                                                                class=" d-inline-flex flex-column  justify-content-start mt-3 row-gap-1 w-100">
+                                                                <small class="fw-medium w-75 text-start"
+                                                                    style="font-size: .8rem;">Action</small>
+                                                                <div class="table-dropdown-container">
+                                                                    <div id="table-modal"
+                                                                        class="dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                                                        <span style="font-size: .8rem;">Select
+                                                                            Options</span>
+                                                                        <button
+                                                                            class="clear__btn border-0 bg-transparent"
+                                                                            style="font-size: 1.1rem;">
+                                                                            <i class='bx bx-chevron-down icon'></i>
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <div class="table-dropdown-menu-custom">
+                                                                        <a href="#">Option 1</a>
+                                                                        <a href="#">Option 2</a>
+                                                                        <a href="#">Option 3</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="w-100 d-flex justify-content-end pt-3">
+                                                                <div class="" style="width: 30%;">
+                                                                    <button class="btn-connect w-100">Save
+                                                                        <i class='bx bx-transfer-alt'></i></button>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div id="feed__actions" class="table_left_line_card"
+                                                        style="width: 20%;">
+                                                        <button class="update_btn clear__btn" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" title="Test"><i
+                                                                class='bx bx-candles'>
+                                                            </i></button>
+
+                                                        <button class="delete_btn clear__btn" data-bs-toggle="tooltip"
+                                                            data-bs-placement="top" title="Delete"><i
+                                                                class='bx bx-trash'></i></button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
                                     </div>
 
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -329,7 +343,6 @@
     <!-- 1. Menu -->
     <div class="offcanvas offcanvas-start my-1 ms-1 rounded d-flex flex-column d-lg-none" tabindex="-1"
         id="off-home-menu" aria-labelledby="offcanvasExampleLabel" style="width: 330px; ">
-
         <div class="offcanvas-body">
             <div class="mt-2" style="width: 90px;">
                 <img src="/assets/images/svg/logo_dark.svg" class="" alt="Logo">
@@ -338,23 +351,26 @@
                 style="max-height: calc(97dvh - 120px); overflow-y: auto;">
 
                 <div class="group_menu">
-                    <ul class="p-0">
-                        <li><a href="/server.html">Servers Settings</a></li>
-                        <li><a href="/filters.html" class="active__menu">Filters</a></li>
-                        <li><a href="/block_list.html">Block List</a></li>
-                        <li><a href="/feed.html">Feeds</a></li>
-                        <li><a href="/dev.html">Dev</a></li>
-                        <li><a href="/shortcuts.html">Shortcuts</a></li>
-                        <li><a href="/shortcuts.html">Profile</a></li>
-                    </ul>
+                    <div class="group_menu_item">
+                        <ul class="p-0">
+                            <li><a href="/server.html"><i class="bi bi-app-indicator"></i>General</a></li>
+                            <li><a href="/filters.html" class="parameter_active_menu"><i
+                                        class='bx bx-collection'></i>Filters</a></li>
+                            <li><a href="/block_list.html"><i class="bi bi-view-list"></i>Block List</a></li>
+                            <li><a href="/feed.html"><i class='bx bx-candles'></i>Feeds</a></li>
+                            <li><a href="/dev.html"><i class="bi bi-cpu-fill"></i>Dev</a></li>
+                            <li><a href="/shortcuts.html"><i class="bi bi-command"></i>Shortcuts</a></li>
+                            <li><a href="/profile.html"><i class='bx bx-user'></i>Profile</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 
-    <!-- 2. -->
     <!-- Filter -->
-    <div class="offcanvas offcanvas-end my-2 mx-2 rounded scrollable overflow-y-auto" tabindex="-1" id="filter-modal"
+    <div class="offcanvas offcanvas-end my-2 mx-2 rounded scrollable overflow-y-auto" tabindex="-1" id="filterModal"
         aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
             <div class="w-100">
@@ -366,7 +382,7 @@
                     </div>
                 </div>
 
-                <small class="fw-normal d-flex" style="width: 80%;">
+                <small class="fw-normal d-flex  description__text" style="width: 80%;">
                     Step
                     of
                     Lorem,
@@ -377,149 +393,173 @@
             </div>
         </div>
 
-        <div class="offcanvas-body  mt-2 mb-4" style="max-height: 90vh; padding-left: .6rem;">
-            <div class="" style="min-height: 70vh;">
+        <div class="offcanvas-body  mt-2 mb-4">
+            <div class="">
                 <div class="d-flex flex-column row-gap-0">
-
                     <div class="d-flex flex-column mb-3">
                         <small class="fw-semibold d-flex align-items-center gap-1"
                             style="color: var(--menu-primary); font-size: .8rem;">
                             <i class='bx bx-plug' style="font-size: 1rem;"></i>General
                         </small>
-                        <small class="description__text fw-normal"
-                            style="font-size: .78rem; opacity: .7; font-size: .76rem; padding-left: 1.2rem;">
+                        <small class="description__text fw-normal">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         </small>
                     </div>
-
-                    <div class="d-flex flex-column row-gap-2" style="width: 88%;">
-                        <div
-                            class=" mt-2 d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-between ">
-                            <div class="filed__card">
-                                <small class="field__label">Filter Name</small>
-                                <input id="provider" type="text" class="param__field"
-                                    style="font-size: .8rem; width: 250px;" placeholder="Enter filter name">
-                            </div>
-                            <div class="filed__card mt-3 mt-lg-0">
-                                <small class="field__label">Priority</small>
-                                <input id="script_priority" type="number" class="param__field fw-semibold text-center"
-                                    style="font-size: .8rem; width: 80px; " placeholder="">
+                    <div class="mx-2 mt-2  d-flex flex-column" style="width: 93%">
+                        <div class="mb-3">
+                            <div
+                                class=" mt-2 d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-between">
+                                <div class="filed__card input_large_card">
+                                    <small class="field__label">Filter Name</small>
+                                    <input id="provider" type="text" class="base__field" style="font-size: .8rem; "
+                                        placeholder="Enter filter name">
+                                </div>
+                                <div class="filed__card mt-3 mt-lg-0">
+                                    <small class="field__label">Priority</small>
+                                    <input id="script_priority" type="number"
+                                        class="base__field fw-semibold text-center"
+                                        style="font-size: .8rem; width: 80px; " placeholder="">
+                                </div>
                             </div>
                         </div>
-
-                        <div class="filed__card">
+                        <div class="filed__card mb-3">
                             <small class="field__label">Test</small>
-                            <input id="provider" type="text" class="param__field w-100" style="font-size: .8rem;"
+                            <input id="test" type="text" class="param__field w-100" style="font-size: .8rem;"
                                 placeholder="ALLOF (AND)">
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Tab Menu Header-->
-                    <div class="menu__card mt-3">
-                        <ul class="nav nav-pills mb-3 column-gap-4" id="imap-tab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <button class="active clear__btn" id="pills-condition-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-condition" type="button" role="tab"
-                                    aria-controls="pills-condition" aria-selected="true">
-                                    Conditions
-                                </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <button class="clear__btn" id="pills-action-tab" data-bs-toggle="pill"
-                                    data-bs-target="#pills-action" type="button" role="tab" aria-controls="pills-action"
-                                    aria-selected="false">
-                                    Actions
-                                </button>
-                            </li>
-                        </ul>
+
+            <!-- Tab Menu Header-->
+            <div class="menu__card mt-3">
+                <ul class="nav nav-pills mb-3 column-gap-4" id="imap-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="active clear__btn" id="pills_condition-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills_condition" type="button" role="tab" aria-controls="pills_condition"
+                            aria-selected="true">
+                            Conditions
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="clear__btn" id="pills_script-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills_script" type="button" role="tab" aria-controls="pills_script"
+                            aria-selected="false">
+                            Actions
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Children-->
+            <div class="tab-content scrolbale pt-4 px-2" id="pills-tabContent" style="width: 96%;">
+                <!-- 1 -->
+                <div class="tab-pane fade show active " id="pills_condition" role="tabpanel"
+                    aria-labelledby="pills-condition-tab">
+
+                    <div class="filed__card mb-3">
+                        <small class="field__label">Select a Category</small>
+                        <select class="form-select no-focus" id="categorySelect">
+                            <optgroup label="Message">
+                                <option value="subject">Subject</option>
+                                <option value="body">Body</option>
+                                <option value="size">Size (KB)</option>
+                            </optgroup>
+
+                            <optgroup label="Header">
+                                <option value="to">To</option>
+                                <option value="from">From</option>
+                                <option value="cc">CC</option>
+                                <option value="to_or_cc">To or CC</option>
+                                <option value="bcc">BCC</option>
+                                <option value="custom">Custom</option>
+                            </optgroup>
+                        </select>
                     </div>
 
-                    <!-- Tab Children-->
-                    <div class="tab-content scrolbale pt-4" id="pills-tabContent" style="width: 88%;">
-                        <!-- 1 -->
-                        <div class="tab-pane fade show active " id="pills-condition" role="tabpanel"
-                            aria-labelledby="pills-condition-tab">
+                    <div id="customer-input" class="filed__card mb-3">
+                        <small class="field__label">Customer</small>
+                        <input id="address" type="text" class="param__field w-100" style="font-size: .8rem;"
+                            placeholder="ALLOF (AND)">
+                    </div>
 
-                            <div class="filed__card mb-3">
-                                <small class="field__label">Select a Category</small>
-                                <select class="form-select no-focus" id="categorySelect">
-                                    <optgroup label="Message">
-                                        <option value="subject">Subject</option>
-                                        <option value="body">Body</option>
-                                        <option value="size">Size (KB)</option>
-                                    </optgroup>
+                    <div class="d-flex flex-column row-gap-2">
+                        <small class="field__label">Select a
+                            Condition</small>
+                        <select class="form-select" id="conditionSelect" disabled>
+                            <option value="">Select a category first</option>
+                        </select>
+                    </div>
 
-                                    <optgroup label="Header">
-                                        <option value="to">To</option>
-                                        <option value="from">From</option>
-                                        <option value="cc">CC</option>
-                                        <option value="to_or_cc">To or CC</option>
-                                        <option value="bcc">BCC</option>
-                                        <option value="custom">Custom</option>
-                                    </optgroup>
-                                </select>
-                            </div>
+                    <div class="filed__card mt-3">
+                        <small class="field__label">Address</small>
+                        <input id="address" type="text" class="param__field w-100" style="font-size: .8rem;"
+                            placeholder="ALLOF (AND)">
+                    </div>
+                </div>
 
-                            <div id="customer-input" class="filed__card mb-3">
-                                <small class="field__label">Customer</small>
-                                <input id="address" type="text" class="param__field w-100" style="font-size: .8rem;"
-                                    placeholder="ALLOF (AND)">
-                            </div>
+                <!-- 2 -->
+                <div class="tab-pane fade" id="pills_script" role="tabpanel" aria-labelledby="pills-mail-server-tab">
+                    <div class="d-flex flex-column row-gap-2 mb-3">
+                        <small class="field__label">Select an Action</small>
+                        <select class="form-select" id="actionSelect">
 
-                            <div class="d-flex flex-column row-gap-2">
-                                <small class="field__label">Select a
-                                    Condition</small>
-                                <select class="form-select" id="conditionSelect" disabled>
-                                    <option value="">Select a category first</option>
-                                </select>
-                            </div>
+                            <option value="deliver">Deliver (Keep)</option>
+                            <option value="copy_email">Copy email to mailbox</option>
+                            <option value="move_email">Move email to mailbox</option>
+                            <option value="flag">Flag</option>
+                            <option value="add_flag">Add Flag</option>
+                            <option value="remove_flag">Remove Flag</option>
+                            <option value="redirect">Redirect</option>
+                            <option value="forward">Forward</option>
+                            <option value="reject">Reject</option>
+                            <option value="discard">Discard</option>
+                            <option value="reply_message">Reply Message</option>
+                        </select>
+                    </div>
 
-                            <div class="filed__card mt-3">
-                                <small class="field__label">Address</small>
-                                <input id="address" type="text" class="param__field w-100" style="font-size: .8rem;"
-                                    placeholder="ALLOF (AND)">
-                            </div>
-                        </div>
-
-                        <!-- 2 -->
-                        <div class="tab-pane fade" id="pills-action" role="tabpanel"
-                            aria-labelledby="pills-mail-server-tab">
-                            <div class="d-flex flex-column row-gap-2 mb-3">
-                                <small class="field__label">Select an Action</small>
-                                <select class="form-select" id="actionSelect">
-
-                                    <option value="deliver">Deliver (Keep)</option>
-                                    <option value="copy_email">Copy email to mailbox</option>
-                                    <option value="move_email">Move email to mailbox</option>
-                                    <option value="flag">Flag</option>
-                                    <option value="add_flag">Add Flag</option>
-                                    <option value="remove_flag">Remove Flag</option>
-                                    <option value="redirect">Redirect</option>
-                                    <option value="forward">Forward</option>
-                                    <option value="reject">Reject</option>
-                                    <option value="discard">Discard</option>
-                                    <option value="reply_message">Reply Message</option>
-                                </select>
-                            </div>
-
-                            <div id="dynamicFields" class="" style="display: none;"></div>
-                            <!-- ------------------------------- Actions ------------------------------- -->
-                            <div class="my-4 w-100">
-                                <div class="w-100 d-flex column-gap-2" style="margin-top: 1.15rem;">
-                                    <button class="btn-reset px-4">Reset<i class='bx bx-reset'></i></button>
-                                    <button class="btn-connect">Save <i class='bx bx-transfer-alt'></i></button>
-                                </div>
-                            </div>
+                    <div id="dynamicFields" class="" style="display: none;"></div>
+                    <!-- ------------------------------- Actions ------------------------------- -->
+                    <div class="my-4 w-100">
+                        <div class="w-100 d-flex column-gap-2" style="margin-top: 1.15rem;">
+                            <button class="btn-reset px-4">Reset<i class='bx bx-reset'></i></button>
+                            <button class="btn-connect">Save <i class='bx bx-transfer-alt'></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    </div>
 
+    <!-- <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images,
+                lists, etc.
+            </div>
+            <div class="dropdown mt-3">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
 
     <!-- Script Modal -->
-    <div class="offcanvas offcanvas-end my-2 mx-2 rounded scrollable overflow-y-auto" tabindex="-1" id="script-modal"
+    <div class="offcanvas offcanvas-end my-2 mx-2 rounded scrollable overflow-y-auto" tabindex="-1" id="filterScript"
         aria-labelledby="offcanvasRightLabel">
 
         <!-- Header -->
@@ -534,9 +574,9 @@
                         </button>
                     </div>
                 </div>
-                <span class="fw-normal w-25" style="font-size: .82rem;">
-                    Step of Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
+                <small class="fw-normal d-flex  description__text" style="width: 80%;">
+                    Step of Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias, officia.
+                </small>
             </div>
         </div>
 
@@ -545,22 +585,25 @@
             <div class="position-absolute start-0 end-0 top-0 bottom-0">
                 <div class="offcanvas-body position-relative d-flex flex-column">
                     <div class="d-flex flex-column row-gap-2">
-                        <div
-                            class=" mt-2 d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-between ">
-                            <div class="filed__card">
-                                <small class="field__label">Filter Name</small>
-                                <input id="provider" type="text" class="param__field"
-                                    style="font-size: .8rem; width: 250px;" placeholder="Enter filter name">
-                            </div>
-                            <div class="filed__card mt-3 mt-lg-0">
-                                <small class="field__label">Priority</small>
-                                <input id="script_priority" type="number" class="param__field fw-semibold text-center"
-                                    style="font-size: .8rem; width: 80px; " placeholder="">
+                        <div class="mb-3">
+                            <div
+                                class=" mt-2 d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-between">
+                                <div class="filed__card input_large_card">
+                                    <small class="field__label">Filter Name</small>
+                                    <input id="provider" type="text" class="base__field" style="font-size: .8rem; "
+                                        placeholder="Enter filter name">
+                                </div>
+                                <div class="filed__card mt-3 mt-lg-0">
+                                    <small class="field__label">Priority</small>
+                                    <input id="script_priority" type="number"
+                                        class="base__field fw-semibold text-center"
+                                        style="font-size: .8rem; width: 80px; " placeholder="">
+                                </div>
                             </div>
                         </div>
 
                         <!-- <div> -->
-                        <div class="d-flex flex-column mb-3" style="width: 98%;">
+                        <div class="d-flex flex-column mb-3">
                             <small class="fw-semibold d-flex align-items-center gap-1 mb-1"
                                 style="color: var(--menu-primary); font-size: .8rem;">
                                 <i class='bx bx-plug' style="font-size: 1rem;"></i>Sieve Script
@@ -574,14 +617,14 @@
                             </small>
 
                             <textarea name="" id="" type="text" class="param__field scrollable w-100 mt-3"
-                                style="font-size: .8rem; height: 200px"></textarea>
+                                style="font-size: .8rem; min-height: 100px"></textarea>
 
                         </div>
 
                         <!--  -->
-                        <div class="d-flex justify-content-end" style="width: 98%;">
-                            <div class=" w-50">
-                                <button class="btn-connect w-100" style="font-size: .9rem;">Save <i
+                        <div class="d-flex justify-content-end">
+                            <div class=" w-25">
+                                <button class="submit_btn w-100" style="font-size: .9rem;">Save <i
                                         class='bx bx-transfer-alt'></i></button>
                             </div>
                         </div>
