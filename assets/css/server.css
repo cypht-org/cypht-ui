@@ -264,7 +264,78 @@ th span i {
     /* border-color: ; */
 }
 
+
 /*  */
+
+/* --------------------------------- General -------------------------------- */
+
+.menu_card {
+    border-bottom: 2.5px solid #F6F6F8;
+}
+
+.menu_card ul {
+    display: flex !important;
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu_card ul li {
+    list-style: none;
+    font-size: .85rem;
+    color: #707071;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+    transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out;
+    /* margin-bottom: -9px; */
+}
+
+.menu_card ul li:hover {
+    color: var(--menu-primary);
+}
+
+
+#sub-menus {
+    overflow: auto;
+    /* ou overflow-x / overflow-y selon besoin */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Chrome, Safari, Edge */
+.hide-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+.menu_card ul li a {
+    color: inherit;
+    text-decoration: none;
+    padding: 8px 12px;
+    background-color: transparent;
+    display: flex;
+}
+
+
+
+
+.active {
+    background-color: var(--primary-color-25);
+    color: var(--primary-color-700) !important;
+    font-weight: 600;
+    font-size: .88rem !important;
+    padding: 5px 12px;
+    border-radius: .3rem !important;
+    box-shadow: 0px 4px 6px rgba(168, 18, 18, 0.026);
+    border: .99px solid var(--primary-color-400) !important;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* --------------------------------- Responsive -------------------------------- */
+
 
 @media (min-width: 768px) {
     .offcanvas {
@@ -393,8 +464,9 @@ th span i {
 .active {
     font-weight: 600 !important;
     color: var(--menu-primary) !important;
-    border-color: var(--primary-color) !important;
-    background-color: transparent !important;
+    border: .8px solid var(--primary-color) !important;
+    background-color: var(--primary-color-50) !important;
+    border-radius: 7px;
 }
 
 .interface__content {

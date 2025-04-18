@@ -21,7 +21,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/filters.css">
+    <link rel="stylesheet" href="/assets/css/server.css">
 </head>
 
 <body class="position-relative">
@@ -156,12 +156,10 @@
 
                     </div>
 
-                    <div class="flex-1 d-flex flex-column position-relative parameter_view_card  bg-primary"
-                        style="height: 100%;">
-
-                        <!-- En-tête fixe -->
-                        <div class="bg-warning flex-1 d-flex flex-column overflow-y-auto">
-                            <div class="d-flex column-gap-3 py-4 parameter_title_card ps-4">
+                    <div class="flex-1 d-flex flex-column position-relative parameter_view_card">
+                        <div
+                            class="position-absolute top-0 bottom-0 start-0 end-0  desktop_scroll overflow-y-auto px-3 ">
+                            <div class="d-flex column-gap-3 py-4 parameter_title_card">
                                 <div>
                                     <div class="param_icon_card d-flex">
                                         <i class="bi bi-app-indicator"></i>
@@ -175,23 +173,58 @@
                                 </div>
                             </div>
 
-                            <!-- Contenu scrollable -->
-                            <div class="flex-1 d-flex flex-column px-3" style="height: 50rem;">
+                            <div id="sub-menus" class="position-sticky menu_card" style="top: 0; z-index: 10;">
+                                <ul class="nav-pills mb-3 column-gap-4 d-flex hide-scroll overflow-x-auto py-3"
+                                    id="pills-tab" role="tablist">
+                                    <li class="" role="presentation">
+                                        <a class="active" id="pills-server-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-server" type="button" role="tab"
+                                            aria-controls="pills-server" aria-selected="true">New E-mail
+                                            Account</a>
+                                    </li>
+                                    <li class="" role="presentation">
+                                        <a id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                                            type="button" role="tab" aria-controls="pills-profile"
+                                            aria-selected="false">IMAP - JMAP-SMTP
+                                            Servers</a>
+                                    </li>
 
-                                <!-- Beaucoup de contenu -->
-                                <div class="h-50" style="background-color: red;">menu</div>
-                                <div class="h-25" style="background-color: var(--gray-200);">2</div>
-                                <div class="h-25" style="background-color: var(--gray-200);">3</div>
-                                <div class="h-25" style="background-color: var(--gray-200);">4</div>
-                                <div class="h-25" style="background-color: var(--gray-200);">5</div>
-                                <div class="h-25" style="background-color: var(--gray-200);">6</div>
-                                <!-- Répété... -->
+                                    <li class="" role="presentation">
+                                        <a id="pills-import-tab" data-bs-toggle="pill" data-bs-target="#pills-import"
+                                            type="button" role="tab" aria-controls="pills-import"
+                                            aria-selected="false">Bluk-Import
+                                            Account</a>
+                                    </li>
+                                    <li class="" role="presentation">
+                                        <a id="pills-exchange-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-exchange" type="button" role="tab"
+                                            aria-controls="pills-exchange" aria-selected="false">Exchange
+                                            Servers</a>
+                                    </li>
+                                    <li class="" role="presentation">
+                                        <a id="pills-wordpress-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-wordpress" type="button" role="tab"
+                                            aria-controls="pills-wordpress" aria-selected="false">WordPress
+                                            connect</a>
+                                    </li>
+                                    <li class="" role="presentation">
+                                        <a id="pills-github-tab" data-bs-toggle="pill" data-bs-target="#pills-github"
+                                            type="button" role="tab" aria-controls="pills-github"
+                                            aria-selected="false">Github Connect</a>
+                                    </li>
+                                </ul>
+
                             </div>
+                            <div class="h-50">2</div>
+                            <div class="h-50">3</div>
+                            <div class="h-50">4</div>
+                            <div class="h-50">5</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- Modal -->

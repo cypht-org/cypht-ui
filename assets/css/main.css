@@ -1048,12 +1048,12 @@ body {
 }
 
 
-.active {
+/* .active {
     font-weight: 600 !important;
     color: var(--menu-primary) !important;
     border-color: var(--primary-color) !important;
     background-color: transparent !important;
-}
+} */
 
 /* destroy button */
 .btn-delete {
