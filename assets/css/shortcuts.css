@@ -19,34 +19,34 @@
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    font-size: .85rem;
+    font-size: .9rem;
     font-weight: normal;
 }
 
 .shortcut-item {
     display: flex;
-    align-items: center;
-    font-size: .78rem;
-    gap: 1.15rem;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    gap: .5rem;
+}
+
+.shortcut-item .key-card {
+    padding-right: 6px;
 }
 
 .shortcut-item .key {
-
-    flex-grow: 1;
+    display: inline-flex;
     font-weight: 600;
-
+    background-color: var(--gray-100);
+    padding: 4px 9px;
+    border-radius: 4px;
 }
 
-.shortcut-item .action {
-    width: 60%;
-    /* background-color: red; */
-}
 
 .shortcut-item i {
     font-size: 1rem;
+    display: none;
 }
-
-
 
 .float_btn_container {
     right: 2.5rem !important;
@@ -67,24 +67,115 @@
     color: #fff;
 }
 
-
 .offcanvas {
     width: 94% !important;
 }
 
+
+/* ----------------------------- Issoini-Takashi ---------------------------- */
+
+
+.shortcut_card {
+    border-radius: .9rem .9rem .5rem .5rem;
+    background-color: var(--background);
+    width: 100%;
+    border: .8px solid var(--gray-200) !important;
+
+}
+
+.shortcut_card_top {
+    border-bottom: .8px solid var(--primary-color-200) !important;
+    margin-bottom: .5rem;
+}
+
+.shortcut_card_top span {
+    font-size: .96rem;
+    font-weight: 600;
+}
+
+.shortcut_card_top i {
+    font-size: 1.1rem;
+}
+
+/*  */
 @media (min-width: 768px) {
     .offcanvas {
         width: 55% !important;
     }
+
+    .shortcut-item {
+        flex-direction: row;
+    }
+
+    .shortcut-item .action {
+        width: 70%;
+    }
+
+    .shortcut-item .key-card {
+        flex-grow: 1;
+    }
+
+    .shortcut-item i {
+        display: flex;
+    }
+
+
 }
 
 @media (min-width: 992px) {
+
+
+    .shortcut_card {
+        /* width: 100%; */
+        border: .8px solid var(--gray-200) !important;
+        /* border-radius: .9rem .9rem .5rem .5rem; */
+    }
+
+    .shortcuts-grid {
+        font-size: .8rem;
+    }
+
+    .shortcut_card_top span {
+        font-size: .86rem;
+    }
+
+    .shortcut_card_top i {
+        font-size: 1rem;
+    }
+
+
     .offcanvas {
         width: 35% !important;
     }
+
+    .shortcut_container {
+        display: flex;
+    }
+
+    .icon_label_indicator {
+        margin-top: 1rem;
+    }
+
+    .icon_label_indicator i {
+        border-radius: .4rem;
+        border: .8px solid var(--gray-200) !important;
+        background-color: var(--background);
+        padding: 8px;
+        font-size: 1.4rem;
+        color: var(--primary-color) !important;
+    }
+
+    .shortcut_container {
+        gap: 20px;
+    }
+
+
 }
 
 @media (min-width: 1400px) {
+
+
+
     .offcanvas {
         width: 30% !important;
     }

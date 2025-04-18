@@ -1,33 +1,51 @@
-@import url('/assets/css/main.css');
 @import url('/assets/css/server.css');
 
-.table-dark {
-    --bs-table-bg: #F8F9FB;
-    --bs-table-color: var(--foreground);
-    border: 1px solid rgba(128, 128, 128, 0.228);
+
+.parameter_view_menu_card {
+      padding: .5rem !important;
 }
 
-thead tr {
-      background-color: red !important;
-      font-size: .8rem;
-      font-weight: 300 !important;
+
+.parameter_view_menu_card button {
+      font-size: .7rem !important;
 }
 
-thead tr th {
-      font-size: .8rem;
-      font-weight: 600 !important;
+.parameter_view_menu_card button i {
+      font-size: .7rem;
 }
 
-tbody tr td {
-      font-size: .8rem;
-      font-weight: 400 !important;
+
+.table-bordered {
+      border: .5px solid rgba(128, 128, 128, 0.228) !important;
 }
 
-td button {
-
-      border-radius: .3rem !important;
+.feed_list_card {
+      /* margin: 0 1.4rem; */
+      background-color: var(--background);
+      border-radius: .4rem .4rem 0 0;
 }
 
-td button i {
-      font-size: 1rem;
+
+
+@media (min-width: 992px) {
+
+      .parameter_view_menu_card,
+      .feed_list_card {
+            padding: .7rem 3rem !important;
+      }
+
+      .parameter_view_menu_card button {
+            font-size: .72rem !important;
+      }
+
+      .parameter_view_menu_card button i {
+            font-size: .76rem;
+      }
+
+      .feed_list_card {
+            /* margin: 0 1.4rem;
+            background-color: var(--background);
+            border-radius: .9rem .9rem 0 0; */
+      }
+
 }

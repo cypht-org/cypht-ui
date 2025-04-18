@@ -32,21 +32,6 @@
     border-color: var(--primary-color);
 }
 
-.radio-circle {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-}
-
-.radio-circle.active {
-    background-color: var(--primary-color) !important;
-}
-
 
 /*  */
 .table-dropdown-container {
