@@ -115,9 +115,18 @@
 
 /* !!! */
 .to_card {
-    width: 6dvw;
+    width: 2dvw;
     font-size: .85rem;
     display: flex;
+}
+
+.dark .to_card .form-label {
+    color: var(--accent-foreground);
+}
+
+#to-input {
+    width: 370px;
+    height: 35px;
 }
 
 
@@ -132,7 +141,12 @@
 .compose_search_input:focus {
     /* border: none; */
     outline: none;
+    /* background-color: #242e41 !important; */
     /* border-color: transparent; */
+}
+
+.dark .compo-email-item:hover, .dark #no-result:hover {
+    background: #242e41;
 }
 
 
@@ -233,7 +247,7 @@
     max-height: 90dvh;
     overflow-y: auto;
     background: white;
-    border: 1px solid #ddd;
+    border: 1px solid var(--background-2);
     border-radius: 4px;
     z-index: 1000;
     display: none;
