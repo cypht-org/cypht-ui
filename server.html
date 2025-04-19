@@ -21,7 +21,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/server.css">
+    <link rel="stylesheet" href="/assets/css/general.css">
 </head>
 
 <body class="position-relative">
@@ -131,12 +131,11 @@
             </div>
 
             <!-- Desktop -->
-            <div class="flex-1 d-flex flex-column">
+            <div class="flex-1 d-flex flex-column ">
 
                 <div class="d-none d-lg-flex align-items-center server_title_card mt-4">
                     <h4 class="fw-semibold">Settings</h4>
                 </div>
-
 
                 <div class="flex-1 d-flex d-lg-flex flex-1 magic-t-line column-gap-5 mb-2">
                     <div class="d-none d-lg-block parameter_menu_card">
@@ -158,8 +157,8 @@
 
                     <div class="flex-1 d-flex flex-column position-relative parameter_view_card">
                         <div
-                            class="position-absolute top-0 bottom-0 start-0 end-0  desktop_scroll overflow-y-auto px-3 ">
-                            <div class="d-flex column-gap-3 py-4 parameter_title_card">
+                            class="position-absolute top-0 bottom-0 start-0 end-0  desktop_scroll overflow-y-auto d-flex flex-column row-gap-3  overflow-x-hidden pb-2">
+                            <div class="d-flex column-gap-3 pt-3 py-2 parameter_title_card ps-4">
                                 <div>
                                     <div class="param_icon_card d-flex">
                                         <i class="bi bi-app-indicator"></i>
@@ -173,52 +172,420 @@
                                 </div>
                             </div>
 
-                            <div id="sub-menus" class="position-sticky menu_card" style="top: 0; z-index: 10;">
-                                <ul class="nav-pills mb-3 column-gap-4 d-flex hide-scroll overflow-x-auto py-3"
-                                    id="pills-tab" role="tablist">
-                                    <li class="" role="presentation">
-                                        <a class="active" id="pills-server-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-server" type="button" role="tab"
-                                            aria-controls="pills-server" aria-selected="true">New E-mail
-                                            Account</a>
-                                    </li>
-                                    <li class="" role="presentation">
-                                        <a id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
-                                            type="button" role="tab" aria-controls="pills-profile"
-                                            aria-selected="false">IMAP - JMAP-SMTP
-                                            Servers</a>
-                                    </li>
+                            <div class="px-4 mt-3 mt-lg-0">
+                                <div class="parameter_view_menu_card py-2 px-2">
+                                    <!-- <div class=" "> -->
+                                    <div
+                                        class="menu_card scroll-indicator-wrapper position-relative d-flex gap-2  px-0">
+                                        <div class="scroll-left-indicator d-none ps-1"><i
+                                                class="bi bi-chevron-left"></i>
+                                        </div>
+                                        <ul class="column-gap-4 d-flex hide-scroll overflow-x-auto px-1" id="pills-tab"
+                                            role="tablist">
+                                            <li class="" role="presentation">
+                                                <a class="active" id="pills-server-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-server" type="button" role="tab"
+                                                    aria-controls="pills-server" aria-selected="true">Add E-mail
+                                                    Account</a>
+                                            </li>
+                                            <li class="" role="presentation">
+                                                <a id="pills-profile-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                                    aria-controls="pills-profile" aria-selected="false">IMAP -
+                                                    JMAP-SMTP
+                                                    Servers</a>
+                                            </li>
 
-                                    <li class="" role="presentation">
-                                        <a id="pills-import-tab" data-bs-toggle="pill" data-bs-target="#pills-import"
-                                            type="button" role="tab" aria-controls="pills-import"
-                                            aria-selected="false">Bluk-Import
-                                            Account</a>
-                                    </li>
-                                    <li class="" role="presentation">
-                                        <a id="pills-exchange-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-exchange" type="button" role="tab"
-                                            aria-controls="pills-exchange" aria-selected="false">Exchange
-                                            Servers</a>
-                                    </li>
-                                    <li class="" role="presentation">
-                                        <a id="pills-wordpress-tab" data-bs-toggle="pill"
-                                            data-bs-target="#pills-wordpress" type="button" role="tab"
-                                            aria-controls="pills-wordpress" aria-selected="false">WordPress
-                                            connect</a>
-                                    </li>
-                                    <li class="" role="presentation">
-                                        <a id="pills-github-tab" data-bs-toggle="pill" data-bs-target="#pills-github"
-                                            type="button" role="tab" aria-controls="pills-github"
-                                            aria-selected="false">Github Connect</a>
-                                    </li>
-                                </ul>
-
+                                            <li class="" role="presentation">
+                                                <a id="pills-import-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-import" type="button" role="tab"
+                                                    aria-controls="pills-import" aria-selected="false">Bluk-Import
+                                                    Account</a>
+                                            </li>
+                                            <li class="" role="presentation">
+                                                <a id="pills-exchange-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-exchange" type="button" role="tab"
+                                                    aria-controls="pills-exchange" aria-selected="false">Exchange
+                                                    Servers</a>
+                                            </li>
+                                            <li class="" role="presentation">
+                                                <a id="pills-wordpress-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-wordpress" type="button" role="tab"
+                                                    aria-controls="pills-wordpress" aria-selected="false">WordPress
+                                                    connect</a>
+                                            </li>
+                                            <li class="" role="presentation">
+                                                <a id="pills-github-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-github" type="button" role="tab"
+                                                    aria-controls="pills-github" aria-selected="false">Github
+                                                    Connect</a>
+                                            </li>
+                                        </ul>
+                                        <div class="scroll-right-indicator d-none pe-3"><i
+                                                class="bi bi-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="h-50">2</div>
-                            <div class="h-50">3</div>
-                            <div class="h-50">4</div>
-                            <div class="h-50">5</div>
+
+                            <div class="px-4 flex-1 d-flex">
+                                <div class="parameter_view_menu_card flex-1 px-4">
+                                    <div class="tab-content  d-flex flex-column" id="pills-tabContent">
+
+                                        <!-- 1 -->
+                                        <div class="tab-pane fade px-2 server-tab active show" id="pills-server"
+                                            role="tabpanel" aria-labelledby="pills-server-tab">
+                                            <div class="clear_space d-flex flex-column" style="font-size: .88rem;">
+                                                <small class="description__text">Quickly add an account from popular
+                                                    E-mail
+                                                    providers</small>
+                                                <small class="mt-1 description__text">
+                                                    To manually configure an account,
+                                                    use the <a href="" class="label_action fw-medium"
+                                                        style="opacity: 1;">IMAP/SMTP</a>
+                                                    section.
+                                                </small>
+                                                <p></p>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="d-flex flex-column row-gap-4 flex-lg-row column-gap-5">
+                                                    <div class="ms-lg-3">
+                                                        <div class="d-flex flex-column mb-3">
+                                                            <small class="fw-semibold"
+                                                                style="color: var(--menu-primary); font-size: .82rem;">Personal
+                                                                Info</small>
+                                                            <small class="description__text"
+                                                                style="font-size: .78rem; opacity: .7;">Lorem ipsum
+                                                                dolor
+                                                                sit,
+                                                                amet
+                                                                consectetur adipisicing elit.</small>
+                                                        </div>
+
+                                                        <div class="">
+                                                            <div class="d-flex flex-column mb-3 row-gap-1 w-100">
+                                                                <small class="field__label">Provider</small>
+                                                                <div class="dropdown-container">
+                                                                    <div
+                                                                        class="dropdown-origin dropdown-btn d-flex align-items-center justify-content-between px-2 position-relative">
+                                                                        <span style="font-size: .8rem;">Select
+                                                                            Provider</span>
+                                                                        <button
+                                                                            class="clear__btn border-0 bg-transparent"
+                                                                            style="font-size: 1.1rem;">
+                                                                            <i class='bx bx-chevron-down icon'></i>
+                                                                        </button>
+                                                                    </div>
+
+                                                                    <div class="dropdown-menu-custom">
+                                                                        <a href="#">Option 1</a>
+                                                                        <a href="#">Option 2</a>
+                                                                        <a href="#">Option 3</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="filed__card mb-3">
+                                                                <small class="field__label">Username</small>
+                                                                <input id="username" type="text" class="base__field"
+                                                                    style="font-size: .8rem;"
+                                                                    placeholder="Enter username">
+                                                            </div>
+                                                            <div class="filed__card">
+                                                                <small class="field__label">Account name</small>
+                                                                <input id="tenant_name" type="text" class="base__field"
+                                                                    style="font-size: .8rem;"
+                                                                    placeholder="Enter account name">
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div class="d-flex flex-column mb-3">
+                                                            <small class="fw-semibold"
+                                                                style="color: var(--menu-primary); font-size: .82rem;">Credentials</small>
+                                                            <small class="description__text">Lorem ipsum
+                                                                dolor
+                                                                sit,
+                                                                amet
+                                                                consectetur adipisicing elit.</small>
+                                                        </div>
+                                                        <div class="">
+
+                                                            <div class="filed__card mb-3">
+                                                                <small class="field__label">E-mail Address</small>
+                                                                <input id="email_address" type="email"
+                                                                    class="base__field" style="font-size: .8rem;"
+                                                                    placeholder="Enter email address">
+                                                            </div>
+                                                            <div class="filed__card">
+                                                                <small class="field__label">Password</small>
+                                                                <input id="password" type="password" class="base__field"
+                                                                    style="font-size: .8rem;"
+                                                                    placeholder="Enter password">
+                                                            </div>
+
+                                                            <div class="filed__card">
+                                                                <small class="field__label"></small>
+                                                                <div class="w-100 d-flex column-gap-2 "
+                                                                    style="margin-top: 1.15rem;">
+                                                                    <button class="btn-reset px-4">Reset<i
+                                                                            class='bx bx-reset'></i></button>
+                                                                    <button class="btn-connect">Connect <i
+                                                                            class="bi bi-arrow-return-right"></i></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 3 -->
+                                        <div class="tab-pane fade import-tab" id="pills-import" role="tabpanel"
+                                            aria-labelledby="pills-import-tab">
+                                            <div class="clear_space d-flex flex-column description_text">
+                                                <small>Import file add an account from popular E-mail providers <span>
+                                                        To
+                                                        manually
+                                                        configure an account,
+                                                        use the config section.</span></small>
+                                            </div>
+                                            <div class="mt-4">
+                                                <div class="d-flex flex-column justify-content-between mb-2">
+                                                    <small
+                                                        class="d-flex align-items-center column-gap-2 import-title"><i
+                                                            class='bx bx-card' style="font-size: 1rem;"></i>Bluk-Import
+                                                        Account using template file</small>
+                                                    <small class="fw-normal mx-4">Please ensure your <span
+                                                            class="color__text">yaml</span> or
+                                                        <span class="color__text">ccv</span> file followers the correct
+                                                        format</span></small>
+                                                </div>
+
+                                                <div class="d-flex flex-column mx-4 mt-4">
+                                                    <small class="mb-1  import-title">Download an example config
+                                                        file</small>
+                                                    <div>
+                                                        <div class="model__files__card d-flex flex-column ">
+                                                            <div class="item item__one">
+                                                                <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                                                                <a href="/assets/files/smtp_config.pdf" download
+                                                                    class=""
+                                                                    style="text-decoration: none; color: inherit;">
+                                                                    Download a simple yaml file
+                                                                </a>
+                                                            </div>
+
+                                                            <div class="item item__two">
+                                                                <i class="bi bi-file-earmark-arrow-down-fill"></i>
+                                                                <a href="/assets/files/smtp_config.pdf" download
+                                                                    class=""
+                                                                    style="text-decoration: none; color: inherit;">
+                                                                    Download a simple ccv file
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column mx-4 mt-4 ">
+                                                    <small class="mb-1">Choose File</small>
+                                                    <input class="form-control form-control-lg fw-medium"
+                                                        id="formFileSm" type="file"
+                                                        style="font-size: .76rem; border-radius: 2px;">
+                                                </div>
+
+                                                <div class="filed__card mx-4">
+                                                    <small class="field__label"></small>
+                                                    <div class="w-100 d-flex column-gap-2 "
+                                                        style="margin-top: 1.15rem;">
+                                                        <button class="btn-reset px-4">Cancel<i
+                                                                class='bx bx-reset'></i></button>
+                                                        <button class="btn-connect">Save <i
+                                                                class='bx bx-transfer-alt'></i></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 4 -->
+                                        <div class="tab-pane fade exchange-tab" id="pills-exchange" role="tabpanel"
+                                            aria-labelledby="pills-exchange-tab">
+                                            <div class="clear_space d-flex flex-column description_text">
+                                                <small>Exchange servers config from popular E-mail providers <span> To
+                                                        manually
+                                                        configure an account,
+                                                        use the config section.</span></small>
+                                            </div>
+
+                                            <div class="d-flex flex-column flex-lg-row row-gap-4 column-gap-5 mt-4">
+                                                <div class="ms-lg-3">
+                                                    <div class="d-flex flex-column mb-3">
+                                                        <small class="fw-semibold d-flex align-items-center gap-1"
+                                                            style="color: var(--menu-primary); font-size: .83rem;">
+                                                            <i class='bx bx-card' style="font-size: 1rem;"></i>Server
+                                                            Information
+                                                        </small>
+                                                        <small class="description__text"
+                                                            style="opacity: .8; padding-left: 2px;">
+                                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                        </small>
+                                                    </div>
+
+                                                    <div class="">
+                                                        <div class="filed__card mb-3">
+                                                            <small class="field__label">Name</small>
+                                                            <input id="username" type="text" class="base__field"
+                                                                style="font-size: .8rem;" placeholder="Enter username">
+                                                        </div>
+                                                        <div class="filed__card">
+                                                            <small class="field__label">Server Address</small>
+                                                            <input id="server_address" type="text" class="base__field"
+                                                                style="font-size: .8rem;"
+                                                                placeholder="Enter account name">
+                                                        </div>
+                                                        <div class="filed__card mb-3">
+                                                            <small class="field__label">Email or Username</small>
+                                                            <input id="username" type="text" class="base__field"
+                                                                style="font-size: .8rem;" placeholder="Enter username">
+                                                        </div>
+                                                        <div class="filed__card">
+                                                            <small class="field__label">Password</small>
+                                                            <input id="password" type="text" class="base__field"
+                                                                style="font-size: .8rem;" placeholder="Enter password">
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="exchange_profile_card">
+                                                    <div class="d-flex flex-column  column-gap-3 mb-3">
+                                                        <div class="d-flex column-gap-4">
+                                                            <small class="fw-semibold d-flex align-items-center gap-1"
+                                                                style="color: var(--menu-primary); font-size: .8rem;">
+                                                                <i class='bx bx-user'
+                                                                    style="font-size: 1rem;"></i>Profile
+                                                            </small>
+                                                            <div class="form-check d-flex">
+                                                                <input class="form-check-input cursor-pointer"
+                                                                    type="checkbox" value="" id="ex-profile-check"
+                                                                    checked>
+                                                                <label
+                                                                    class="form-check-label fw-medium d-flex align-items-center cursor-pointer px-1"
+                                                                    style="font-size: .84rem;" for="ex-profile-check">
+                                                                    Create profile
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <small class="description__text"
+                                                            style="opacity: .8; padding-left: 2px;">
+                                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                                        </small>
+                                                    </div>
+                                                    <div class="">
+
+                                                        <div class="filed__card mb-3">
+                                                            <small class="field__label">Reply to</small>
+                                                            <input id="email_address" type="email" class="base__field"
+                                                                style="font-size: .8rem;"
+                                                                placeholder="Enter email address">
+                                                        </div>
+                                                        <div class="filed__card">
+                                                            <small class="field__label">Signature</small>
+                                                            <textarea text="text" name="" id="" class="base__field"
+                                                                style="font-size: .8rem; height: 88px;"></textarea>
+                                                        </div>
+
+                                                        <div class="form-check d-flex">
+                                                            <input class="form-check-input cursor-pointer"
+                                                                type="checkbox" value="" id="default-profile-check"
+                                                                checked>
+                                                            <label
+                                                                class="form-check-label fw-medium d-flex align-items-center cursor-pointer px-1 mb-1"
+                                                                style="font-size: .84rem;" for="default-profile-check">
+                                                                Set this profile default
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="filed__card">
+                                                            <small class="field__label"></small>
+                                                            <div class="w-100 d-flex column-gap-2 "
+                                                                style="margin-top: 1.15rem;">
+                                                                <button class="btn-reset px-4">Reset<i
+                                                                        class='bx bx-reset'></i></button>
+                                                                <button class="btn-connect">Connect <i
+                                                                        class="bi bi-arrow-return-right"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 5 -->
+                                        <div class="tab-pane fade connect_tab" id="pills-wordpress" role="tabpanel"
+                                            aria-labelledby="pills-wordpress-tab">
+                                            <div class="clear_space d-flex flex-column description_text">
+                                                <small>WordPress account config from popular E-mail providers <span> To
+                                                        manually
+                                                        configure an account,
+                                                        use the config section.</span></small>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="d-flex flex-column justify-content-between mb-2">
+                                                    <small
+                                                        class="d-flex align-items-center column-gap-2 connect_tab_title"><i
+                                                            class='bx bxl-wordpress'></i>Connect
+                                                        WordPress</small>
+                                                    <small class="fw-normal ms-3 ps-3">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                                        Lorem ipsum dolor sit.
+                                                    </small>
+                                                </div>
+
+                                                <div class="filed__card mx-4" style="width: 300px;">
+                                                    <div class="w-100 d-flex column-gap-2 "
+                                                        style="margin-top: 1.15rem;">
+                                                        <button class="btn-connect">Connect</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- 6 -->
+                                        <div class="tab-pane fade connect_tab" id="pills-github" role="tabpanel"
+                                            aria-labelledby="pills-github-tab">
+                                            <div class="clear_space d-flex flex-column description_text">
+                                                <small>Github account config from popular E-mail providers <span> To
+                                                        manually
+                                                        configure an account,
+                                                        use the config section.</span></small>
+                                            </div>
+
+                                            <div class="mt-4">
+                                                <div class="d-flex flex-column justify-content-between mb-2">
+                                                    <small
+                                                        class="d-flex align-items-center column-gap-2 connect_tab_title"><i
+                                                            class='bx bxl-github'></i>Connect
+                                                        GitHub</small>
+                                                    <small class="fw-normal ms-3 ps-3">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+                                                    </small>
+                                                </div>
+
+                                                <div class="filed__card mx-4" style="width: 300px;">
+                                                    <div class="w-100 d-flex column-gap-2 "
+                                                        style="margin-top: 1.15rem;">
+                                                        <button class="btn-connect">Connect</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
