@@ -147,11 +147,9 @@
 /* lg mediaquery */
 @media (min-width: 769px) and (min-width: 1024px) {
 
-
       .menu_card ul li {
             font-size: .8rem;
       }
-
 
       .description_text {
             font-size: .9rem;
@@ -169,8 +167,6 @@
       .import-tab {
             width: 90%;
       }
-
-
 
 }
 
