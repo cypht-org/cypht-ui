@@ -464,32 +464,3 @@ function updateScrollIndicators() {
 $('#pills-tab').on('scroll', updateScrollIndicators);
 $(window).on('resize', updateScrollIndicators);
 $(document).ready(updateScrollIndicators);
-
-// $(document).ready(function () {
-//   $("#bloack-option-list").click(function () {
-//       $(".dropdown-menu-custom").toggleClass("show");
-//       $(".icon").toggleClass("rotate-icon");
-//   });
-
-//   $(document).click(function (e) {
-//       if (!$(e.target).closest(".dropdown-container").length) {
-//           $(".dropdown-menu-custom").removeClass("show");
-//           $(".icon").removeClass("rotate-icon");
-//       }
-//   });
-
-
-//   // 2
-//   $("#table-modal").click(function () {
-//       $(".table-dropdown-menu-custom").toggleClass("show");
-//       // $(".icon").toggleClass("rotate-icon");
-//   });
-
-//   $(document).click(function (e) {
-//       if (!$(e.target).closest(".table-dropdown-container").length) {
-//           $(".table-dropdown-menu-custom").removeClass("show");
-//           // $(".icon").removeClass("rotate-icon");
-//       }
-//   });
-
-// });

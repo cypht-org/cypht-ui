@@ -177,11 +177,11 @@
                                     <!-- <div class=" "> -->
                                     <div
                                         class="menu_card scroll-indicator-wrapper position-relative d-flex gap-2  px-0">
-                                        <div class="scroll-left-indicator d-none ps-1"><i
-                                                class="bi bi-chevron-left"></i>
+                                        <div onclick="scrollToLeft()" class="scroll-left-indicator d-none ps-1"
+                                            style="cursor:pointer;"><i class="bi bi-chevron-left"></i>
                                         </div>
-                                        <ul class="column-gap-4 d-flex hide-scroll overflow-x-auto px-1" id="pills-tab"
-                                            role="tablist">
+                                        <ul class="column-gap-4 d-flex hide-scroll overflow-x-auto px-1 submenu-container"
+                                            id="pills-tab" role="tablist">
                                             <li class="" role="presentation">
                                                 <a class="active" id="pills-server-tab" data-bs-toggle="pill"
                                                     data-bs-target="#pills-server" type="button" role="tab"
@@ -221,8 +221,8 @@
                                                     Connect</a>
                                             </li>
                                         </ul>
-                                        <div class="scroll-right-indicator d-none pe-3"><i
-                                                class="bi bi-chevron-right"></i>
+                                        <div onclick="scrollToRight()" class="scroll-right-indicator d-none pe-3"
+                                            style="cursor:pointer;"><i class="bi bi-chevron-right"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -288,14 +288,14 @@
 
                                                             <div class="filed__card mb-3">
                                                                 <small class="field__label">Username</small>
-                                                                <input id="username" type="text" class="base__field"
-                                                                    style="font-size: .8rem;"
+                                                                <input id="tab3_username" type="text"
+                                                                    class="base__field" style="font-size: .8rem;"
                                                                     placeholder="Enter username">
                                                             </div>
                                                             <div class="filed__card">
                                                                 <small class="field__label">Account name</small>
-                                                                <input id="tenant_name" type="text" class="base__field"
-                                                                    style="font-size: .8rem;"
+                                                                <input id="tab3_tenant_name" type="text"
+                                                                    class="base__field" style="font-size: .8rem;"
                                                                     placeholder="Enter account name">
                                                             </div>
 
@@ -315,14 +315,14 @@
 
                                                             <div class="filed__card mb-3">
                                                                 <small class="field__label">E-mail Address</small>
-                                                                <input id="email_address" type="email"
+                                                                <input id="tab1_email_address" type="email"
                                                                     class="base__field" style="font-size: .8rem;"
                                                                     placeholder="Enter email address">
                                                             </div>
                                                             <div class="filed__card">
                                                                 <small class="field__label">Password</small>
-                                                                <input id="password" type="password" class="base__field"
-                                                                    style="font-size: .8rem;"
+                                                                <input id="tab1_password" type="password"
+                                                                    class="base__field" style="font-size: .8rem;"
                                                                     placeholder="Enter password">
                                                             </div>
 
@@ -436,14 +436,16 @@
                                                     <div class="">
                                                         <div class="filed__card mb-3">
                                                             <small class="field__label">Name</small>
-                                                            <input id="username" type="text" class="base__field"
+                                                            <input id="tab2_username" type="text" class="base__field"
                                                                 style="font-size: .8rem;" placeholder="Enter username">
                                                         </div>
                                                         <div class="filed__card">
                                                             <small class="field__label">Server Address</small>
-                                                            <input id="server_address" type="text" class="base__field"
-                                                                style="font-size: .8rem;"
+                                                            <input id="tab2_server_address" type="text"
+                                                                class="base__field" style="font-size: .8rem;"
                                                                 placeholder="Enter account name">
+                                                            style="font-size: .8rem;"
+                                                            placeholder="Enter account name">
                                                         </div>
                                                         <div class="filed__card mb-3">
                                                             <small class="field__label">Email or Username</small>
@@ -621,9 +623,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 
 
     <!-- JS -->
@@ -635,6 +635,15 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="/assets/js/utils.js"></script>
+    <script>
+        function scrollToLeft() {
+            document.getElementById('pills-tab').scrollBy({ left: -100, behavior: 'smooth' });
+        }
+
+        function scrollToRight() {
+            document.getElementById('pills-tab').scrollBy({ left: 100, behavior: 'smooth' });
+        }
+    </script>
 </body>
 
 </html>
