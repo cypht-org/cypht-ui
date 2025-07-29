@@ -438,31 +438,29 @@ function selectOption(selected) {
 }
 
 
-// $(document).ready(function () {
-//   $("#bloack-option-list").click(function () {
-//       $(".dropdown-menu-custom").toggleClass("show");
-//       $(".icon").toggleClass("rotate-icon");
-//   });
-
-//   $(document).click(function (e) {
-//       if (!$(e.target).closest(".dropdown-container").length) {
-//           $(".dropdown-menu-custom").removeClass("show");
-//           $(".icon").removeClass("rotate-icon");
-//       }
-//   });
 
 
-//   // 2
-//   $("#table-modal").click(function () {
-//       $(".table-dropdown-menu-custom").toggleClass("show");
-//       // $(".icon").toggleClass("rotate-icon");
-//   });
 
-//   $(document).click(function (e) {
-//       if (!$(e.target).closest(".table-dropdown-container").length) {
-//           $(".table-dropdown-menu-custom").removeClass("show");
-//           // $(".icon").removeClass("rotate-icon");
-//       }
-//   });
+// 
+function updateScrollIndicators() {
+  const $scrollBox = $('#pills-tab');
+  const scrollLeft = $scrollBox.scrollLeft();
+  const scrollWidth = $scrollBox[0].scrollWidth;
+  const clientWidth = $scrollBox[0].clientWidth;
 
-// });
+  if (scrollLeft > 5) {
+    $('.scroll-left-indicator').removeClass('d-none');
+  } else {
+    $('.scroll-left-indicator').addClass('d-none');
+  }
+
+  if (scrollLeft + clientWidth < scrollWidth - 5) {
+    $('.scroll-right-indicator').removeClass('d-none');
+  } else {
+    $('.scroll-right-indicator').addClass('d-none');
+  }
+}
+
+$('#pills-tab').on('scroll', updateScrollIndicators);
+$(window).on('resize', updateScrollIndicators);
+$(document).ready(updateScrollIndicators);
