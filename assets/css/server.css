@@ -114,7 +114,6 @@
 .parameter_title_card {
     min-height: 4rem;
     border-radius: .9rem .9rem 0 0;
-
 }
 
 .parameter_content {
@@ -141,7 +140,7 @@
 }
 
 .parameter_title {
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 700;
 }
 
@@ -264,7 +263,9 @@ th span i {
     /* border-color: ; */
 }
 
-/*  */
+
+/* --------------------------------- Responsive -------------------------------- */
+
 
 @media (min-width: 768px) {
     .offcanvas {
@@ -277,13 +278,19 @@ th span i {
         height: 2rem;
 
     }
+
 }
 
 @media (min-width: 992px) {
 
+    /* .parameter_title_card {
+        min-height: 4rem;
+        border-radius: .9rem .9rem 0 0;
+    
+    } */
 
     .parameter_title_card {
-        height: 5rem;
+        height: 4rem;
         /* border-radius: .9rem .9rem 0 0; */
 
     }
@@ -299,8 +306,6 @@ th span i {
         width: 35% !important;
     }
 
-
-
     .new_config_btn i {
         font-size: 1rem;
         color: var(--primary-color);
@@ -314,6 +319,15 @@ th span i {
 
     .input_large_card {
         width: 68%;
+    }
+
+    .model__files__card .item {
+        font-size: .8rem !important;
+        font-weight: 500;
+    }
+
+    .model__files__card .item i {
+        font-size: 1rem;
     }
 
     /* .table__card {
@@ -331,7 +345,6 @@ th span i {
 @media (min-width: 1505px) {
 
     .parameter_view_menu_card {
-        background-color: palegoldenrod;
         padding-right: 25%;
     }
 }
@@ -394,7 +407,6 @@ th span i {
     font-weight: 600 !important;
     color: var(--menu-primary) !important;
     border-color: var(--primary-color) !important;
-    background-color: transparent !important;
 }
 
 .interface__content {
@@ -486,8 +498,8 @@ th span i {
 .model__files__card {
     display: inline-flex;
     min-height: 34px;
-    border: 1px solid rgba(128, 128, 128, 0.284);
-    border-radius: 3px;
+    border: .8px solid rgba(128, 128, 128, 0.284);
+    border-radius: 4px;
     gap: 0rem;
     font-size: .77rem;
     color: #00000077;
@@ -498,12 +510,16 @@ th span i {
     color: #00000077;
     display: flex;
     align-items: center;
-    padding: 0px 5.5px;
+    padding: 9px 8px;
     gap: .2rem;
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .model__files__card .item i {
-    font-size: 1rem;
+    font-size: 1.2rem;
+    color: var(--primary-color-500);
 }
 
 .model__files__card .item:hover {
@@ -511,7 +527,7 @@ th span i {
 }
 
 .model__files__card .item__two {
-    border-left: 1px solid rgba(128, 128, 128, 0.284);
+    border-top: .8px solid rgba(128, 128, 128, 0.284);
 }
 
 /* Account Menu Styles */
